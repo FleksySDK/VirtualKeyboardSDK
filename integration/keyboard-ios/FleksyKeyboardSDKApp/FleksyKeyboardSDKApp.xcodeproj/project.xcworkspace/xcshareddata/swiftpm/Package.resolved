@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FleksyEngine",
+        "repositoryURL": "git@bitbucket.org:thingthing-dev/spm-fleksyengine.git",
+        "state": {
+          "branch": "feature/public_headers",
+          "revision": "6f75755366ef7fa66e75ed802df244a799b3e412",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "fleksyengine-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FleksySDK/FleksyEngine-iOS",
+      "state" : {
+        "revision" : "8d08c31306d276a7a9d734015a8bc1926338a48d",
+        "version" : "3.5.14"
+      }
+    },
+    {
+      "identity" : "fleksysdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FleksySDK/FleksySDK-iOS",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ab3399a01c5773a3268d7343b5e3048680e297de"
+      }
+    }
+  ],
+  "version" : 2
+}

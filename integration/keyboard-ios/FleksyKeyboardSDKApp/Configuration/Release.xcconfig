@@ -1,0 +1,18 @@
+//
+//  Release.xcconfig
+//  FleksyKeyboardSDKApp
+//
+//  Copyright © 2022 Thingthing,Ltd. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Shared.xcconfig"
+
+OTHER_SWIFT_FLAGS = $(inherited)
+APP_BUNDLE_ID = $(BASE_APP_BUNDLE_ID)
+KEYBOARD_BUNDLE_ID = $(APP_BUNDLE_ID).keyboard
+APP_GROUP_NAME = $(BASE_APP_GROUP_NAME) // For info.plist. Final value set in Release.entitlements files
+
+// Do not add sensitive information here
