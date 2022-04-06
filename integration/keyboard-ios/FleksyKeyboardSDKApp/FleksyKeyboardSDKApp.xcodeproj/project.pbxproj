@@ -15,12 +15,10 @@
 		7585029927204C8A00C69DC3 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7585029727204C8A00C69DC3 /* BoolSettingCell.swift */; };
 		7585029A27204C8A00C69DC3 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585029827204C8A00C69DC3 /* BoolSettingCell.xib */; };
 		75C09A3E27216E81004B938E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C09A3D27216E81004B938E /* SettingsTableViewController.swift */; };
-		75C09A4227218C20004B938E /* Constants+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C09A4127218C20004B938E /* Constants+App.swift */; };
+		75C09A4227218C20004B938E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C09A4127218C20004B938E /* Constants.swift */; };
 		75CD835927351B4C006431DB /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E77248272A76F300A2A421 /* LanguagesTableViewController.swift */; };
 		75D2220A274D550B003C1AF1 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D22209274D550B003C1AF1 /* KeyboardLayoutSelection.swift */; };
 		75D465B42779A3A000C9515C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D465B32779A3A000C9515C /* KeyboardViewController.swift */; };
-		75D465DD2779D3E600C9515C /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D465DC2779D3E600C9515C /* CommonConstants.swift */; };
-		75D465DE2779D3E600C9515C /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D465DC2779D3E600C9515C /* CommonConstants.swift */; };
 		75E1C100277AF78400954730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E1C0FF277AF78400954730 /* AppDelegate.swift */; };
 		75F5623927468AD300A4479D /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F5623727468AD300A4479D /* LanguageCell.swift */; };
 		75F5623A27468AD300A4479D /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F5623827468AD300A4479D /* LanguageCell.xib */; };
@@ -78,10 +76,9 @@
 		7585029727204C8A00C69DC3 /* BoolSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
 		7585029827204C8A00C69DC3 /* BoolSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
 		75C09A3D27216E81004B938E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		75C09A4127218C20004B938E /* Constants+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+App.swift"; sourceTree = "<group>"; };
+		75C09A4127218C20004B938E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75D22209274D550B003C1AF1 /* KeyboardLayoutSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutSelection.swift; sourceTree = "<group>"; };
 		75D465B32779A3A000C9515C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		75D465DC2779D3E600C9515C /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
 		75E1C0FF277AF78400954730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E55ACB27E8917300B972C4 /* Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
 		75E55ACD27E8920B00B972C4 /* Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
@@ -130,14 +127,6 @@
 				75290FB127C66B4C0030BAE4 /* Release.xcconfig */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		753122DF2775D8DC00CCCE06 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				75D465DC2779D3E600C9515C /* CommonConstants.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		7585029227204B7200C69DC3 /* Settings */ = {
@@ -196,7 +185,6 @@
 				E6338E00232FC3A000CF5968 /* FleksyKeyboardSDKApp */,
 				E646A184232FD8DA00FEDE69 /* keyboard */,
 				E6338DFF232FC3A000CF5968 /* Products */,
-				753122DF2775D8DC00CCCE06 /* Common */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,7 +205,7 @@
 				75E55ACB27E8917300B972C4 /* Release.entitlements */,
 				7585029027204AA200C69DC3 /* SettingsSDK.swift */,
 				752DF1332722B6830078701C /* SettingModels.swift */,
-				75C09A4127218C20004B938E /* Constants+App.swift */,
+				75C09A4127218C20004B938E /* Constants.swift */,
 				7585026D27202C4400C69DC3 /* WelcomeViewController.swift */,
 				7585029227204B7200C69DC3 /* Settings */,
 				E6338E0A232FC3A000CF5968 /* Main.storyboard */,
@@ -391,13 +379,12 @@
 				7585029927204C8A00C69DC3 /* BoolSettingCell.swift in Sources */,
 				75E1C100277AF78400954730 /* AppDelegate.swift in Sources */,
 				75D2220A274D550B003C1AF1 /* KeyboardLayoutSelection.swift in Sources */,
-				75D465DD2779D3E600C9515C /* CommonConstants.swift in Sources */,
 				7585029127204AA200C69DC3 /* SettingsSDK.swift in Sources */,
 				75F5623927468AD300A4479D /* LanguageCell.swift in Sources */,
 				750CC9422745370A006F6463 /* LanguagesManager.swift in Sources */,
 				752DF10D27228F900078701C /* SelectionTableViewController.swift in Sources */,
 				7585026E27202C4400C69DC3 /* WelcomeViewController.swift in Sources */,
-				75C09A4227218C20004B938E /* Constants+App.swift in Sources */,
+				75C09A4227218C20004B938E /* Constants.swift in Sources */,
 				752DF1342722B6830078701C /* SettingModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D465DE2779D3E600C9515C /* CommonConstants.swift in Sources */,
 				75D465B42779A3A000C9515C /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,7 +546,7 @@
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/Debug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -591,7 +577,7 @@
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/Release.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
@@ -616,7 +602,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = keyboard/Debug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -646,7 +632,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = keyboard/Release.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = keyboard/Info.plist;

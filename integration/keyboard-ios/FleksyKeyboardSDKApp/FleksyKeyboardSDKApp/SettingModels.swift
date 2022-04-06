@@ -20,14 +20,12 @@ struct BoolSetting {
     let subtitleKey: String?
     private let isInverted: Bool
     fileprivate let key: String
-    let accessibilityPrefix: String
     
-    init(titleKey: String, subtitleKey: String? = nil, isInverted: Bool = false, key: String, accessibilityPrefix: String) {
+    init(titleKey: String, subtitleKey: String? = nil, isInverted: Bool = false, key: String) {
         self.titleKey = titleKey
         self.subtitleKey = subtitleKey
         self.isInverted = isInverted
         self.key = key
-        self.accessibilityPrefix = accessibilityPrefix
     }
     
     func get() -> Bool {
@@ -46,7 +44,6 @@ struct BoolSetting {
 protocol SelectionItem {
     var titleKey: String { get }
     var subtitleKey: String? { get }
-    var accessibilityPrefix: String { get }
     var value: SelectionItemValue { get }
     var modificator: ItemModificator? { get }
 }
@@ -92,14 +89,12 @@ struct SelectionSetting: Selectable {
     
     fileprivate let orderingKey: String?
     private let itemsGetter: () -> [SelectionItem]
-    let accessibilityPrefix: String
     
-    init(titleKey: String, subtitleKey: String? = nil, orderingKey: String? = nil, key: String, accessibilityPrefix: String, allItemsGetter: @escaping () -> [SelectionItem]) {
+    init(titleKey: String, subtitleKey: String? = nil, orderingKey: String? = nil, key: String, allItemsGetter: @escaping () -> [SelectionItem]) {
         self.titleKey = titleKey
         self.subtitleKey = subtitleKey
         self.orderingKey = orderingKey
         self.key = key
-        self.accessibilityPrefix = accessibilityPrefix
         self.itemsGetter = allItemsGetter
     }
     
@@ -155,7 +150,6 @@ struct FontSelectionItem: SelectionItem {
         fontName
     }
     let subtitleKey: String? = nil
-    let accessibilityPrefix: String
     var value: SelectionItemValue {
         .string(fontName)
     }
@@ -163,12 +157,11 @@ struct FontSelectionItem: SelectionItem {
         return .font(name: self.fontName)
     }
     
-    init(fontName: String, accessibilityPrefix: String) {
+    init(fontName: String) {
         self.fontName = fontName
-        self.accessibilityPrefix = accessibilityPrefix
     }
     
-    static func getAllFontSelectionItems(accessibilityPrefix: String) -> [FontSelectionItem] {
+    static func getAllFontSelectionItems() -> [FontSelectionItem] {
         return [
             "System Font",
             "Gilroy-Medium",
@@ -180,7 +173,7 @@ struct FontSelectionItem: SelectionItem {
             "Avenir-Light",
             "System Font Bold"
         ].map {
-            FontSelectionItem(fontName: $0, accessibilityPrefix: accessibilityPrefix + $0.replacingOccurrences(of: " ", with: "-") + ".")
+            FontSelectionItem(fontName: $0)
         }
     }
 }
@@ -191,33 +184,33 @@ struct SpecialKeySelectionItem: SelectionItem {
     let titleKey: String
     let subtitleKey: String? = nil
     let integerValue: Int
-    let accessibilityPrefix: String
     var value: SelectionItemValue {
         .integer(integerValue)
     }
     var modificator: ItemModificator? = nil
 
-    static func getAllSpecialKeySelectionItems(accessibilityPrefix: String) -> [SpecialKeySelectionItem] {
+    static func getAllSpecialKeySelectionItems() -> [SpecialKeySelectionItem] {
         let magicButtonsSorted = SettingsSDK.userDefaults.object(forKey: FLEKSY_SETTINGS_MAGIC_BUTTON_ORDER) as? [NSNumber] ?? []
         return magicButtonsSorted.compactMap { button in
-            let data: (titleKey: String, accessibilityPrefix: String)? = {
-                switch button.uint32Value {
-                case FleksyControlTypeEmojiKey.rawValue:
-                    return (NSLocalizedString("Emoji", comment: ""), "Emoji")
-                case FleksyControlTypeCommaKey.rawValue:
-                    return (NSLocalizedString("Comma", comment: ""), "Comma")
-                case FleksyControlTypeHideKeyboardKey.rawValue:
-                    return (NSLocalizedString("Dismiss Keyboard", comment: ""), "Dismiss-Keyboard")
-                case FleksyControlTypeAutoCorrectOffKey.rawValue:
-                    return (NSLocalizedString("Autocorrect Toggle", comment: ""), "Autocorrect")
-                case FleksyControlTypeGlobeKey.rawValue:
-                    return (NSLocalizedString("Globe (Switch Keyboard)", comment: ""), "Globe")
-                default:
-                    return nil
-                }
-            }()
-            return data.map {
-                SpecialKeySelectionItem(titleKey: $0.titleKey, integerValue: button.intValue, accessibilityPrefix: $0.accessibilityPrefix)
+            let titleKey: String?
+            switch button.uint32Value {
+            case FleksyControlTypeEmojiKey.rawValue:
+                titleKey = NSLocalizedString("Emoji", comment: "")
+            case FleksyControlTypeCommaKey.rawValue:
+                titleKey = NSLocalizedString("Comma", comment: "")
+            case FleksyControlTypeHideKeyboardKey.rawValue:
+                titleKey = NSLocalizedString("Dismiss Keyboard", comment: "")
+            case FleksyControlTypeAutoCorrectOffKey.rawValue:
+                titleKey = NSLocalizedString("Autocorrect Toggle", comment: "")
+            case FleksyControlTypeGlobeKey.rawValue:
+                titleKey = NSLocalizedString("Globe (Switch Keyboard)", comment: "")
+            default:
+                titleKey = nil
+            }
+            if let titleKey = titleKey {
+                return SpecialKeySelectionItem(titleKey: titleKey, integerValue: button.intValue)
+            } else {
+                return nil
             }
         }
     }

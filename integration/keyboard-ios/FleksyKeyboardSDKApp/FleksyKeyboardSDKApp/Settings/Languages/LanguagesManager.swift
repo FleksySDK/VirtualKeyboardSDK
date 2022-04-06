@@ -44,10 +44,6 @@ class LanguageModel: Hashable {
         }
     }
     
-    var accessibilityPrefix: String {
-        Constants.Accessibility.SectionPrefix.languages + code + "."
-    }
-    
     static func == (lhs: LanguageModel, rhs: LanguageModel) -> Bool {
         return lhs.code == rhs.code
     }
@@ -164,11 +160,6 @@ class LanguagesManager {
         {
             languageModel.downloadState = .installed(currentLanguage: currentLanguage, keyboardLayout: layout)
         }
-    }
-    
-    // MARK: - Register for notifications
-    
-    func registerForSetCurrentLanguageNotification() {
     }
     
     // MARK: - Private methods

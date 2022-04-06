@@ -9,7 +9,7 @@ import Foundation
 import FleksyKeyboardSDK
 import UIKit
 
-extension Constants {
+enum Constants {
     enum App {
         static let keyboardExtensionBundleId = Bundle.main.bundleIdentifier! + ".keyboard"
         static var versionAndBuild: String {
@@ -27,10 +27,6 @@ extension Constants {
                 return "-"
             }
             return versionAndBuild(forBundle: bundle)
-        }
-        
-        static var engineVersionAndBuild: String {
-            return SettingsSDK.userDefaults.value(forKey: FLEKSY_ENGINE_VERSION) as? String ?? "-"
         }
         
         private static func versionAndBuild(forBundle bundle: Bundle) -> String {
@@ -94,7 +90,6 @@ extension Constants {
     enum Locales {
         
         static func languageName(forCode code: String) -> String {
-            // Functionality taken fromm FleksyUtility+Language.m `-nameForLanguageCode:`
             Locale.current.localizedString(forIdentifier: code) ?? code
         }
     }
