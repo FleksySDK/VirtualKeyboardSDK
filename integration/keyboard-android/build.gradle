@@ -1,6 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-	ext.kotlin_version = '1.4.10'
+	ext.kotlin_version = '1.5.31'
 	repositories {
 		google()
 		jcenter()
@@ -20,9 +20,8 @@ allprojects {
 	repositories {
 		google()
 		jcenter()
-
 		maven {
-			url fleksy_sdk_maven_url
+			url "https://maven.fleksy.com/maven"
 		}
 	}
 }
@@ -33,6 +32,6 @@ task clean(type: Delete) {
 
 ext {
 	minSdkVersion = 21
-	targetSdkVersion = 30
-	compileSdkVersion = 30
+	targetSdkVersion = 32
+	compileSdkVersion = 32
 }

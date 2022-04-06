@@ -20,74 +20,14 @@ import java.util.concurrent.TimeUnit
 
 class SampleKeyboardService : KeyboardService() {
 
-	lateinit var sharedPreferences: SharedPreferences
-
-	private val spaceBarLogo by lazy {
-		ContextCompat.getDrawable(this, R.drawable.ic_fleksy_watermark)
-	}
-
-	override fun onCreate() {
-		sharedPreferences = getSharedPreferences("default", MODE_PRIVATE)
-
-		// Prepare any dependencies needed in `createConfiguration`
-		// before calling `super.onCreate()`
-
-		super.onCreate()
-
-		// Set user dictionary
-		setUserDictionary()
-
-		// Configuration changes inside keyboard
-		eventBus.configuration.subscribe {
-			when (it) {
-				is AutoCorrectionChanged -> updateAutoCorrect(it.enabled)
-				is CurrentLanguageChanged -> {
-					setCurrentLocale(it.locale)
-					setUserDictionary()
-				}
-			}
-		}
-
-		// Dictionary changes inside keyboard
-		eventBus.dictionary.subscribe {
-			when (it) {
-				is AddUserWord -> updateUserDictionary(userDictionary.apply { add(it.word) })
-				is RemoveUserWord -> updateUserDictionary(userDictionary.apply { remove(it.word) })
-				is AutoLearnedWord -> updateUserDictionary(userDictionary.apply { add(it.word) })
-			}
-		}
-	}
-
-	private fun setUserDictionary() {
-		setUserWords(userDictionary.toList())
-	}
-
-	private val userDictionary: MutableSet<String>
-		get() = sharedPreferences.getStringSet(userDictionaryKey, null)?.toMutableSet()
-			?: mutableSetOf()
-
-	private fun updateUserDictionary(words: Set<String>) {
-		sharedPreferences.edit().putStringSet(userDictionaryKey, words).apply()
-	}
-
-	private fun updateAutoCorrect(enabled: Boolean) {
-		sharedPreferences.edit().putBoolean("autoCorrect", enabled).apply()
-	}
-
-	private fun setCurrentLocale(locale: String) {
-		sharedPreferences.edit().putString("currentLocale", locale).apply()
-	}
-
-	private val userDictionaryKey get() = "userDictionary_$currentLocale"
-
 	private val currentLanguage
 		get() = KeyboardLanguage(currentLocale, currentLayout)
 
 	private val currentLocale
-		get() = sharedPreferences.getString("currentLocale", null) ?: "en-US"
+		get() = "en-US"
 
 	private val currentLayout
-		get() = sharedPreferences.getString("layout_$currentLocale", null)
+		get() = "QWERTY"
 
 	override fun createConfiguration() =
 		KeyboardConfiguration(
@@ -123,7 +63,6 @@ class SampleKeyboardService : KeyboardService() {
 				forceTheme = SystemThemes.lightTheme,
 				forceDarkTheme = SystemThemes.darkTheme,
 				useStandardLayoutSystem = true,
-				spacebarLogo = spaceBarLogo,
 				spacebarStyle = SpacebarStyle.Automatic,
 				hoverStyle = HoverStyle.FactorSizeBar(
 					widthFactor = .9f,
@@ -149,17 +88,6 @@ class SampleKeyboardService : KeyboardService() {
 				licenseSecret = "your-secret-key"
 			)
 		)
-
-	override val appIcon get() = R.drawable.fleksy_logo
-
-	// Note: Will only be called when no apps registered on AppConfiguration
-	override fun onAppsButtonClicked() {
-		startActivity(
-			Intent(this, MainActivity::class.java).apply {
-				flags = Intent.FLAG_ACTIVITY_NEW_TASK
-			}
-		)
-	}
 
 	companion object {
 
