@@ -14,9 +14,6 @@ struct KeyboardLayoutItem: SelectionItem {
         layout
     }
     let subtitleKey: String? = nil
-    var accessibilityPrefix: String {
-        Constants.Accessibility.SectionPrefix.languages + Constants.Accessibility.Languages.Prefix.keyboardLayout + titleKey + "."
-    }
     var value: SelectionItemValue {
         .string(titleKey)
     }
@@ -38,9 +35,6 @@ struct KeyboardLayoutSelection: Selectable {
     
     var titleKey: String { languageName ?? languageCode }
     let subtitleKey: String? = nil
-    var accessibilityPrefix: String {
-        Constants.Accessibility.SectionPrefix.languages + Constants.Accessibility.Languages.Prefix.keyboardLayout + languageCode + "."
-    }
     
     let allowsSorting = false
     

@@ -21,13 +21,11 @@ class WelcomeViewController: UITableViewController {
         let titleKey: String
         let detailKey: String?
         let type: ItemType
-        let accessibilityIdentifierPrefix: String
         
-        init(titleKey: String, subtitleKey: String? = nil, type: ItemType, accessibilityIdentifierPrefix: String) {
+        init(titleKey: String, subtitleKey: String? = nil, type: ItemType) {
             self.titleKey = titleKey
             self.detailKey = subtitleKey
             self.type = type
-            self.accessibilityIdentifierPrefix = accessibilityIdentifierPrefix
         }
     }
     
@@ -87,27 +85,21 @@ class WelcomeViewController: UITableViewController {
         return [
             Section(titleKey: "Settings", items: [
                 Item(titleKey: "Languages",
-                     type: .languages,
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.languages),
+                     type: .languages),
                 Item(titleKey: "Look",
-                     type: .settings(SettingsSDK.lookSettings),
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.look),
+                     type: .settings(SettingsSDK.lookSettings)),
                 Item(titleKey: "Gestures",
-                     type: .settings(SettingsSDK.gesturesSettings),
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.gestures),
+                     type: .settings(SettingsSDK.gesturesSettings)),
                 Item(titleKey: "Typing",
-                     type: .settings(SettingsSDK.typingSettings),
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.typing),
+                     type: .settings(SettingsSDK.typingSettings)),
             ]),
             Section(titleKey: "Information", items: [
                 Item(titleKey: "App version",
                      subtitleKey: Constants.App.versionAndBuild,
-                     type: .info,
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.appVersion),
+                     type: .info),
                 Item(titleKey: "FleksyKeyboardSDK version",
                      subtitleKey: Constants.App.keyboardSDKVersionAndBuild,
-                     type: .info,
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.keyboardSDKVersion),
+                     type: .info),
             ])
         ]
     }
@@ -115,7 +107,6 @@ class WelcomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Welcome to FleksySDK!", comment: "")
-        view.accessibilityIdentifier = Constants.Accessibility.welcomeScreenPrefix + Constants.Accessibility.ComponentSuffix.view
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
@@ -129,7 +120,6 @@ class WelcomeViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let item = sender as? Item {
             segue.destination.title = NSLocalizedString(item.titleKey, comment: "")
-            segue.destination.view.accessibilityIdentifier = item.accessibilityIdentifierPrefix + Constants.Accessibility.ComponentSuffix.view
             if case .settings(let settings) = item.type,
                let settingsVC = segue.destination as? SettingsTableViewController {
                 settingsVC.settings = settings
@@ -166,7 +156,6 @@ class WelcomeViewController: UITableViewController {
             NSLocalizedString($0, comment: "")
         }
         cell.accessoryType = item.type.action == nil ? .none : .disclosureIndicator
-        cell.accessibilityIdentifier = item.accessibilityIdentifierPrefix + Constants.Accessibility.ComponentSuffix.button
         return cell
     }
     

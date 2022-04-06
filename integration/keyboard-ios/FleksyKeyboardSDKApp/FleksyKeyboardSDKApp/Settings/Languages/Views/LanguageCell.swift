@@ -50,45 +50,28 @@ class LanguageCell: UITableViewCell {
     }
     
     private func refreshForLanguageDownloadState(_ language: LanguageModel, animated: Bool) {
-        let actionAccessibilitySuffix: String
         switch language.downloadState {
         case .notDownloaded:
             btnLayout.isHidden = true
             imgIconAction.isHidden = false
             imgIconAction.image = Constants.Images.download
             progressView.isHidden = true
-            actionAccessibilitySuffix = Constants.Accessibility.Languages.Prefix.download + Constants.Accessibility.ComponentSuffix.button
         case .downloading(progress: let progress):
             btnLayout.isHidden = true
             imgIconAction.isHidden = true
             progressView.isHidden = false
             progressView.setProgress(progress, animated: animated)
-            actionAccessibilitySuffix = Constants.Accessibility.Languages.Prefix.downloading + Constants.Accessibility.ComponentSuffix.view
         case .downloaded:
             imgIconAction.isHidden = false
             imgIconAction.image = Constants.Images.plus
             btnLayout.isHidden = true
             progressView.isHidden = true
-            actionAccessibilitySuffix = Constants.Accessibility.Languages.Prefix.download + Constants.Accessibility.ComponentSuffix.button
         case .installed(let currentLanguage, let keyboardLayout):
             imgIconAction.isHidden = !currentLanguage
             imgIconAction.image = Constants.Images.check
             btnLayout.isHidden = false
             refreshLayoutButton(title: keyboardLayout)
             progressView.isHidden = true
-            actionAccessibilitySuffix = Constants.Accessibility.Languages.Prefix.setCurrent + Constants.Accessibility.ComponentSuffix.button
-        }
-        
-        // self contains only info about the lenguage
-        accessibilityIdentifier = language.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.view
-        lbTitle.accessibilityIdentifier = language.accessibilityPrefix + actionAccessibilitySuffix
-        lbTitle.isAccessibilityElement = true
-        if language.isCurrentLanguage {
-            imgIconAction.accessibilityIdentifier = language.accessibilityPrefix + Constants.Accessibility.Languages.Prefix.currentLanguage + Constants.Accessibility.ComponentSuffix.view
-            imgIconAction.isAccessibilityElement = true
-        } else {
-            imgIconAction.accessibilityIdentifier = nil
-            imgIconAction.isAccessibilityElement = false
         }
     }
     

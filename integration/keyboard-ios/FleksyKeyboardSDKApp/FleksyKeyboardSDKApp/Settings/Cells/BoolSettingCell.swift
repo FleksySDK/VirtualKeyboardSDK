@@ -44,9 +44,6 @@ class BoolSettingCell: UITableViewCell {
         }
         lbSubtitle.isHidden = lbSubtitle.text?.isEmpty ?? true
         switchSetting.isOn = setting.get()
-        
-        accessibilityIdentifier = setting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.view
-        switchSetting.accessibilityIdentifier = setting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.switchControl
     }
     
 }

@@ -11,7 +11,6 @@ protocol Selectable {
     var allowsSorting: Bool { get }
     var titleKey: String { get }
     var subtitleKey: String? { get }
-    var accessibilityPrefix: String { get }
     var items: [SelectionItem] { get }
     
     func itemsOrderUpdated(_ reorderedItems: [SelectionItem])
@@ -49,11 +48,7 @@ class SelectionTableViewController: UITableViewController {
         title = (selectionData?.titleKey).map {
             NSLocalizedString($0, comment: "")
         }
-        view.accessibilityIdentifier = selectionData?.accessibilityPrefix.appending(Constants.Accessibility.ComponentSuffix.view)
         navigationItem.rightBarButtonItem = allowsSorting ? editButtonItem : nil
-        navigationItem.rightBarButtonItem?.accessibilityIdentifier = selectionData?.accessibilityPrefix
-            .appending(Constants.Accessibility.ActionPrefix.reorder)
-            .appending(Constants.Accessibility.ComponentSuffix.button)
         isEditing = false
         tableView.reloadData()
     }
@@ -95,7 +90,6 @@ class SelectionTableViewController: UITableViewController {
                 cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .body)
             }
             
-            cell.accessibilityIdentifier = item.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.button
             cell.selectionStyle = .none
         }
         return cell

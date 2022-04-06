@@ -225,8 +225,6 @@ extension LanguagesTableViewController: LanguagesManagerDelegate {
                 handler(success)
             }
             let deleteImage = Constants.Images.trash
-            // Setting the accessibilityIdentifier in the image does not work for the swipe action button
-            deleteImage?.accessibilityLabel = language.accessibilityPrefix + Constants.Accessibility.ActionPrefix.delete + Constants.Accessibility.ComponentSuffix.button
             deleteAction.image = deleteImage
             return UISwipeActionsConfiguration(actions: [deleteAction])
         } else {

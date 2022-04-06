@@ -44,10 +44,6 @@ class LanguageModel: Hashable {
         }
     }
     
-    var accessibilityPrefix: String {
-        Constants.Accessibility.SectionPrefix.languages + code + "."
-    }
-    
     static func == (lhs: LanguageModel, rhs: LanguageModel) -> Bool {
         return lhs.code == rhs.code
     }

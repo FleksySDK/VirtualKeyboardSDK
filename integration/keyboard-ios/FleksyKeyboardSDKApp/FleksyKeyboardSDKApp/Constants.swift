@@ -9,7 +9,7 @@ import Foundation
 import FleksyKeyboardSDK
 import UIKit
 
-extension Constants {
+enum Constants {
     enum App {
         static let keyboardExtensionBundleId = Bundle.main.bundleIdentifier! + ".keyboard"
         static var versionAndBuild: String {

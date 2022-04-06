@@ -51,7 +51,6 @@ class SettingsTableViewController: UITableViewController {
             }
             boolSettingCell.selectionStyle = .none
             boolSettingCell.loadSetting(boolSetting)
-            boolSettingCell.accessibilityIdentifier = boolSetting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.view
             return boolSettingCell
         case .selection(let selectionSetting):
             let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self))
@@ -61,7 +60,6 @@ class SettingsTableViewController: UITableViewController {
                 NSLocalizedString($0, comment: "")
             }
             cell.accessoryType = .disclosureIndicator
-            cell.accessibilityIdentifier = selectionSetting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.button
             cell.selectionStyle = .default
             return cell
         }
