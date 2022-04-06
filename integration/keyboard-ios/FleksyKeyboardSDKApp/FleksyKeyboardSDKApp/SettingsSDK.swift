@@ -18,7 +18,6 @@ struct SettingsSDK {
     static var lookSettings: [SettingModel] {
         let accessibilityPrefix = Constants.Accessibility.SectionPrefix.look
         return [
-            // "Size of keyboard paddings" ???,
             .selection(SelectionSetting(titleKey: "Keyboard font",
                                         key: FLEKSY_SETTINGS_KEYPAD_FONT,
                                         accessibilityPrefix: accessibilityPrefix + "Font.",
@@ -36,9 +35,6 @@ struct SettingsSDK {
                                         allItemsGetter: {
                                             return SpecialKeySelectionItem.getAllSpecialKeySelectionItems(accessibilityPrefix: accessibilityPrefix + "SpecialKey.")
                                         }))
-            
-            // Emoji selector: to implement it, first we need to decouple the FleksyEmoji from the SDK. Maybe implement new way of setting the emoji skin tone preference?
-            //            .selector(Selector(titleKey: "Emoji skin tone", key: FLEKSY_SETTINGS_EMOJI_RACE_PREFERENCES))
         ]
     }
     

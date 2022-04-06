@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6338DFD232FC3A000CF5968"
-               BuildableName = "Dev.FleksySDK.app"
+               BuildableName = "$APP_NAME.app"
                BlueprintName = "FleksyKeyboardSDKApp"
                ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
             </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6338DFD232FC3A000CF5968"
-            BuildableName = "Dev.FleksySDK.app"
+            BuildableName = "$APP_NAME.app"
             BlueprintName = "FleksyKeyboardSDKApp"
             ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6338DFD232FC3A000CF5968"
-            BuildableName = "Dev.FleksySDK.app"
+            BuildableName = "$APP_NAME.app"
             BlueprintName = "FleksyKeyboardSDKApp"
             ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
          </BuildableReference>

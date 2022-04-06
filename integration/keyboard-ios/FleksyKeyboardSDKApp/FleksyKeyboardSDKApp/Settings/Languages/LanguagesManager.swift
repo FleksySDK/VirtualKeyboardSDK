@@ -166,11 +166,6 @@ class LanguagesManager {
         }
     }
     
-    // MARK: - Register for notifications
-    
-    func registerForSetCurrentLanguageNotification() {
-    }
-    
     // MARK: - Private methods
     
     private func reloadLanguages() {

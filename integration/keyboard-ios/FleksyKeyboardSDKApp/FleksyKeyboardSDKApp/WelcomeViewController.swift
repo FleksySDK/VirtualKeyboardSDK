@@ -108,10 +108,6 @@ class WelcomeViewController: UITableViewController {
                      subtitleKey: Constants.App.keyboardSDKVersionAndBuild,
                      type: .info,
                      accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.keyboardSDKVersion),
-                Item(titleKey: "Engine version",
-                     subtitleKey: Constants.App.engineVersionAndBuild,
-                     type: .info,
-                     accessibilityIdentifierPrefix: Constants.Accessibility.SectionPrefix.engineVersion)
             ])
         ]
     }

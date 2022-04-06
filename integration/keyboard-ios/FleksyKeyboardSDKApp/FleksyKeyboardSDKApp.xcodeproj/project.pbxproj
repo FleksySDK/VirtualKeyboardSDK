@@ -560,7 +560,7 @@
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/Debug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -591,7 +591,7 @@
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/Release.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
@@ -616,7 +616,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = keyboard/Debug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -646,7 +646,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = keyboard/Release.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = $APP_BUILD;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = keyboard/Info.plist;

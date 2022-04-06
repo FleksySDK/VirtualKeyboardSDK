@@ -29,10 +29,6 @@ extension Constants {
             return versionAndBuild(forBundle: bundle)
         }
         
-        static var engineVersionAndBuild: String {
-            return SettingsSDK.userDefaults.value(forKey: FLEKSY_ENGINE_VERSION) as? String ?? "-"
-        }
-        
         private static func versionAndBuild(forBundle bundle: Bundle) -> String {
             let version = bundle.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
             let build = bundle.infoDictionary?["CFBundleVersion"] as? String ?? ""
@@ -94,7 +90,6 @@ extension Constants {
     enum Locales {
         
         static func languageName(forCode code: String) -> String {
-            // Functionality taken fromm FleksyUtility+Language.m `-nameForLanguageCode:`
             Locale.current.localizedString(forIdentifier: code) ?? code
         }
     }

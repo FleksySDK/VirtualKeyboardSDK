@@ -200,7 +200,7 @@ extension LanguagesTableViewController: LanguagesManagerDelegate {
     }
     
     func didFailDownloadingLanguage(_ language: LanguageModel) {
-        //TODO: implement
+        // Handle error case
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -213,7 +213,6 @@ extension LanguagesTableViewController: LanguagesManagerDelegate {
         }
     }
     
-    @available(iOS 11.0, *)
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if let language = getLanguage(at: indexPath),
            languageManager.canDeleteLanguage(language)
@@ -244,7 +243,7 @@ extension LanguagesTableViewController: LanguagesManagerDelegate {
         if languageManager.deleteLanguage(language) {
             tableView.reloadData()
         } else {
-            //TODO: implement
+            // Handle error case
         }
     }
 }
