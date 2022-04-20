@@ -1,22 +1,14 @@
 package co.thingthing.sample.sdksample
 
-import android.content.Intent
-import android.content.SharedPreferences
-import androidx.core.content.ContextCompat
-import co.thingthing.fleksy.core.bus.events.ConfigurationEvent.AutoCorrectionChanged
-import co.thingthing.fleksy.core.bus.events.ConfigurationEvent.CurrentLanguageChanged
-import co.thingthing.fleksy.core.bus.events.DictionaryEvent.*
 import co.thingthing.fleksy.core.common.extensions.context.dp2px
 import co.thingthing.fleksy.core.keyboard.*
 import co.thingthing.fleksy.core.keyboard.KeyboardConfiguration.*
-import co.thingthing.fleksy.core.keyboard.models.FLDataConfiguration
 import co.thingthing.fleksy.core.languages.KeyboardLanguage
 import co.thingthing.fleksy.core.languages.LanguageRepository
 import co.thingthing.fleksy.core.prediction.model.PredictionModelType
 import co.thingthing.fleksy.core.speech.SpeechMode
 import co.thingthing.fleksy.core.themes.SystemThemes
 import co.thingthing.fleksy.core.ui.KeyboardFont
-import java.util.concurrent.TimeUnit
 
 class SampleKeyboardService : KeyboardService() {
 
