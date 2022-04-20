@@ -2,7 +2,8 @@
 //  KeyboardViewController.swift
 //  keyboard
 //
-//  Copyright © 2021 Thingthing,Ltd. All rights reserved.
+//  Copyright © 2022 Thingthing,Ltd. All rights reserved.
+//  Licensed under the MIT license. See LICENSE file in the project root for details
 //
 
 import UIKit
