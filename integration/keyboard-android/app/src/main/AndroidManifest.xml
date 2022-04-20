@@ -11,6 +11,7 @@
 		android:theme="@style/AppTheme">
 		<activity
 			android:directBootAware="true"
+			android:exported="true"
 			android:name="co.thingthing.sample.sdksample.MainActivity"
 			android:windowSoftInputMode="adjustResize">
 
@@ -21,6 +22,7 @@
 		</activity>
 
 		<service
+			android:exported="true"
 			android:name="co.thingthing.sample.sdksample.SampleKeyboardService"
 			android:directBootAware="true"
 			android:permission="android.permission.BIND_INPUT_METHOD">

@@ -14,8 +14,6 @@ buildscript {
 	}
 }
 
-apply from: "fleksy.properties"
-
 allprojects {
 	repositories {
 		google()
