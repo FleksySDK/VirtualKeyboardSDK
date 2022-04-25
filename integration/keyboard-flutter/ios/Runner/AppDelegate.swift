@@ -2,7 +2,6 @@ import FleksySDK
 import UIKit
 import Flutter
 
-
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
     override func application(
@@ -21,26 +20,17 @@ import Flutter
             print(call.method)
             switch(call.method) {
             case "isImeEnabled": result(self.isImeEnabled)
-            case "isImeSelected": result(self.isImeSelected())
-            case "enableIme": result(self.enableIme())
+            case "enableIme": self.enableIme()
             default: print("")
             }
-            
-            
         })
-        
         
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    
-    private func isImeSelected() -> Bool {
-        return true
-    }
-    
     private var isImeEnabled: Bool {
-        return FleksyExtensionSetupStatus.isAddedToSettingsKeyboardExtension(withBundleId: "co.thingthing.integration.flutter")
+        return FleksyExtensionSetupStatus.isAddedToSettingsKeyboardExtension(withBundleId: "co.thingthing.integration.flutterintegration.keyboard")
     }
     
     private func enableIme() -> Void {

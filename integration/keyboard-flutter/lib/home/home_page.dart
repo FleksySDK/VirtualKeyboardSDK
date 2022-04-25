@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
           children: [
             AppBar(title: const Text('Fleksy SDK')),
             StatusRow('Enable ime: ', enableIme, _isImeEnabled),
-            StatusRow('Select ime: ', selectIme, _isImeSelected),
+            if (Platform.isAndroid) StatusRow('Select ime: ', selectIme, _isImeSelected),
             Expanded(child: Container(),),
             const Padding(padding: EdgeInsets.symmetric(horizontal: 16.0), child: TextField())
           ],
