@@ -30,7 +30,7 @@ import Flutter
     }
     
     private var isImeEnabled: Bool {
-        return FleksyExtensionSetupStatus.isAddedToSettingsKeyboardExtension(withBundleId: "co.thingthing.integration.flutterintegration.keyboard")
+        return FleksyExtensionSetupStatus.isAddedToSettingsKeyboardExtension(withBundleId: "thingthing.FleksySDK.flutterintegration.keyboard")
     }
     
     private func enableIme() -> Void {
