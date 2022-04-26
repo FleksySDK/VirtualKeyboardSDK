@@ -16,10 +16,14 @@ import Flutter
             (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
             
             switch(call.method) {
-            case "isImeEnabled": result(self.isImeEnabled)
-            case "enableIme": self.enableIme()
-            default: print("")
+                case "isImeEnabled": result(self.isImeEnabled)
+                case "enableIme": self.enableIme()
+                default: result(FlutterError(code: "UNAVAILABLE",
+                                         message: "Not available",
+                                         details: nil))
             }
+            
+            return;
         })
         
         GeneratedPluginRegistrant.register(with: self)

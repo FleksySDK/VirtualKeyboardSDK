@@ -45,8 +45,8 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     try {
       _isImeEnabled = await platform.invokeMethod('isImeEnabled');
       _isImeSelected = await platform.invokeMethod('isImeSelected');
-    } on PlatformException catch (e) {
-      log("Failed to Invoke: '${e.message}'");
+    } on Exception catch (e) {
+      log("Failed to Invoke: '${e.toString()}'");
     }
     setState(() {});
   }
