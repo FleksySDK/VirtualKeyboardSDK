@@ -15,9 +15,6 @@ import Flutter
         channel.setMethodCallHandler({
             (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
             
-            
-            
-            print(call.method)
             switch(call.method) {
             case "isImeEnabled": result(self.isImeEnabled)
             case "enableIme": self.enableIme()
