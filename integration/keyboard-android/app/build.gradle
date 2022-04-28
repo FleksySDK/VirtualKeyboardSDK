@@ -31,10 +31,6 @@ android {
 		targetCompatibility JavaVersion.VERSION_1_8
 	}
 
-	aaptOptions {
-		noCompress '.json', '.wav'
-	}
-
 	splits {
 		abi {
 			enable true
@@ -42,6 +38,9 @@ android {
 			include "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
 			universalApk false
 		}
+	}
+	androidResources {
+		noCompress '.json', '.wav'
 	}
 }
 
@@ -55,5 +54,5 @@ dependencies {
 
 
 	// Keyboard Dependencies
-	implementation "co.thingthing.fleksycore:fleksycore-release:3.5.13"
+	implementation "co.thingthing.fleksycore:fleksycore-release:3.5.14"
 }
