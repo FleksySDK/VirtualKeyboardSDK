@@ -1,0 +1,3 @@
+[submodule "submodules/android-core-services"]
+	path = submodules/android-core-services
+	url = git@bitbucket.org:thingthing-dev/android-core-services.git

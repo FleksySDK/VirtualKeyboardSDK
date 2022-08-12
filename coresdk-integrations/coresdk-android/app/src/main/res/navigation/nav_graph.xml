@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loading_dest">
+
+    <fragment
+        android:id="@+id/main_dest"
+        android:name="co.thingthing.fleksy.lib.app.ui.MainFragment"
+        android:label="MainFragment" >
+        <argument
+            android:name="LanguagePath"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loading_dest"
+        android:name="co.thingthing.fleksy.lib.app.ui.LoadingFragment"
+        android:label="LoadingFragment"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loading_to_main"
+            app:destination="@id/main_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loading_dest"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

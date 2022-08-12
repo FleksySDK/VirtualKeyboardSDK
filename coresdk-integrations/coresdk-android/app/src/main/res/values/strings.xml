@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fleksy Core SDK Sample</string>
+    <string name="text_prediction_testing">Text prediction testing</string>
+
+    <string name="default_error">Something went wrong</string>
+    <string name="autocorrection">Autocorrection</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="hint_insert_text">Enter Text</string>
+    <string name="range">(%1$s-%2$s)</string>
+</resources>
