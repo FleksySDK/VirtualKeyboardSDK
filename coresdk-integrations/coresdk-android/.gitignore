@@ -1,0 +1,26 @@
+# Android Studio and Gradle
+build/
+local.properties
+.gradle
+gradle-app.setting
+*.iml
+.idea/
+*.ipr
+*.iws
+out/
+captures/
+.idea_modules/
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# OSX files
+.DS_Store
+*.DS_Store

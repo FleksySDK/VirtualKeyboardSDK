@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {url "https://plugins.gradle.org/m2/" }
+        maven {
+            url "https://maven.fleksy.com/maven"
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {url "https://plugins.gradle.org/m2/" }
+        maven {
+            url "https://maven.fleksy.com/maven"
+        }
+    }
+}
+rootProject.name = "FleksyCoreSDKSample"
+include ':app'
