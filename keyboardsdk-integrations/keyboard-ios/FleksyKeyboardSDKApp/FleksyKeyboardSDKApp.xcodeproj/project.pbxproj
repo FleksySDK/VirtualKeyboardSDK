@@ -690,8 +690,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
