@@ -75,13 +75,7 @@ class KeyboardViewController: FleksyKeyboardSDK.FKKeyboardViewController {
         config.debugConfig = debugConfig
         
         return config
-    }
-}
-
-// MARK: - FKInterfaceDelegate
-
-extension KeyboardViewController {
-    
+    }    
     /// This is an expensive call - we should only enable it in test keyboards
     override func onLayoutChanges(_ dictLayout: [AnyHashable : Any]) {
     }
@@ -89,4 +83,5 @@ extension KeyboardViewController {
     override func dataCollection(_ data: String) {
         // TODO: Receive data.
     }
+    
 }
