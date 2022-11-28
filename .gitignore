@@ -38,6 +38,7 @@ xcuserdata
 *.moved-aside
 DerivedData
 *.xcuserstate
+Package.resolved
 
 # Intellij
 
