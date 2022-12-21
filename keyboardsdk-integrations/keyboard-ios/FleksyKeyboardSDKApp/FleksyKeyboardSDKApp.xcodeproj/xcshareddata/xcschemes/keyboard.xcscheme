@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1330"
+   LastUpgradeVersion = "1420"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E646A182232FD8DA00FEDE69"
+               BlueprintIdentifier = "7540091929530F3E0022B197"
                BuildableName = "keyboard.appex"
                BlueprintName = "keyboard"
                ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
@@ -29,8 +29,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6338DFD232FC3A000CF5968"
-               BuildableName = "$APP_NAME.app"
+               BlueprintIdentifier = "754008FE29530F120022B197"
+               BuildableName = "FleksyKeyboardSDKApp.app"
                BlueprintName = "FleksyKeyboardSDKApp"
                ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
             </BuildableReference>
@@ -57,48 +57,41 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.apple.MobileSMS"
-         RemotePath = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/Applications/MobileSMS.app">
-      </RemoteRunnable>
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6338DFD232FC3A000CF5968"
-            BuildableName = "$APP_NAME.app"
+            BlueprintIdentifier = "754008FE29530F120022B197"
+            BuildableName = "FleksyKeyboardSDKApp.app"
             BlueprintName = "FleksyKeyboardSDKApp"
             ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
+      askForAppToLaunch = "Yes"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "0"
-         BundleIdentifier = "com.apple.MobileSMS"
-         RemotePath = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/Applications/MobileSMS.app">
-      </RemoteRunnable>
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E646A182232FD8DA00FEDE69"
-            BuildableName = "keyboard.appex"
-            BlueprintName = "keyboard"
+            BlueprintIdentifier = "754008FE29530F120022B197"
+            BuildableName = "FleksyKeyboardSDKApp.app"
+            BlueprintName = "FleksyKeyboardSDKApp"
             ReferencedContainer = "container:FleksyKeyboardSDKApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
