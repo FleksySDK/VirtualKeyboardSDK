@@ -1,16 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "FleksyEngine",
-        "repositoryURL": "git@bitbucket.org:thingthing-dev/spm-fleksyengine.git",
-        "state": {
-          "branch": "feature/public_headers",
-          "revision": "6f75755366ef7fa66e75ed802df244a799b3e412",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "fleksyengine-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FleksySDK/FleksyEngine-iOS",
+      "state" : {
+        "revision" : "f4a6515a2cb5d5488b8f4d0fc0fa2874641efa48",
+        "version" : "3.6.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "fleksysdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FleksySDK/FleksySDK-iOS",
+      "state" : {
+        "revision" : "b247b387375c7938ceff9d4b45714b6c3922d332",
+        "version" : "4.3.3"
+      }
+    },
+    {
+      "identity" : "ios-coreservices",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FleksySDK/iOS-CoreServices",
+      "state" : {
+        "revision" : "dfeda018e4fb4163a439a11f818e43231b72fe49",
+        "version" : "1.3.2"
+      }
+    }
+  ],
+  "version" : 2
 }

@@ -11,7 +11,7 @@ import FleksyKeyboardSDK
 
 // MARK: - KeyboardViewController
 
-class KeyboardViewController: FleksyKeyboardSDK.FKKeyboardViewController {
+class KeyboardViewController: FKKeyboardViewController {
     
     // MARK: View Controller life cycle
     
