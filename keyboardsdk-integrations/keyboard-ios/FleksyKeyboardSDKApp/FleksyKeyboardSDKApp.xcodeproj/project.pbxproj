@@ -490,9 +490,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/FleksyKeyboardSDKApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
@@ -521,9 +520,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/FleksyKeyboardSDKApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
@@ -549,9 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = keyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
@@ -575,9 +572,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = keyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
