@@ -38,7 +38,7 @@ class WelcomeViewController: UITableViewController {
     private enum ItemType {
         case languages
         case settings([SettingModel])
-        case keyboardTest
+        case inAppKeyboardTest
         case link(path: String)
         case info
         
@@ -48,8 +48,8 @@ class WelcomeViewController: UITableViewController {
                 return .segue(identifier: "LanguageSelectionSegue")
             case .settings:
                 return .segue(identifier: "SettingsSegue")
-            case .keyboardTest:
-                return .segue(identifier: "KeyboardTestSegue")
+            case .inAppKeyboardTest:
+                return .segue(identifier: "InAppKeyboardTestSegue")
             case .link(let path):
                 guard let url = URL(string: path) else {
                     return nil
@@ -84,6 +84,10 @@ class WelcomeViewController: UITableViewController {
     
     private static func getSections() -> [Section] {
         return [
+            Section(titleKey: "", items: [
+                Item(titleKey: "In-app keyboard",
+                     type: .inAppKeyboardTest)
+            ]),
             Section(titleKey: "Settings", items: [
                 Item(titleKey: "Languages",
                      type: .languages),

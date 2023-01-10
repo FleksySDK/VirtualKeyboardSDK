@@ -23,5 +23,10 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gilroy-Medium.otf</string>
+		<string>Gilroy-Regular.otf</string>
+	</array>
 </dict>
 </plist>

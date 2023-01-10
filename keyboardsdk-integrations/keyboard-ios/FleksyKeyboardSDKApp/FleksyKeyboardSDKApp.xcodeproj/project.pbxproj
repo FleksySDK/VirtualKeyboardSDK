@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753CA88D296D747200E05B42 /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 753CA88C296D747200E05B42 /* FleksySDK */; };
+		753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */; };
+		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
+		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
+		753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540090329530F120022B197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090229530F120022B197 /* AppDelegate.swift */; };
 		7540090529530F120022B197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090429530F120022B197 /* SceneDelegate.swift */; };
 		7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
 		7540092129530F3E0022B197 /* keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7540091A29530F3E0022B197 /* keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7540092829530F5D0022B197 /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 7540092729530F5D0022B197 /* FleksySDK */; };
-		7540092D29530FF10022B197 /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 7540092C29530FF10022B197 /* FleksySDK */; };
 		75400945295311B30022B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7540092E295311B30022B197 /* Assets.xcassets */; };
 		75400946295311B30022B197 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400931295311B30022B197 /* BoolSettingCell.swift */; };
 		75400947295311B30022B197 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75400932295311B30022B197 /* BoolSettingCell.xib */; };
@@ -58,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppKeyboardTextField.swift; sourceTree = "<group>"; };
 		754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FleksyKeyboardSDKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7540090229530F120022B197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7540090429530F120022B197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7540092829530F5D0022B197 /* FleksySDK in Frameworks */,
+				753CA88D296D747200E05B42 /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,13 +104,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7540092D29530FF10022B197 /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753CA88E296D74FE00E05B42 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		754008F629530F120022B197 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +140,7 @@
 		7540090129530F120022B197 /* FleksyKeyboardSDKApp */ = {
 			isa = PBXGroup;
 			children = (
+				753CA88E296D74FE00E05B42 /* CustomViews */,
 				7540092929530F6E0022B197 /* FleksyKeyboardSDKApp.entitlements */,
 				7540090229530F120022B197 /* AppDelegate.swift */,
 				7540092E295311B30022B197 /* Assets.xcassets */,
@@ -239,7 +251,7 @@
 			);
 			name = FleksyKeyboardSDKApp;
 			packageProductDependencies = (
-				7540092729530F5D0022B197 /* FleksySDK */,
+				753CA88C296D747200E05B42 /* FleksySDK */,
 			);
 			productName = TestSDKIntegration;
 			productReference = 754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */;
@@ -259,7 +271,6 @@
 			);
 			name = keyboard;
 			packageProductDependencies = (
-				7540092C29530FF10022B197 /* FleksySDK */,
 			);
 			productName = keyboard;
 			productReference = 7540091A29530F3E0022B197 /* keyboard.appex */;
@@ -310,11 +321,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */,
 				75400945295311B30022B197 /* Assets.xcassets in Resources */,
 				7540095E2953185A0022B197 /* Main.storyboard in Resources */,
 				7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */,
 				7540094C295311B30022B197 /* LanguageCell.xib in Resources */,
 				75400947295311B30022B197 /* BoolSettingCell.xib in Resources */,
+				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,10 +348,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7540094D295311B30022B197 /* LanguageCell.swift in Sources */,
+				753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */,
 				7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */,
 				75400953295311B30022B197 /* SettingsSDK.swift in Sources */,
 				75400949295311B30022B197 /* LanguagesManager.swift in Sources */,
 				75400948295311B30022B197 /* SettingsTableViewController.swift in Sources */,
+				753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */,
 				7540094E295311B30022B197 /* SelectionTableViewController.swift in Sources */,
 				7540090329530F120022B197 /* AppDelegate.swift in Sources */,
 				75400946295311B30022B197 /* BoolSettingCell.swift in Sources */,
