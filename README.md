@@ -63,5 +63,5 @@ The remaining source code available in this repository are licensed under the MI
  
 Documentation is distributed under the CC-BY-ND-4.0 license, available at https://creativecommons.org/licenses/by-nd/4.0/,
  
-All code and materials are © 2022 ThingThing Ltd.
+All code and materials are © 2023 ThingThing Ltd.
 
