@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-	compileSdkVersion 33
+	compileSdk rootProject.compileSdk
 	namespace 'co.thingthing.sample.sdksample'
 
 	defaultConfig {
 		applicationId "co.thingthing.sample.sdksample"
-		minSdkVersion rootProject.minSdkVersion
-		targetSdkVersion rootProject.targetSdkVersion
+		minSdk rootProject.minSdk
+		targetSdk rootProject.targetSdk
 		versionCode 1
 		versionName "1.0.0"
 		multiDexEnabled true
