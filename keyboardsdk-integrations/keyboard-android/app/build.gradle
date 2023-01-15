@@ -52,12 +52,11 @@ android {
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.aar'])
-	implementation 'androidx.appcompat:appcompat:1.5.1'
+	implementation 'androidx.appcompat:appcompat:1.6.0'
 	implementation 'androidx.core:core-ktx:1.9.0'
 	implementation "androidx.constraintlayout:constraintlayout:2.1.4"
 	implementation 'com.android.support:multidex:1.0.3'
 
-
 	// Keyboard Dependencies
-	implementation "co.thingthing.fleksycore:fleksycore-release:3.6.2"
+	implementation "co.thingthing.fleksycore:fleksycore-release:4.0.1"
 }
