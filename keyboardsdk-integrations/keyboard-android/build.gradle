@@ -12,5 +12,4 @@ ext {
 	minSdkVersion = 21
 	targetSdkVersion = 33
 	compileSdkVersion = 33
-	kotlin_version = '1.8.0'
 }
