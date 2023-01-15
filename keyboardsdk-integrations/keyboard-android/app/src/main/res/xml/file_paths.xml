@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-	<root-path name="root" path="." />
-	<files-path name="shared_media" path="SharedContent/.nomedia/" />
+    <root-path
+        name="root"
+        path="." />
+    <files-path
+        name="shared_media"
+        path="SharedContent/.nomedia/" />
 </paths>
