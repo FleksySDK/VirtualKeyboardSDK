@@ -76,8 +76,8 @@ class SampleKeyboardService : KeyboardService() {
                 showEmojiSuggestions = true
 			),
 			license = LicenseConfiguration(
-				licenseKey = "your-license-key",
-				licenseSecret = "your-secret-key"
+				licenseKey = BuildConfig.FLEKSY_LICENSE_KEY,
+				licenseSecret = BuildConfig.FLEKSY_SECRET_KEY
 			)
 		)
 

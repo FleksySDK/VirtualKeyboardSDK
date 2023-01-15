@@ -14,6 +14,10 @@ android {
 		versionCode 1
 		versionName "1.0.0"
 		multiDexEnabled true
+
+		// License and Secret key, read from environment
+		buildConfigField "String", "FLEKSY_LICENSE_KEY", "\"$System.env.FLEKSY_LICENSE_KEY\""
+		buildConfigField "String", "FLEKSY_SECRET_KEY", "\"$System.env.FLEKSY_SECRET_KEY\""
 	}
 
 	buildTypes {
