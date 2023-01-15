@@ -8,17 +8,22 @@ import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import co.thingthing.sample.sdksample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+	private lateinit var binding: ActivityMainBinding
+
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_main)
+		binding = ActivityMainBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
-		imeEnabled.setOnClickListener { showInputMethodSettings() }
-		imeCurrent.setOnClickListener { showInputMethodPicker() }
-		tryEditText.setOnEditorActionListener { v, _, _ -> v.text = ""; true }
+		binding.apply {
+			imeEnabled.setOnClickListener { showInputMethodSettings() }
+			imeCurrent.setOnClickListener { showInputMethodPicker() }
+			tryEditText.setOnEditorActionListener { v, _, _ -> v.text = ""; true }
+		}
 	}
 
 	override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -35,8 +40,8 @@ class MainActivity : AppCompatActivity() {
 	}
 
 	private fun updateStatus() {
-		setStatus(imeEnabled, isImeEnabled)
-		setStatus(imeCurrent, isImeCurrent)
+		setStatus(binding.imeEnabled, isImeEnabled)
+		setStatus(binding.imeCurrent, isImeCurrent)
 	}
 
 	private fun setStatus(view: TextView, status: Boolean) {
