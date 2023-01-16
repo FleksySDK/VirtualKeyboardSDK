@@ -1,58 +1,66 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jlleitschuh.gradle.ktlint'
+}
 
 android {
-	compileSdkVersion 33
-	buildToolsVersion "33.0.1"
+    compileSdk rootProject.compileSdk
+    namespace 'co.thingthing.sample.sdksample'
 
-	defaultConfig {
-		applicationId "co.thingthing.sample.sdksample"
-		minSdkVersion rootProject.minSdkVersion
-		targetSdkVersion rootProject.targetSdkVersion
-		versionCode 1
-		versionName "1.0.0"
-		multiDexEnabled true
-	}
+    defaultConfig {
+        applicationId "co.thingthing.sample.sdksample"
+        minSdk rootProject.minSdk
+        targetSdk rootProject.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
 
-	buildTypes {
-		release {
-			minifyEnabled true
-			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-		}
+        // License and Secret key, read from environment
+        buildConfigField "String", "FLEKSY_LICENSE_KEY", "\"$System.env.FLEKSY_LICENSE_KEY\""
+        buildConfigField "String", "FLEKSY_SECRET_KEY", "\"$System.env.FLEKSY_SECRET_KEY\""
+    }
 
-		debug {
-			minifyEnabled false
-		}
-	}
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
 
-	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
-	}
+    buildFeatures {
+        viewBinding true
+    }
 
-	splits {
-		abi {
-			enable true
-			reset()
-			include "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
-			universalApk false
-		}
-	}
-	androidResources {
-		noCompress '.json', '.wav'
-	}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
+            universalApk false
+        }
+    }
+    androidResources {
+        noCompress '.json', '.wav'
+    }
 }
 
 dependencies {
-	implementation fileTree(dir: 'libs', include: ['*.aar'])
-	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-	implementation 'androidx.appcompat:appcompat:1.5.1'
-	implementation 'androidx.core:core-ktx:1.9.0'
-	implementation "androidx.constraintlayout:constraintlayout:2.1.4"
-	implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.android.support:multidex:1.0.3'
 
-
-	// Keyboard Dependencies
-	implementation "co.thingthing.fleksycore:fleksycore-release:3.6.2"
+    // Keyboard Dependencies
+    implementation "co.thingthing.fleksycore:fleksycore-release:4.0.1"
 }
