@@ -30,7 +30,7 @@ Core SDK is the backbone of our keyboard SDK.
 
 This is a specific SDK for people looking for increasing the reach of it's typing capabilities.
 
-Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 languages are the core features that enables the expansion of any Input Technologies to other geografies. 
+Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 languages are the core features that enables the expansion of any Input Technologies to other geographies. 
 
 ###  Integration
 
