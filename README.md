@@ -30,7 +30,7 @@ Core SDK is the backbone of our keyboard SDK.
 
 This is a specific SDK for people looking for increasing the reach of it's typing capabilities.
 
-Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 languages are the core features that enables the expansion of any Input Technologies to other geografies. 
+Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 languages are the core features that enables the expansion of any Input Technologies to other geographies. 
 
 ###  Integration
 
@@ -63,5 +63,5 @@ The remaining source code available in this repository are licensed under the MI
  
 Documentation is distributed under the CC-BY-ND-4.0 license, available at https://creativecommons.org/licenses/by-nd/4.0/,
  
-All code and materials are © 2022 ThingThing Ltd.
+All code and materials are © 2023 ThingThing Ltd.
 

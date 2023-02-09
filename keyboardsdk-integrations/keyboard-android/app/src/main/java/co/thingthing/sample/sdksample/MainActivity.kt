@@ -8,55 +8,59 @@ import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import co.thingthing.sample.sdksample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_main)
+    private lateinit var binding: ActivityMainBinding
 
-		imeEnabled.setOnClickListener { showInputMethodSettings() }
-		imeCurrent.setOnClickListener { showInputMethodPicker() }
-		tryEditText.setOnEditorActionListener { v, _, _ -> v.text = ""; true }
-	}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-	override fun onWindowFocusChanged(hasFocus: Boolean) {
-		super.onWindowFocusChanged(hasFocus)
-		updateStatus()
-	}
+        binding.apply {
+            imeEnabled.setOnClickListener { showInputMethodSettings() }
+            imeCurrent.setOnClickListener { showInputMethodPicker() }
+            tryEditText.setOnEditorActionListener { v, _, _ -> v.text = ""; true }
+        }
+    }
 
-	private fun showInputMethodSettings() {
-		startActivity(Intent(Settings.ACTION_INPUT_METHOD_SETTINGS))
-	}
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        updateStatus()
+    }
 
-	private fun showInputMethodPicker() {
-		inputMethodManager?.showInputMethodPicker()
-	}
+    private fun showInputMethodSettings() {
+        startActivity(Intent(Settings.ACTION_INPUT_METHOD_SETTINGS))
+    }
 
-	private fun updateStatus() {
-		setStatus(imeEnabled, isImeEnabled)
-		setStatus(imeCurrent, isImeCurrent)
-	}
+    private fun showInputMethodPicker() {
+        inputMethodManager?.showInputMethodPicker()
+    }
 
-	private fun setStatus(view: TextView, status: Boolean) {
-		view.text = status.toString()
-		view.setTextColor(if (status) Color.GREEN else Color.RED)
-	}
+    private fun updateStatus() {
+        setStatus(binding.imeEnabled, isImeEnabled)
+        setStatus(binding.imeCurrent, isImeCurrent)
+    }
 
-	private val isImeEnabled
-		get() = enabledInputMethods.any { it.packageName == packageName }
+    private fun setStatus(view: TextView, status: Boolean) {
+        view.text = status.toString()
+        view.setTextColor(if (status) Color.GREEN else Color.RED)
+    }
 
-	private val isImeCurrent
-		get() = defaultInputMethod.startsWith("$packageName/")
+    private val isImeEnabled
+        get() = enabledInputMethods.any { it.packageName == packageName }
 
-	private val inputMethodManager
-		get() = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+    private val isImeCurrent
+        get() = defaultInputMethod.startsWith("$packageName/")
 
-	private val enabledInputMethods
-		get() = inputMethodManager?.enabledInputMethodList ?: emptyList()
+    private val inputMethodManager
+        get() = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
 
-	private val defaultInputMethod
-		get() = Settings.Secure.getString(contentResolver, Settings.Secure.DEFAULT_INPUT_METHOD)
+    private val enabledInputMethods
+        get() = inputMethodManager?.enabledInputMethodList ?: emptyList()
 
+    private val defaultInputMethod
+        get() = Settings.Secure.getString(contentResolver, Settings.Secure.DEFAULT_INPUT_METHOD)
 }
