@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		753CA88D296D747200E05B42 /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 753CA88C296D747200E05B42 /* FleksySDK */; };
+		753CA88D296D747200E05B42 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */; };
 		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
 		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753CA88D296D747200E05B42 /* FleksySDK in Frameworks */,
+				753CA88D296D747200E05B42 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +251,6 @@
 			);
 			name = FleksyKeyboardSDKApp;
 			packageProductDependencies = (
-				753CA88C296D747200E05B42 /* FleksySDK */,
 			);
 			productName = TestSDKIntegration;
 			productReference = 754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */;
@@ -648,23 +647,10 @@
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 4.5.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7540092729530F5D0022B197 /* FleksySDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7540092629530F5D0022B197 /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */;
-			productName = FleksySDK;
-		};
-		7540092C29530FF10022B197 /* FleksySDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7540092629530F5D0022B197 /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */;
-			productName = FleksySDK;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 754008F729530F120022B197 /* Project object */;
 }
