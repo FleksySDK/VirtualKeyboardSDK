@@ -23,8 +23,16 @@ import co.thingthing.fleksy.core.prediction.model.PredictionModelType
 import co.thingthing.fleksy.core.speech.SpeechMode
 import co.thingthing.fleksy.core.themes.SystemThemes
 import co.thingthing.fleksy.core.ui.KeyboardFont
+import co.thingthing.fleksyapps.giphy.GiphyApp
+import java.util.concurrent.TimeUnit
 
 class SampleKeyboardService : KeyboardService() {
+
+	private val apps by lazy {
+		listOf(
+			GiphyApp(GIPHY_API_KEY)
+		)
+	}
 
     private val currentLanguage
         get() = KeyboardLanguage(currentLocale, currentLayout)
@@ -92,10 +100,22 @@ class SampleKeyboardService : KeyboardService() {
             license = LicenseConfiguration(
                 licenseKey = BuildConfig.FLEKSY_LICENSE_KEY,
                 licenseSecret = BuildConfig.FLEKSY_SECRET_KEY
+            ),
+			apps = KeyboardConfiguration.AppsConfiguration(
+                keyboardApps = apps,
+                shareAuthority = "$packageName.fileprovider",
+                shareDirectory = "SharedContent",
+                shareContentExpiration = TimeUnit.HOURS.toMillis(1),
+                showAppsInCarousel = true,
+                showAppsOnStart = true
             )
-        )
+		)
+
+	override val appIcon get() = R.drawable.fleksy_logo
 
     companion object {
+
+		const val GIPHY_API_KEY = "ADD_YOUR_GIPHY_KEY_HERE"
 
         private val DEFAULT_RECENT_EMOJI = setOf(
             "😂", "😍", "😭", "☺️", "😘", "👏", "🙏", "👌", "👍",
