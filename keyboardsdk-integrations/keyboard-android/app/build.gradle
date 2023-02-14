@@ -61,6 +61,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.android.support:multidex:1.0.3'
 
-    // Keyboard Dependencies
-    implementation "co.thingthing.fleksycore:fleksycore-release:4.0.1"
+	// Keyboard Dependencies
+	implementation "co.thingthing.fleksycore:fleksycore-release:4.0.1"
+	implementation("co.thingthing.fleksyapps:giphy:2.0.0")
 }

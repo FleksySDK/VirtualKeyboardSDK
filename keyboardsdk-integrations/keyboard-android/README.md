@@ -18,6 +18,11 @@ Once integrated, you can see an actual custom keyboard on your device.
 To build this project, please set both license and secret keys as `FLEKSY_LICENSE_KEY` and `FLEKSY_SECRET_KEY`
 in your respective build environment to populate the `BuildConfig` variables at build time.
 
+## Fleksy Apps
+1. The included GIPHY app requires a GIPHY API key to run properly. You must provide your own. You may [request one here](https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key).
+2. In the file `keyboardsdk-integrations/keyboard-android/app/src/main/java/co/thingthing/sample/sdksample/SimpleKeyboardService.kt` file, replace the text "ADD_YOUR_GIPHY_KEY_HERE" for your GIPHY API key.
+3. Run the project.
+
 ## Documentation
 
 - [Quick Start](https://docs.fleksy.com/quick-start/) - Get started developing your keyboard using the FleksySDK.
