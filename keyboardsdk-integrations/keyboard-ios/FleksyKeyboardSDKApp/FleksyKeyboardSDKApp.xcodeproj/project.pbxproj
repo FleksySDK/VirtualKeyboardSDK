@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		753CA88D296D747200E05B42 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */; };
 		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
 		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
@@ -34,6 +33,8 @@
 		7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
+		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
+		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753CA88D296D747200E05B42 /* (null) in Frameworks */,
+				75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +253,7 @@
 			);
 			name = FleksyKeyboardSDKApp;
 			packageProductDependencies = (
+				75F25B5C299FB30C00D884AB /* FleksySDK */,
 			);
 			productName = TestSDKIntegration;
 			productReference = 754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */;
@@ -270,6 +273,7 @@
 			);
 			name = keyboard;
 			packageProductDependencies = (
+				75F25B5E299FB33E00D884AB /* FleksySDK */,
 			);
 			productName = keyboard;
 			productReference = 7540091A29530F3E0022B197 /* keyboard.appex */;
@@ -303,7 +307,7 @@
 			);
 			mainGroup = 754008F629530F120022B197;
 			packageReferences = (
-				7540092629530F5D0022B197 /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */,
+				75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */,
 			);
 			productRefGroup = 7540090029530F120022B197 /* Products */;
 			projectDirPath = "";
@@ -642,7 +646,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7540092629530F5D0022B197 /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */ = {
+		75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
@@ -651,6 +655,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75F25B5C299FB30C00D884AB /* FleksySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */;
+			productName = FleksySDK;
+		};
+		75F25B5E299FB33E00D884AB /* FleksySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */;
+			productName = FleksySDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 754008F729530F120022B197 /* Project object */;
 }
