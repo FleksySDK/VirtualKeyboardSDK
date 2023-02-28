@@ -23,6 +23,17 @@ Using the Fleksy Keyboard SDK you are able to create an App for iOS or Android w
 | [/keyboardsdk-integrations/keyboard-android](/keyboardsdk-integrations/keyboard-android) | Android project for an App which has a keyboard built using the FleksySDK. |
 | [/keyboardsdk-integrations/keyboard-flutter](/keyboardsdk-integrations/keyboard-flutter) | Flutter project for an App which holds a keyboard built using the FleksySDK. |
 
+### Testing ⌨️
+
+Want to test how FleksySDK works on your phone ?
+
+Join our community to test how FleksySDK performs. 
+
+| Public Link | Description |
+| --- | --- |
+| [iOS Testflight](https://testflight.apple.com/join/zOZEBpQ9) | iOS sample App for testing right away our last development on the FleksySDK.|
+| [Android Firebase](https://appdistribution.firebase.dev/i/f9ae23f7f30c9045) | Android sample App for testing right away our last development on the FleksySDK.|
+
 
 ## Core SDK ⚙️
 
