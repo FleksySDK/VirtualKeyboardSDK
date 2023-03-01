@@ -3,7 +3,7 @@
 
 Fleksy is in a mission to build the technological foundation for outstanding Language Input Technologies.
 
-In this repository, FleksySDK repository, Fleksy showcases the different sdk's for iOS, Android and Flutter that might power your Keyboard or Input Technology.
+In this repository, FleksySDK repository, Fleksy showcases the different sdk's for iOS, watchOS, Android and Flutter that might power your Keyboard or Input Technology.
 
 ## Keyboard SDK 📱
 
@@ -50,6 +50,7 @@ Using the Fleksy Core SDK you can add Autocorrection, Next word prediction and S
 | Folder | Description |
 | --- | --- |
 | [/coresdk-integrations/coresdk-ios](/coresdk-integrations/coresdk-ios) | iOS project for an App which uses the Fleksy Core SDK for Autocorrection and Next word prediction. |
+| [/coresdk-integrations/coresdk-watchos](/coresdk-integrations/coresdk-watchos) | watchOS project for an App which uses the Fleksy Core SDK for implementing a keyboard. |
 | [/coresdk-integrations/coresdk-android](/coresdk-integrations/coresdk-android) | Android project for an App which uses the Fleksy Core SDK for Autocorrection and Next word prediction. |
 
 ## Documentation 📗
