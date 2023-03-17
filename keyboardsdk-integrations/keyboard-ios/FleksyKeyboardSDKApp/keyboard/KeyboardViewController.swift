@@ -8,6 +8,7 @@
 
 import UIKit
 import FleksyKeyboardSDK
+import GiphyApp
 
 // MARK: - KeyboardViewController
 
@@ -55,19 +56,25 @@ class KeyboardViewController: FKKeyboardViewController {
       
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
+        let appsConfig = AppsConfiguration(keyboardApps: [GiphyApp(apiKey: "your-Giphy-api-key")],
+                                           showAppsInCarousel: true)
+        
         // KEYBOARD CONFIGURATION --
         // it groups capture, style and takes as constructor if we want a custom view or not + specific height
         //
         // this is going to be deprecated
         // let config = KeyboardConfiguration(customView: false, heightCustom: 46, capture: capture, style: style, appearance: appearance, typing:typing)
+        
         let config = KeyboardConfiguration(panel: panelConfig,
-                                           capture: capture,
-                                           style: style,
-                                           appearance: appearance,
-                                           typing: typing,
-                                           specialKeys: nil,
-                                           license: licenseConfig,
-                                           debug: debugConfig)
+                                            capture: capture,
+                                            style: style,
+                                            appearance: appearance,
+                                            typing: typing,
+                                            specialKeys: nil,
+                                            apps: appsConfig,
+                                            license: licenseConfig,
+                                            debug: debugConfig)
+        
         if #available(iOSApplicationExtension 11.0, *) {
             config.needsInputMethodSwitch = self.needsInputModeSwitchKey
         }
@@ -75,7 +82,7 @@ class KeyboardViewController: FKKeyboardViewController {
         config.debugConfig = debugConfig
         
         return config
-    }    
+    }
     /// This is an expensive call - we should only enable it in test keyboards
     override func onLayoutChanges(_ dictLayout: [AnyHashable : Any]) {
     }
