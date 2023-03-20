@@ -35,6 +35,8 @@
 		7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
+		75ECE35729C854110010601C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75ECE35A29C854110010601C /* Localizable.strings */; };
+		75ECE35829C854110010601C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75ECE35A29C854110010601C /* Localizable.strings */; };
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,7 @@
 		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		75ECE35C29C8542B0010601C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 			children = (
 				7540090129530F120022B197 /* FleksyKeyboardSDKApp */,
 				7540091B29530F3E0022B197 /* keyboard */,
+				75ECE35329C853FD0010601C /* Localization */,
 				7540090029530F120022B197 /* Products */,
 				7540092B29530FF10022B197 /* Frameworks */,
 			);
@@ -238,6 +242,14 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		75ECE35329C853FD0010601C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				75ECE35A29C854110010601C /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +322,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 754008F629530F120022B197;
 			packageReferences = (
@@ -336,6 +349,7 @@
 				7540095E2953185A0022B197 /* Main.storyboard in Resources */,
 				7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */,
 				7540094C295311B30022B197 /* LanguageCell.xib in Resources */,
+				75ECE35729C854110010601C /* Localizable.strings in Resources */,
 				75400947295311B30022B197 /* BoolSettingCell.xib in Resources */,
 				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
 			);
@@ -346,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */,
+				75ECE35829C854110010601C /* Localizable.strings in Resources */,
 				75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +407,17 @@
 			targetProxy = 7540091F29530F3E0022B197 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75ECE35A29C854110010601C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75ECE35C29C8542B0010601C /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7540091129530F120022B197 /* Debug */ = {

@@ -66,14 +66,14 @@ class KeyboardViewController: FKKeyboardViewController {
         // let config = KeyboardConfiguration(customView: false, heightCustom: 46, capture: capture, style: style, appearance: appearance, typing:typing)
         
         let config = KeyboardConfiguration(panel: panelConfig,
-                                            capture: capture,
-                                            style: style,
-                                            appearance: appearance,
-                                            typing: typing,
-                                            specialKeys: nil,
-                                            apps: appsConfig,
-                                            license: licenseConfig,
-                                            debug: debugConfig)
+                                           capture: capture,
+                                           style: style,
+                                           appearance: appearance,
+                                           typing: typing,
+                                           specialKeys: nil,
+                                           apps: appsConfig,
+                                           license: licenseConfig,
+                                           debug: debugConfig)
         
         if #available(iOSApplicationExtension 11.0, *) {
             config.needsInputMethodSwitch = self.needsInputModeSwitchKey
