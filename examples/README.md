@@ -1,1 +1,29 @@
-Add some of the information about the different examples.
+## About
+
+The FleksySDK is versatile and can be employed for various purposes. Within this folder, we will demonstrate multiple ways to use the SDK to create your own virtual keyboard.
+
+## Getting Started
+
+Each folder has a different example per platform.
+
+### Open View
+
+When a trigger action occurs, a view will appear over the virtual keyboard.
+
+💥 Trigger Action: We have three main types of trigger actions: 
+  1. When a text is typed. 
+  2. When a result from an API request has to be shown to the user. 
+  3. When the user presses directly a button.
+  
+👀 View over the keyboard: We can show a view over the keyboard in different shapes:
+  1. Full View that covers all the keyboard. We call this fleksyapp, which is a complete view for creating anything. 
+  2. Frame View which is shown on top of the virtual keyboard view.
+
+**Open View Example**
+
+The example that we have created triggers when the user presses a button and shows a full view over the keyboard. 
+What you will achieve:
+
+<p align="center">
+    <img src ="resources/openview.gif" width="300" />
+</p>
