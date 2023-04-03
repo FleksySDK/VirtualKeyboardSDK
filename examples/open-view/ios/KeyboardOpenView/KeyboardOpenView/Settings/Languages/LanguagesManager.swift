@@ -1,8 +1,8 @@
 //
 //  LanguagesManager.swift
-//  FleksyKeyboardSDKApp
+//  KeyboardOpenView
 //
-//  Copyright © 2021 Thingthing,Ltd. All rights reserved.
+//  Copyright © 2023 Thingthing,Ltd. All rights reserved.
 //
 
 import Foundation

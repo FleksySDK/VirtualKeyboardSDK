@@ -13,7 +13,7 @@ import FleksyAppsCore
 /// Example on how to add a View on top of the keyboard
 /// This can be cusomized to your own needs
 ///
-class KeyboardOpenView : KeyboardApp{
+class KeyboardOpenViewCustom : KeyboardApp{
     
     let appId = "someId.example" // Static ID used to call this View from the keyboardViewController
     var configuration: AppConfiguration?

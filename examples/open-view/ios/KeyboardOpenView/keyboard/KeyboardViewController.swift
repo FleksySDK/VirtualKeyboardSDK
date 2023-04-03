@@ -33,7 +33,7 @@ class KeyboardViewController: FKKeyboardViewController {
         // KEYBOARD CONFIGURATION --
         let config = KeyboardConfiguration( style: style,
                                            specialKeys: nil,
-                                            apps: AppsConfiguration(keyboardApps: [KeyboardOpenView.init()], showAppsInCarousel: false), /// This is a new parameter. We share the View that might be invoked.
+                                            apps: AppsConfiguration(keyboardApps: [KeyboardOpenViewCustom.init()], showAppsInCarousel: false), /// This is a new parameter. We share the View that might be invoked.
                                            license: licenseConfig)
         
         if #available(iOSApplicationExtension 11.0, *) {

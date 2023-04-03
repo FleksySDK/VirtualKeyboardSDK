@@ -9,33 +9,31 @@
 /* Begin PBXBuildFile section */
 		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
 		753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
-		7540090329530F120022B197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090229530F120022B197 /* AppDelegate.swift */; };
-		7540090529530F120022B197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090429530F120022B197 /* SceneDelegate.swift */; };
 		7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
 		7540092129530F3E0022B197 /* keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7540091A29530F3E0022B197 /* keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		75400945295311B30022B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7540092E295311B30022B197 /* Assets.xcassets */; };
-		75400946295311B30022B197 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400931295311B30022B197 /* BoolSettingCell.swift */; };
-		75400947295311B30022B197 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75400932295311B30022B197 /* BoolSettingCell.xib */; };
-		75400948295311B30022B197 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400933295311B30022B197 /* SettingsTableViewController.swift */; };
-		75400949295311B30022B197 /* LanguagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400935295311B30022B197 /* LanguagesManager.swift */; };
-		7540094A295311B30022B197 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400937295311B30022B197 /* KeyboardLayoutSelection.swift */; };
-		7540094B295311B30022B197 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400938295311B30022B197 /* LanguagesTableViewController.swift */; };
-		7540094C295311B30022B197 /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7540093A295311B30022B197 /* LanguageCell.xib */; };
-		7540094D295311B30022B197 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540093B295311B30022B197 /* LanguageCell.swift */; };
-		7540094E295311B30022B197 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540093C295311B30022B197 /* SelectionTableViewController.swift */; };
-		7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540093D295311B30022B197 /* WelcomeViewController.swift */; };
-		75400952295311B30022B197 /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400943295311B30022B197 /* SettingModels.swift */; };
-		75400953295311B30022B197 /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400944295311B30022B197 /* SettingsSDK.swift */; };
-		75400955295311D30022B197 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400954295311D30022B197 /* Constants.swift */; };
 		75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
 		7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
-		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
-		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
-		C758D73129D5872E00532289 /* KeyboardOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758D73029D5872E00532289 /* KeyboardOpenView.swift */; };
-		C758D73329D5930800532289 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
-		C758D73429D5930A00532289 /* KeyboardOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758D73029D5872E00532289 /* KeyboardOpenView.swift */; };
+		C758D73129D5872E00532289 /* KeyboardOpenViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */; };
+		C7C70A0E29DB2F61003FBD14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709F529DB2F61003FBD14 /* Constants.swift */; };
+		C7C70A0F29DB2F61003FBD14 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */; };
+		C7C70A1029DB2F61003FBD14 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */; };
+		C7C70A1129DB2F61003FBD14 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */; };
+		C7C70A1229DB2F61003FBD14 /* LanguagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */; };
+		C7C70A1329DB2F61003FBD14 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */; };
+		C7C70A1429DB2F61003FBD14 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */; };
+		C7C70A1529DB2F61003FBD14 /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */; };
+		C7C70A1629DB2F61003FBD14 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */; };
+		C7C70A1729DB2F61003FBD14 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */; };
+		C7C70A1829DB2F61003FBD14 /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0429DB2F61003FBD14 /* SettingModels.swift */; };
+		C7C70A1929DB2F61003FBD14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */; };
+		C7C70A1A29DB2F61003FBD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0729DB2F61003FBD14 /* Assets.xcassets */; };
+		C7C70A1B29DB2F61003FBD14 /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */; };
+		C7C70A1C29DB2F61003FBD14 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */; };
+		C7C70A1D29DB2F61003FBD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0A29DB2F61003FBD14 /* Main.storyboard */; };
+		C7C70A1E29DB2F61003FBD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */; };
+		C7C70A2029DB2F61003FBD14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0D29DB2F61003FBD14 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,34 +61,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FleksyKeyboardSDKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7540090229530F120022B197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7540090429530F120022B197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7540091029530F120022B197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754008FF29530F120022B197 /* KeyboardOpenView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardOpenView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7540091A29530F3E0022B197 /* keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7540091C29530F3E0022B197 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		7540091E29530F3E0022B197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7540092929530F6E0022B197 /* FleksyKeyboardSDKApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FleksyKeyboardSDKApp.entitlements; sourceTree = "<group>"; };
 		7540092A29530F800022B197 /* keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = keyboard.entitlements; sourceTree = "<group>"; };
-		7540092E295311B30022B197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75400931295311B30022B197 /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
-		75400932295311B30022B197 /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
-		75400933295311B30022B197 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		75400935295311B30022B197 /* LanguagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesManager.swift; sourceTree = "<group>"; };
-		75400937295311B30022B197 /* KeyboardLayoutSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutSelection.swift; sourceTree = "<group>"; };
-		75400938295311B30022B197 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
-		7540093A295311B30022B197 /* LanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
-		7540093B295311B30022B197 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
-		7540093C295311B30022B197 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
-		7540093D295311B30022B197 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		75400943295311B30022B197 /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
-		75400944295311B30022B197 /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
-		75400954295311D30022B197 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75400957295313DE0022B197 /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
 		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
-		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C758D73029D5872E00532289 /* KeyboardOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOpenView.swift; sourceTree = "<group>"; };
+		C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOpenViewCustom.swift; sourceTree = "<group>"; };
+		C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KeyboardOpenView.entitlements; sourceTree = "<group>"; };
+		C7C709F529DB2F61003FBD14 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
+		C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
+		C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesManager.swift; sourceTree = "<group>"; };
+		C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutSelection.swift; sourceTree = "<group>"; };
+		C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
+		C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
+		C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
+		C7C70A0429DB2F61003FBD14 /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
+		C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7C70A0729DB2F61003FBD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
+		C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C7C70A0A29DB2F61003FBD14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7C70A0C29DB2F61003FBD14 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C70A0D29DB2F61003FBD14 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,7 @@
 		754008F629530F120022B197 = {
 			isa = PBXGroup;
 			children = (
-				7540090129530F120022B197 /* FleksyKeyboardSDKApp */,
+				C7C709F429DB2F61003FBD14 /* KeyboardOpenView */,
 				7540091B29530F3E0022B197 /* keyboard */,
 				7540090029530F120022B197 /* Products */,
 				7540092B29530FF10022B197 /* Frameworks */,
@@ -126,36 +124,17 @@
 		7540090029530F120022B197 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */,
+				754008FF29530F120022B197 /* KeyboardOpenView.app */,
 				7540091A29530F3E0022B197 /* keyboard.appex */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7540090129530F120022B197 /* FleksyKeyboardSDKApp */ = {
-			isa = PBXGroup;
-			children = (
-				7540092929530F6E0022B197 /* FleksyKeyboardSDKApp.entitlements */,
-				7540090229530F120022B197 /* AppDelegate.swift */,
-				7540092E295311B30022B197 /* Assets.xcassets */,
-				75400943295311B30022B197 /* SettingModels.swift */,
-				7540092F295311B30022B197 /* Settings */,
-				75400944295311B30022B197 /* SettingsSDK.swift */,
-				75400954295311D30022B197 /* Constants.swift */,
-				7540093D295311B30022B197 /* WelcomeViewController.swift */,
-				7540090429530F120022B197 /* SceneDelegate.swift */,
-				7540095B2953185A0022B197 /* LaunchScreen.storyboard */,
-				7540095C2953185A0022B197 /* Main.storyboard */,
-				7540091029530F120022B197 /* Info.plist */,
-			);
-			path = FleksyKeyboardSDKApp;
 			sourceTree = "<group>";
 		};
 		7540091B29530F3E0022B197 /* keyboard */ = {
 			isa = PBXGroup;
 			children = (
 				7540092A29530F800022B197 /* keyboard.entitlements */,
-				C758D73029D5872E00532289 /* KeyboardOpenView.swift */,
+				C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
 				75400956295313DE0022B197 /* fonts */,
 				7540091E29530F3E0022B197 /* Info.plist */,
@@ -170,54 +149,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7540092F295311B30022B197 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				75400930295311B30022B197 /* Cells */,
-				75400933295311B30022B197 /* SettingsTableViewController.swift */,
-				75400934295311B30022B197 /* Languages */,
-				7540093C295311B30022B197 /* SelectionTableViewController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		75400930295311B30022B197 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				75400931295311B30022B197 /* BoolSettingCell.swift */,
-				75400932295311B30022B197 /* BoolSettingCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		75400934295311B30022B197 /* Languages */ = {
-			isa = PBXGroup;
-			children = (
-				75400935295311B30022B197 /* LanguagesManager.swift */,
-				75400936295311B30022B197 /* Model */,
-				75400938295311B30022B197 /* LanguagesTableViewController.swift */,
-				75400939295311B30022B197 /* Views */,
-			);
-			path = Languages;
-			sourceTree = "<group>";
-		};
-		75400936295311B30022B197 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				75400937295311B30022B197 /* KeyboardLayoutSelection.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		75400939295311B30022B197 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7540093A295311B30022B197 /* LanguageCell.xib */,
-				7540093B295311B30022B197 /* LanguageCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		75400956295313DE0022B197 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,12 +158,79 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		C7C709F429DB2F61003FBD14 /* KeyboardOpenView */ = {
+			isa = PBXGroup;
+			children = (
+				C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */,
+				C7C709F529DB2F61003FBD14 /* Constants.swift */,
+				C7C709F629DB2F61003FBD14 /* Settings */,
+				C7C70A0429DB2F61003FBD14 /* SettingModels.swift */,
+				C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */,
+				C7C70A0729DB2F61003FBD14 /* Assets.xcassets */,
+				C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */,
+				C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */,
+				C7C70A0A29DB2F61003FBD14 /* Main.storyboard */,
+				C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */,
+				C7C70A0C29DB2F61003FBD14 /* Info.plist */,
+				C7C70A0D29DB2F61003FBD14 /* SceneDelegate.swift */,
+			);
+			path = KeyboardOpenView;
+			sourceTree = "<group>";
+		};
+		C7C709F629DB2F61003FBD14 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C7C709F729DB2F61003FBD14 /* Cells */,
+				C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */,
+				C7C709FB29DB2F61003FBD14 /* Languages */,
+				C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C7C709F729DB2F61003FBD14 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */,
+				C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C7C709FB29DB2F61003FBD14 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */,
+				C7C709FD29DB2F61003FBD14 /* Model */,
+				C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */,
+				C7C70A0029DB2F61003FBD14 /* Views */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		C7C709FD29DB2F61003FBD14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7C70A0029DB2F61003FBD14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */,
+				C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		754008FE29530F120022B197 /* FleksyKeyboardSDKApp */ = {
+		754008FE29530F120022B197 /* KeyboardOpenView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7540091329530F120022B197 /* Build configuration list for PBXNativeTarget "FleksyKeyboardSDKApp" */;
+			buildConfigurationList = 7540091329530F120022B197 /* Build configuration list for PBXNativeTarget "KeyboardOpenView" */;
 			buildPhases = (
 				754008FB29530F120022B197 /* Sources */,
 				754008FC29530F120022B197 /* Frameworks */,
@@ -244,12 +242,12 @@
 			dependencies = (
 				7540092029530F3E0022B197 /* PBXTargetDependency */,
 			);
-			name = FleksyKeyboardSDKApp;
+			name = KeyboardOpenView;
 			packageProductDependencies = (
 				75F25B5C299FB30C00D884AB /* FleksySDK */,
 			);
 			productName = TestSDKIntegration;
-			productReference = 754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */;
+			productReference = 754008FF29530F120022B197 /* KeyboardOpenView.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7540091929530F3E0022B197 /* keyboard */ = {
@@ -290,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 754008FA29530F120022B197 /* Build configuration list for PBXProject "FleksyKeyboardSDKApp" */;
+			buildConfigurationList = 754008FA29530F120022B197 /* Build configuration list for PBXProject "KeyboardOpenView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -306,7 +304,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				754008FE29530F120022B197 /* FleksyKeyboardSDKApp */,
+				754008FE29530F120022B197 /* KeyboardOpenView */,
 				7540091929530F3E0022B197 /* keyboard */,
 			);
 		};
@@ -317,13 +315,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C70A1D29DB2F61003FBD14 /* Main.storyboard in Resources */,
 				753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */,
-				75400945295311B30022B197 /* Assets.xcassets in Resources */,
-				7540095E2953185A0022B197 /* Main.storyboard in Resources */,
-				7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */,
-				7540094C295311B30022B197 /* LanguageCell.xib in Resources */,
-				75400947295311B30022B197 /* BoolSettingCell.xib in Resources */,
+				C7C70A1529DB2F61003FBD14 /* LanguageCell.xib in Resources */,
 				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
+				C7C70A1929DB2F61003FBD14 /* LaunchScreen.storyboard in Resources */,
+				C7C70A1A29DB2F61003FBD14 /* Assets.xcassets in Resources */,
+				C7C70A1029DB2F61003FBD14 /* BoolSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,21 +341,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7540094D295311B30022B197 /* LanguageCell.swift in Sources */,
-				7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */,
-				75400953295311B30022B197 /* SettingsSDK.swift in Sources */,
-				75400949295311B30022B197 /* LanguagesManager.swift in Sources */,
-				75400948295311B30022B197 /* SettingsTableViewController.swift in Sources */,
-				7540094E295311B30022B197 /* SelectionTableViewController.swift in Sources */,
-				7540090329530F120022B197 /* AppDelegate.swift in Sources */,
-				75400946295311B30022B197 /* BoolSettingCell.swift in Sources */,
-				75400952295311B30022B197 /* SettingModels.swift in Sources */,
-				7540094A295311B30022B197 /* KeyboardLayoutSelection.swift in Sources */,
-				C758D73429D5930A00532289 /* KeyboardOpenView.swift in Sources */,
-				75400955295311D30022B197 /* Constants.swift in Sources */,
-				C758D73329D5930800532289 /* KeyboardViewController.swift in Sources */,
-				7540090529530F120022B197 /* SceneDelegate.swift in Sources */,
-				7540094B295311B30022B197 /* LanguagesTableViewController.swift in Sources */,
+				C7C70A1429DB2F61003FBD14 /* LanguagesTableViewController.swift in Sources */,
+				C7C70A0F29DB2F61003FBD14 /* BoolSettingCell.swift in Sources */,
+				C7C70A1E29DB2F61003FBD14 /* AppDelegate.swift in Sources */,
+				C7C70A1B29DB2F61003FBD14 /* SettingsSDK.swift in Sources */,
+				C7C70A1629DB2F61003FBD14 /* LanguageCell.swift in Sources */,
+				C7C70A1129DB2F61003FBD14 /* SettingsTableViewController.swift in Sources */,
+				C7C70A2029DB2F61003FBD14 /* SceneDelegate.swift in Sources */,
+				C7C70A1329DB2F61003FBD14 /* KeyboardLayoutSelection.swift in Sources */,
+				C7C70A1829DB2F61003FBD14 /* SettingModels.swift in Sources */,
+				C7C70A0E29DB2F61003FBD14 /* Constants.swift in Sources */,
+				C7C70A1729DB2F61003FBD14 /* SelectionTableViewController.swift in Sources */,
+				C7C70A1229DB2F61003FBD14 /* LanguagesManager.swift in Sources */,
+				C7C70A1C29DB2F61003FBD14 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */,
-				C758D73129D5872E00532289 /* KeyboardOpenView.swift in Sources */,
+				C758D73129D5872E00532289 /* KeyboardOpenViewCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,10 +428,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = KeyboardOpenView;
+				PRODUCT_NAME = KeyboardOpenView;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -487,9 +486,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = KeyboardOpenView;
+				PRODUCT_NAME = KeyboardOpenView;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -503,11 +505,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/FleksyKeyboardSDKApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/KeyboardOpenView.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
+				INFOPLIST_FILE = KeyboardOpenView/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -534,11 +536,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FleksyKeyboardSDKApp/FleksyKeyboardSDKApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/KeyboardOpenView.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
+				INFOPLIST_FILE = KeyboardOpenView/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -614,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		754008FA29530F120022B197 /* Build configuration list for PBXProject "FleksyKeyboardSDKApp" */ = {
+		754008FA29530F120022B197 /* Build configuration list for PBXProject "KeyboardOpenView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7540091129530F120022B197 /* Debug */,
@@ -623,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7540091329530F120022B197 /* Build configuration list for PBXNativeTarget "FleksyKeyboardSDKApp" */ = {
+		7540091329530F120022B197 /* Build configuration list for PBXNativeTarget "KeyboardOpenView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7540091429530F120022B197 /* Debug */,

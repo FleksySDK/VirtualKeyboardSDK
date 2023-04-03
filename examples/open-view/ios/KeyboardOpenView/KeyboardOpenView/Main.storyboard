@@ -11,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="fU9-5j-c5R">
             <objects>
-                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8fM-9j-Jv6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
         <!--Languages Table View Controller-->
         <scene sceneID="u23-Th-OL2">
             <objects>
-                <tableViewController id="OCm-S2-sbW" customClass="LanguagesTableViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OCm-S2-sbW" customClass="LanguagesTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="lAp-Ny-x6a">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--Settings Table View Controller-->
         <scene sceneID="kzK-rk-kOp">
             <objects>
-                <tableViewController id="ZVl-z9-W5q" customClass="SettingsTableViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZVl-z9-W5q" customClass="SettingsTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QuB-Wz-fvx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IMI-kA-V1G">
                                 <rect key="frame" x="10" y="113" width="373" height="84.666666666666686"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-Rc-HUO" customClass="InAppKeyboardTextField" customModule="FleksyKeyboardSDKApp" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-Rc-HUO" customClass="InAppKeyboardTextField" customModule="KeyboardOpenView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -186,7 +186,7 @@
         <!--Selection Table View Controller-->
         <scene sceneID="AXg-2G-zCQ">
             <objects>
-                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OOI-Ww-cqP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
