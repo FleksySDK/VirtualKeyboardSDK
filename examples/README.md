@@ -31,7 +31,8 @@ What you will achieve:
 
 [**Frame View With TextField Example**](open-view/ios/KeyboardFrameWithTextField)
 
-In this caes we are showcasing how we can show a view on top of the keyboard with a textfield. When the frame view appears on top of the keyboard we automatically switch the context to the internal textfield. When we close the frame view we automatically switch back the cursor to the textfield of the app.
+In this case we are showcasing how we can show a view on top of the keyboard with a textfield. When the frame view appears on top of the keyboard we automatically switch the context to the internal textfield. When we close the frame view we automatically switch back the cursor to the textfield of the app.
+Note: By tapping the textfield, the user can manually switch between app textfield and keyboard's textfield.
 
 What you will achieve:
 
