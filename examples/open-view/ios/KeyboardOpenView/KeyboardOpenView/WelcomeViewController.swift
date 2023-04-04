@@ -11,7 +11,6 @@ import FleksyKeyboardSDK
 
 class WelcomeViewController: UITableViewController {
     
-    private static let subtitleCellReuseIdentifier = "SubtitleSettingsCellId"
     private static let rightDetailCellReuseIdentifier = "RightDetailSettingsCellId"
     
     private static var fleksyKeyboardAdded: Bool {
@@ -36,17 +35,11 @@ class WelcomeViewController: UITableViewController {
     }
     
     private enum ItemType {
-        case languages
-        case settings([SettingModel])
         case link(path: String)
         case info
         
         var action: ItemAction? {
             switch self {
-            case .languages:
-                return .segue(identifier: "LanguageSelectionSegue")
-            case .settings:
-                return .segue(identifier: "SettingsSegue")
             case .link(let path):
                 guard let url = URL(string: path) else {
                     return nil
@@ -62,7 +55,7 @@ class WelcomeViewController: UITableViewController {
             case .info:
                 return WelcomeViewController.rightDetailCellReuseIdentifier
             default:
-                return WelcomeViewController.subtitleCellReuseIdentifier
+                return WelcomeViewController.rightDetailCellReuseIdentifier
             }
         }
     }
@@ -81,16 +74,6 @@ class WelcomeViewController: UITableViewController {
     
     private static func getSections() -> [Section] {
         return [
-            Section(titleKey: "Settings", items: [
-                Item(titleKey: "Languages",
-                     type: .languages),
-                Item(titleKey: "Look",
-                     type: .settings(SettingsSDK.lookSettings)),
-                Item(titleKey: "Gestures",
-                     type: .settings(SettingsSDK.gesturesSettings)),
-                Item(titleKey: "Typing",
-                     type: .settings(SettingsSDK.typingSettings)),
-            ]),
             Section(titleKey: "Information", items: [
                 Item(titleKey: "App version",
                      subtitleKey: Constants.App.versionAndBuild,
@@ -118,10 +101,6 @@ class WelcomeViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let item = sender as? Item {
             segue.destination.title = NSLocalizedString(item.titleKey, comment: "")
-            if case .settings(let settings) = item.type,
-               let settingsVC = segue.destination as? SettingsTableViewController {
-                settingsVC.settings = settings
-            }
         }
     }
     

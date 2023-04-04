@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWZ-u6-tgV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kWZ-u6-tgV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="fU9-5j-c5R">
             <objects>
-                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="KeyboardFrameWithTextField" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8fM-9j-Jv6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,98 +72,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="yJ8-nE-C5h"/>
-                    <connections>
-                        <segue destination="ZVl-z9-W5q" kind="show" identifier="SettingsSegue" id="AFa-Tl-r48"/>
-                        <segue destination="OCm-S2-sbW" kind="show" identifier="LanguageSelectionSegue" id="alc-qJ-Gd2"/>
-                        <segue destination="eV4-U9-eHL" kind="show" identifier="InAppKeyboardTestSegue" id="IG4-2k-pqu"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yL-ob-uHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017" y="139"/>
-        </scene>
-        <!--Languages Table View Controller-->
-        <scene sceneID="u23-Th-OL2">
-            <objects>
-                <tableViewController id="OCm-S2-sbW" customClass="LanguagesTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="lAp-Ny-x6a">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="OCm-S2-sbW" id="nwC-Gs-4TV"/>
-                            <outlet property="delegate" destination="OCm-S2-sbW" id="3Me-CK-wUn"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="EB0-nk-J85"/>
-                    <connections>
-                        <segue destination="u7L-Ct-OJ2" kind="show" identifier="KeyboardLayoutSelectionSegue" id="g3K-wM-7z9"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Sp-LD-p1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1885" y="-568"/>
-        </scene>
-        <!--Settings Table View Controller-->
-        <scene sceneID="kzK-rk-kOp">
-            <objects>
-                <tableViewController id="ZVl-z9-W5q" customClass="SettingsTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QuB-Wz-fvx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ZVl-z9-W5q" id="u5g-7R-a2c"/>
-                            <outlet property="delegate" destination="ZVl-z9-W5q" id="wfC-zW-tE8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="tNu-D3-AOs"/>
-                    <connections>
-                        <segue destination="u7L-Ct-OJ2" kind="show" identifier="SelectionSettingSegue" id="Ytg-7e-j4e"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dp5-5O-PXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1887" y="139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hCX-DK-gC5">
-            <objects>
-                <viewController id="eV4-U9-eHL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Etv-iA-lQO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IMI-kA-V1G">
-                                <rect key="frame" x="10" y="113" width="373" height="84.666666666666686"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-Rc-HUO" customClass="InAppKeyboardTextField" customModule="KeyboardOpenView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The text field above uses the SDK keyboard as its custom input view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x59-cv-H0a">
-                                        <rect key="frame" x="0.0" y="44" width="373" height="40.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JpA-E5-rN7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="IMI-kA-V1G" firstAttribute="top" secondItem="JpA-E5-rN7" secondAttribute="top" constant="10" id="Bnj-up-XkM"/>
-                            <constraint firstItem="JpA-E5-rN7" firstAttribute="trailing" secondItem="IMI-kA-V1G" secondAttribute="trailing" constant="10" id="Ksl-ti-rgu"/>
-                            <constraint firstItem="IMI-kA-V1G" firstAttribute="leading" secondItem="JpA-E5-rN7" secondAttribute="leading" constant="10" id="ewr-t3-717"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Sh2-ui-gFn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OjY-k3-3cF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1885" y="832"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o1B-rR-b49">
@@ -186,7 +98,7 @@
         <!--Selection Table View Controller-->
         <scene sceneID="AXg-2G-zCQ">
             <objects>
-                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="KeyboardOpenView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="KeyboardFrameWithTextField" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OOI-Ww-cqP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,9 +115,6 @@
             <point key="canvasLocation" x="2772" y="139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="g3K-wM-7z9"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -1,5 +1,5 @@
 //  SceneDelegate.swift
-//  KeyboardOpenView
+//  KeyboardFrameWithTextField
 //
 //  Copyright © 2023 Thingthing,Ltd. All rights reserved.
 //  Licensed under the MIT license. See LICENSE file in the project root for details

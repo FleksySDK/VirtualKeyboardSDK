@@ -17,19 +17,8 @@
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 		C758D73129D5872E00532289 /* KeyboardOpenViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */; };
 		C7C70A0E29DB2F61003FBD14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709F529DB2F61003FBD14 /* Constants.swift */; };
-		C7C70A0F29DB2F61003FBD14 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */; };
-		C7C70A1029DB2F61003FBD14 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */; };
-		C7C70A1129DB2F61003FBD14 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */; };
-		C7C70A1229DB2F61003FBD14 /* LanguagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */; };
-		C7C70A1329DB2F61003FBD14 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */; };
-		C7C70A1429DB2F61003FBD14 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */; };
-		C7C70A1529DB2F61003FBD14 /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */; };
-		C7C70A1629DB2F61003FBD14 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */; };
-		C7C70A1729DB2F61003FBD14 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */; };
-		C7C70A1829DB2F61003FBD14 /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0429DB2F61003FBD14 /* SettingModels.swift */; };
 		C7C70A1929DB2F61003FBD14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */; };
 		C7C70A1A29DB2F61003FBD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0729DB2F61003FBD14 /* Assets.xcassets */; };
-		C7C70A1B29DB2F61003FBD14 /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */; };
 		C7C70A1C29DB2F61003FBD14 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */; };
 		C7C70A1D29DB2F61003FBD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C70A0A29DB2F61003FBD14 /* Main.storyboard */; };
 		C7C70A1E29DB2F61003FBD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */; };
@@ -71,19 +60,8 @@
 		C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOpenViewCustom.swift; sourceTree = "<group>"; };
 		C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KeyboardOpenView.entitlements; sourceTree = "<group>"; };
 		C7C709F529DB2F61003FBD14 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
-		C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
-		C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesManager.swift; sourceTree = "<group>"; };
-		C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutSelection.swift; sourceTree = "<group>"; };
-		C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
-		C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
-		C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
-		C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
-		C7C70A0429DB2F61003FBD14 /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
 		C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7C70A0729DB2F61003FBD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
 		C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C7C70A0A29DB2F61003FBD14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,67 +140,16 @@
 			isa = PBXGroup;
 			children = (
 				C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */,
-				C7C709F529DB2F61003FBD14 /* Constants.swift */,
-				C7C709F629DB2F61003FBD14 /* Settings */,
-				C7C70A0429DB2F61003FBD14 /* SettingModels.swift */,
-				C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */,
-				C7C70A0729DB2F61003FBD14 /* Assets.xcassets */,
-				C7C70A0829DB2F61003FBD14 /* SettingsSDK.swift */,
-				C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */,
-				C7C70A0A29DB2F61003FBD14 /* Main.storyboard */,
 				C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */,
-				C7C70A0C29DB2F61003FBD14 /* Info.plist */,
 				C7C70A0D29DB2F61003FBD14 /* SceneDelegate.swift */,
+				C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */,
+				C7C709F529DB2F61003FBD14 /* Constants.swift */,
+				C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */,
+				C7C70A0A29DB2F61003FBD14 /* Main.storyboard */,
+				C7C70A0729DB2F61003FBD14 /* Assets.xcassets */,
+				C7C70A0C29DB2F61003FBD14 /* Info.plist */,
 			);
 			path = KeyboardOpenView;
-			sourceTree = "<group>";
-		};
-		C7C709F629DB2F61003FBD14 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				C7C709F729DB2F61003FBD14 /* Cells */,
-				C7C709FA29DB2F61003FBD14 /* SettingsTableViewController.swift */,
-				C7C709FB29DB2F61003FBD14 /* Languages */,
-				C7C70A0329DB2F61003FBD14 /* SelectionTableViewController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		C7C709F729DB2F61003FBD14 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C7C709F829DB2F61003FBD14 /* BoolSettingCell.swift */,
-				C7C709F929DB2F61003FBD14 /* BoolSettingCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		C7C709FB29DB2F61003FBD14 /* Languages */ = {
-			isa = PBXGroup;
-			children = (
-				C7C709FC29DB2F61003FBD14 /* LanguagesManager.swift */,
-				C7C709FD29DB2F61003FBD14 /* Model */,
-				C7C709FF29DB2F61003FBD14 /* LanguagesTableViewController.swift */,
-				C7C70A0029DB2F61003FBD14 /* Views */,
-			);
-			path = Languages;
-			sourceTree = "<group>";
-		};
-		C7C709FD29DB2F61003FBD14 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C7C709FE29DB2F61003FBD14 /* KeyboardLayoutSelection.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C7C70A0029DB2F61003FBD14 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C7C70A0129DB2F61003FBD14 /* LanguageCell.xib */,
-				C7C70A0229DB2F61003FBD14 /* LanguageCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,11 +244,9 @@
 			files = (
 				C7C70A1D29DB2F61003FBD14 /* Main.storyboard in Resources */,
 				753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */,
-				C7C70A1529DB2F61003FBD14 /* LanguageCell.xib in Resources */,
 				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
 				C7C70A1929DB2F61003FBD14 /* LaunchScreen.storyboard in Resources */,
 				C7C70A1A29DB2F61003FBD14 /* Assets.xcassets in Resources */,
-				C7C70A1029DB2F61003FBD14 /* BoolSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,18 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C70A1429DB2F61003FBD14 /* LanguagesTableViewController.swift in Sources */,
-				C7C70A0F29DB2F61003FBD14 /* BoolSettingCell.swift in Sources */,
 				C7C70A1E29DB2F61003FBD14 /* AppDelegate.swift in Sources */,
-				C7C70A1B29DB2F61003FBD14 /* SettingsSDK.swift in Sources */,
-				C7C70A1629DB2F61003FBD14 /* LanguageCell.swift in Sources */,
-				C7C70A1129DB2F61003FBD14 /* SettingsTableViewController.swift in Sources */,
 				C7C70A2029DB2F61003FBD14 /* SceneDelegate.swift in Sources */,
-				C7C70A1329DB2F61003FBD14 /* KeyboardLayoutSelection.swift in Sources */,
-				C7C70A1829DB2F61003FBD14 /* SettingModels.swift in Sources */,
 				C7C70A0E29DB2F61003FBD14 /* Constants.swift in Sources */,
-				C7C70A1729DB2F61003FBD14 /* SelectionTableViewController.swift in Sources */,
-				C7C70A1229DB2F61003FBD14 /* LanguagesManager.swift in Sources */,
 				C7C70A1C29DB2F61003FBD14 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

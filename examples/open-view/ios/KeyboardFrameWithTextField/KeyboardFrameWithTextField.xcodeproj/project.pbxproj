@@ -17,19 +17,8 @@
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 		C758D73129D5872E00532289 /* KeyboardFrameViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758D73029D5872E00532289 /* KeyboardFrameViewCustom.swift */; };
 		C76411A529DC1EE9004207D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764118C29DC1EE9004207D5 /* Constants.swift */; };
-		C76411A629DC1EE9004207D5 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764118F29DC1EE9004207D5 /* BoolSettingCell.swift */; };
-		C76411A729DC1EE9004207D5 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C764119029DC1EE9004207D5 /* BoolSettingCell.xib */; };
-		C76411A829DC1EE9004207D5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119129DC1EE9004207D5 /* SettingsTableViewController.swift */; };
-		C76411A929DC1EE9004207D5 /* LanguagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119329DC1EE9004207D5 /* LanguagesManager.swift */; };
-		C76411AA29DC1EE9004207D5 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119529DC1EE9004207D5 /* KeyboardLayoutSelection.swift */; };
-		C76411AB29DC1EE9004207D5 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119629DC1EE9004207D5 /* LanguagesTableViewController.swift */; };
-		C76411AC29DC1EE9004207D5 /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C764119829DC1EE9004207D5 /* LanguageCell.xib */; };
-		C76411AD29DC1EE9004207D5 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119929DC1EE9004207D5 /* LanguageCell.swift */; };
-		C76411AE29DC1EE9004207D5 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119A29DC1EE9004207D5 /* SelectionTableViewController.swift */; };
-		C76411AF29DC1EE9004207D5 /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119B29DC1EE9004207D5 /* SettingModels.swift */; };
 		C76411B029DC1EE9004207D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C764119C29DC1EE9004207D5 /* LaunchScreen.storyboard */; };
 		C76411B129DC1EE9004207D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C764119D29DC1EE9004207D5 /* Assets.xcassets */; };
-		C76411B229DC1EE9004207D5 /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119E29DC1EE9004207D5 /* SettingsSDK.swift */; };
 		C76411B329DC1EE9004207D5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C764119F29DC1EE9004207D5 /* WelcomeViewController.swift */; };
 		C76411B429DC1EE9004207D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76411A029DC1EE9004207D5 /* Main.storyboard */; };
 		C76411B529DC1EE9004207D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76411A229DC1EE9004207D5 /* AppDelegate.swift */; };
@@ -70,19 +59,8 @@
 		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
 		C758D73029D5872E00532289 /* KeyboardFrameViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameViewCustom.swift; sourceTree = "<group>"; };
 		C764118C29DC1EE9004207D5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C764118F29DC1EE9004207D5 /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
-		C764119029DC1EE9004207D5 /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
-		C764119129DC1EE9004207D5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		C764119329DC1EE9004207D5 /* LanguagesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesManager.swift; sourceTree = "<group>"; };
-		C764119529DC1EE9004207D5 /* KeyboardLayoutSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutSelection.swift; sourceTree = "<group>"; };
-		C764119629DC1EE9004207D5 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
-		C764119829DC1EE9004207D5 /* LanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
-		C764119929DC1EE9004207D5 /* LanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
-		C764119A29DC1EE9004207D5 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
-		C764119B29DC1EE9004207D5 /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
 		C764119C29DC1EE9004207D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C764119D29DC1EE9004207D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C764119E29DC1EE9004207D5 /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
 		C764119F29DC1EE9004207D5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C76411A029DC1EE9004207D5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C76411A229DC1EE9004207D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				7540092A29530F800022B197 /* keyboard.entitlements */,
-				C758D73029D5872E00532289 /* KeyboardFrameViewCustom.swift */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
+				C758D73029D5872E00532289 /* KeyboardFrameViewCustom.swift */,
 				75400956295313DE0022B197 /* fonts */,
 				7540091E29530F3E0022B197 /* Info.plist */,
 			);
@@ -162,67 +140,16 @@
 			isa = PBXGroup;
 			children = (
 				C7CD9D4D29DC202F00F2E0A6 /* KeyboardFrameWithTextField.entitlements */,
-				C764118C29DC1EE9004207D5 /* Constants.swift */,
-				C764118D29DC1EE9004207D5 /* Settings */,
-				C764119B29DC1EE9004207D5 /* SettingModels.swift */,
-				C764119C29DC1EE9004207D5 /* LaunchScreen.storyboard */,
-				C764119D29DC1EE9004207D5 /* Assets.xcassets */,
-				C764119E29DC1EE9004207D5 /* SettingsSDK.swift */,
-				C764119F29DC1EE9004207D5 /* WelcomeViewController.swift */,
-				C76411A029DC1EE9004207D5 /* Main.storyboard */,
 				C76411A229DC1EE9004207D5 /* AppDelegate.swift */,
-				C76411A329DC1EE9004207D5 /* Info.plist */,
 				C76411A429DC1EE9004207D5 /* SceneDelegate.swift */,
+				C764119F29DC1EE9004207D5 /* WelcomeViewController.swift */,
+				C764118C29DC1EE9004207D5 /* Constants.swift */,
+				C764119C29DC1EE9004207D5 /* LaunchScreen.storyboard */,
+				C76411A029DC1EE9004207D5 /* Main.storyboard */,
+				C764119D29DC1EE9004207D5 /* Assets.xcassets */,
+				C76411A329DC1EE9004207D5 /* Info.plist */,
 			);
 			path = KeyboardFrameWithTextField;
-			sourceTree = "<group>";
-		};
-		C764118D29DC1EE9004207D5 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				C764118E29DC1EE9004207D5 /* Cells */,
-				C764119129DC1EE9004207D5 /* SettingsTableViewController.swift */,
-				C764119229DC1EE9004207D5 /* Languages */,
-				C764119A29DC1EE9004207D5 /* SelectionTableViewController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		C764118E29DC1EE9004207D5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C764118F29DC1EE9004207D5 /* BoolSettingCell.swift */,
-				C764119029DC1EE9004207D5 /* BoolSettingCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		C764119229DC1EE9004207D5 /* Languages */ = {
-			isa = PBXGroup;
-			children = (
-				C764119329DC1EE9004207D5 /* LanguagesManager.swift */,
-				C764119429DC1EE9004207D5 /* Model */,
-				C764119629DC1EE9004207D5 /* LanguagesTableViewController.swift */,
-				C764119729DC1EE9004207D5 /* Views */,
-			);
-			path = Languages;
-			sourceTree = "<group>";
-		};
-		C764119429DC1EE9004207D5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C764119529DC1EE9004207D5 /* KeyboardLayoutSelection.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C764119729DC1EE9004207D5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C764119829DC1EE9004207D5 /* LanguageCell.xib */,
-				C764119929DC1EE9004207D5 /* LanguageCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +247,6 @@
 				C76411B429DC1EE9004207D5 /* Main.storyboard in Resources */,
 				C76411B029DC1EE9004207D5 /* LaunchScreen.storyboard in Resources */,
 				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
-				C76411AC29DC1EE9004207D5 /* LanguageCell.xib in Resources */,
-				C76411A729DC1EE9004207D5 /* BoolSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,19 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76411AF29DC1EE9004207D5 /* SettingModels.swift in Sources */,
 				C76411B329DC1EE9004207D5 /* WelcomeViewController.swift in Sources */,
-				C76411A929DC1EE9004207D5 /* LanguagesManager.swift in Sources */,
 				C76411B529DC1EE9004207D5 /* AppDelegate.swift in Sources */,
-				C76411B229DC1EE9004207D5 /* SettingsSDK.swift in Sources */,
-				C76411A629DC1EE9004207D5 /* BoolSettingCell.swift in Sources */,
-				C76411AD29DC1EE9004207D5 /* LanguageCell.swift in Sources */,
-				C76411A829DC1EE9004207D5 /* SettingsTableViewController.swift in Sources */,
 				C76411A529DC1EE9004207D5 /* Constants.swift in Sources */,
-				C76411AB29DC1EE9004207D5 /* LanguagesTableViewController.swift in Sources */,
 				C76411B729DC1EE9004207D5 /* SceneDelegate.swift in Sources */,
-				C76411AA29DC1EE9004207D5 /* KeyboardLayoutSelection.swift in Sources */,
-				C76411AE29DC1EE9004207D5 /* SelectionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
