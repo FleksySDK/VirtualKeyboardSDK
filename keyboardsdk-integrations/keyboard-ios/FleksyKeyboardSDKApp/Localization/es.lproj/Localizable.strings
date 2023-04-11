@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  FleksyKeyboardSDKApp
+
+  Copyright © 2023 Thingthing. All rights reserved.
+  
+*/
+
+// MARK: - BaseApp
+"BaseApp.Error.NoConnection" = "No hay conexión a internet.";
+"BaseApp.Error.Timeout" = "Se agotó el tiempo de espera.";
+"BaseApp.Error.BadURL" = "Error: URL inválida.";
+"BaseApp.Error.BadServerResponse" = "Respuesta inválida del servidor.";
+"BaseApp.Error.RequestCancelled" = "La petición se canceló";
+"BaseApp.Error.InvalidHTTPStatusCodeFormat" = "Error: código de respuesta inválido %d";
+"BaseApp.Error.Other" = "Ha ocurrido un error desconocido";
+
+// MARK: - GiphyApp
+"Giphy.Category.Trending" = "Tendencias";
+"Giphy.SearchButtonText" = "Buscar en Giphy";
+"Giphy.SearchPlaceholder" = "Buscar gifs...";
+"Giphy.Toast.Downloading" = "Descargando";
+"Giphy.Toast.CopiedAndReady" = "Copiado y listo para pegarse!";
+"Giphy.Error.NoGifs" = "No hay gifs disponibles en este momento.";
+"Giphy.Error.download" = "El gif seleccionado no pudo cargarse.";
