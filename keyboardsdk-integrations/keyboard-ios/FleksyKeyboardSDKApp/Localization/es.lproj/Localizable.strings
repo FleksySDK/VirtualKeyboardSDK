@@ -6,7 +6,7 @@
   
 */
 
-// BaseApp
+// MARK: - BaseApp
 "BaseApp.Error.NoConnection" = "No hay conexión a internet.";
 "BaseApp.Error.Timeout" = "Se agotó el tiempo de espera.";
 "BaseApp.Error.BadURL" = "Error: URL inválida.";
@@ -15,7 +15,7 @@
 "BaseApp.Error.InvalidHTTPStatusCodeFormat" = "Error: código de respuesta inválido %d";
 "BaseApp.Error.Other" = "Ha ocurrido un error desconocido";
 
-// GiphyApp
+// MARK: - GiphyApp
 "Giphy.Category.Trending" = "Tendencias";
 "Giphy.SearchButtonText" = "Buscar en Giphy";
 "Giphy.SearchPlaceholder" = "Buscar gifs...";
