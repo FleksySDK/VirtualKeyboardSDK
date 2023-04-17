@@ -13,11 +13,11 @@ jobs:
     strategy:
       matrix:
         xcodebuild-workspace: ['coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj']
-        xcodebuild-scheme: ['coresdk']
+        xcodebuild-scheme: ['FleksyCoreSample']
         
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build and archive ${{ matrix.xcodebuild-scheme }}
         working-directory: ./${{ matrix.xcodebuild-workspace }}
