@@ -1,0 +1,31 @@
+
+name: compile_examples_iOS
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        xcodebuild-workspace: ['/coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj/project']
+        xcodebuild-scheme: ['coresdk']
+        
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pod install
+          npm install
+
+      - name: Build and archive ${{ matrix.xcodebuild-scheme }}
+        run: xcodebuild -workspace ${{ matrix.xcodebuild-workspace }}.xcworkspace -scheme ${{ matrix.xcodebuild-scheme }} build -configuration Release archive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive
+
+      - name: Create simulator app
+        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $PWD/build
