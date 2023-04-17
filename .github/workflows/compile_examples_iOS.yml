@@ -19,11 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          pod install
-          npm install
-
       - name: Build and archive ${{ matrix.xcodebuild-scheme }}
         run: xcodebuild -workspace ${{ matrix.xcodebuild-workspace }}.xcworkspace -scheme ${{ matrix.xcodebuild-scheme }} build -configuration Release archive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive
 
