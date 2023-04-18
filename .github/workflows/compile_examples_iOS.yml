@@ -27,7 +27,7 @@ jobs:
             -workspace project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
-            -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }/Build/Products
+            -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products
             
       - name: List folders
         run: ls -d */
@@ -54,4 +54,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.xcodebuild-scheme }}
-          path: ./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }/Build/Products/${{ matrix.xcodebuild-scheme }}.app
+          path: ./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products/${{ matrix.xcodebuild-scheme }}.app
