@@ -29,10 +29,14 @@ jobs:
             -configuration Release archive \
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
-            -derivedDataPath DerivedData build-for-testing
+            -derivedDataPath DerivedData build-for-testing \
+            -exportOptionsPlist ./${{ matrix.xcodebuild-workspace }}/build/Release/exportOptionsRelease.plist
+       
+      - name: List files
+        run: ls -R | grep 'exportOptionsRelease.plist$'
         
       - name: Create simulator app
-        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive/info.plist -exportPath $PWD/build
+        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist ./${{ matrix.xcodebuild-workspace }}/build/Release/exportOptionsRelease.plist -exportPath $PWD/build
       
       - name: List files
         run: ls -R | grep '.app$'
