@@ -12,8 +12,10 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        xcodebuild-workspace: ['coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj']
-        xcodebuild-scheme: ['FleksyCoreSample']
+        xcodebuild-workspace: |
+          ['coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj']
+        xcodebuild-scheme: |
+          ['FleksyCoreSample']
         
     steps:
       - name: Checkout repository
@@ -21,7 +23,18 @@ jobs:
 
       - name: Build and archive ${{ matrix.xcodebuild-scheme }}
         working-directory: ./${{ matrix.xcodebuild-workspace }}
-        run: xcodebuild -resolvePackageDependencies -workspace project.xcworkspace -scheme ${{ matrix.xcodebuild-scheme }} build -configuration Release archive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive
-
+        run: |
+          xcodebuild 
+            -resolvePackageDependencies 
+            -workspace project.xcworkspace 
+            -scheme ${{ matrix.xcodebuild-scheme }} build 
+            -configuration Release archive 
+            -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive
+            
       - name: Create simulator app
-        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $PWD/build
+        run: |
+          cd ios && xcodebuild \
+            -exportArchive \
+            -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
+            -exportOptionsPlist $PWD/ci.plist \
+            -exportPath $PWD/build
