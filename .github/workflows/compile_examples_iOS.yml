@@ -22,13 +22,13 @@ jobs:
       - name: Build and archive ${{ matrix.xcodebuild-scheme }}
         working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: |
-          xcodebuild 
-            -resolvePackageDependencies 
-            -workspace project.xcworkspace 
-            -scheme ${{ matrix.xcodebuild-scheme }} build 
-            -configuration Release archive 
+          xcodebuild \
+            -resolvePackageDependencies \
+            -workspace project.xcworkspace \
+            -scheme ${{ matrix.xcodebuild-scheme }} build \
+            -configuration Release archive \
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive
-            
+                                
       - name: Create simulator app
         run: |
           cd ios && xcodebuild \
