@@ -27,10 +27,15 @@ jobs:
             -workspace project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
-            -sdk iphonesimulator
-            -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products
+            -sdk iphonesimulator \
+            -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products \
             -derivedDataPath DerivedData
-            
+          
+          
+      - name: Create ${{ matrix.xcodebuild-scheme }} app
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
+        run: set -o pipefail && xcodebuild "-workspace" "project.xcworkspace" "-scheme" "${{ matrix.xcodebuild-scheme }}" "-configuration" "Release" "clean" "build"          
+      
       - name: List DerivedData  files
         run: ls -R "./DerivedData"
         
