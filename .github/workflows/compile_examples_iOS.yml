@@ -27,11 +27,15 @@ jobs:
             -workspace project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
+            -sdk iphonesimulator
             -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products
+            -derivedDataPath DerivedData
+            
+      - name: List DerivedData  files
+        run: ls -R "./DerivedData"
         
       - name: List files
-        working-directory: ./${{ matrix.xcodebuild-workspace }}/project.xcworkspace/
-        run: ls -R "./coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj"
+        run: ls -R "./${{ matrix.xcodebuild-workspace }}"
         
       - name: Generate ${{ matrix.xcodebuild-scheme }} app
         run: |
