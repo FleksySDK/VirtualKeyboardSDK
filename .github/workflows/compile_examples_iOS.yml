@@ -28,14 +28,10 @@ jobs:
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
             -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products
-            
-      - name: List folders
-        working-directory: ./${{ matrix.xcodebuild-workspace }}/project.xcworkspace/
-        run: ls -d */
         
       - name: List files
         working-directory: ./${{ matrix.xcodebuild-workspace }}/project.xcworkspace/
-        run: ls -R
+        run: ls -R "./coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj"
         
       - name: Generate ${{ matrix.xcodebuild-scheme }} app
         run: |
