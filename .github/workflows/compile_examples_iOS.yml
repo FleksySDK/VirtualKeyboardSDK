@@ -21,7 +21,7 @@ jobs:
 
       - name: Build ${{ matrix.xcodebuild-scheme }} App
         working-directory: ./${{ matrix.xcodebuild-workspace }}
-        run: xcodebuild -scheme ${{ matrix.xcodebuild-scheme }} -destination 'platform=iOS Simulator,name=iPhone 11' -derivedDataPath build clean build
+        run: xcodebuild -resolvePackageDependencies -workspace project.xcworkspace -scheme ${{ matrix.xcodebuild-scheme }} -destination 'platform=iOS Simulator,name=iPhone 11' -derivedDataPath build clean build
       
       - name: Create .app file
         run: xcrun simctl package booted build/Build/Products/Debug-iphonesimulator/${{ matrix.xcodebuild-scheme }}.app
