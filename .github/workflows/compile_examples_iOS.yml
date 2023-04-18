@@ -23,7 +23,8 @@ jobs:
         working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: |
           xcodebuild archive \
-            -resolvePackageDependencies
+            -resolvePackageDependencies \
+            -workspace project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -sdk iphonesimulator \
             -archivePath ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive
