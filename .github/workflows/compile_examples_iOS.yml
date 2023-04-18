@@ -12,10 +12,8 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        xcodebuild-workspace: |
-          ['coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj']
-        xcodebuild-scheme: |
-          ['FleksyCoreSample']
+        xcodebuild-workspace: ['coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj']
+        xcodebuild-scheme: ['FleksyCoreSample']
         
     steps:
       - name: Checkout repository
