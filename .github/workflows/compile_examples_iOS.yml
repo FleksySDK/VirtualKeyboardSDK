@@ -19,9 +19,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Build ${{ matrix.xcodebuild-scheme }} App
+      - name: Build ${{ matrix.xcodebuild-scheme }} app
         working-directory: ./${{ matrix.xcodebuild-workspace }}
-        run: set -o pipefail && xcodebuild clean -scheme ${{ matrix.xcodebuild-scheme }} -destination "platform=iOS Simulator,name=iPhone 14 Pro" -derivedDataPath DerivedData build-for-testing | xcpretty --color --simple
+        run: |
+          xcodebuild build clean \
+            -resolvePackageDependencies \
+            -workspace project.xcworkspace \
+            -scheme ${{ matrix.xcodebuild-scheme }} \
+            -configuration Release archive \
+            -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
+            -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
+            -derivedDataPath DerivedData build-for-testing
       
       - name: Upload products
         uses: actions/upload-artifact@v1
