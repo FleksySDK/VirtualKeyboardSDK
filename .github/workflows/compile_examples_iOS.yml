@@ -30,15 +30,19 @@ jobs:
             -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products
             
       - name: List folders
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: ls -d */
         
       - name: List files
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: ls -R | grep '.xcarchive$'
         
       - name: List files
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: ls -R | grep '.plist$'
         
       - name: List files
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: ls -R | grep '.app$'
         
       - name: Generate ${{ matrix.xcodebuild-scheme }} app
