@@ -30,9 +30,12 @@ jobs:
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
             -derivedDataPath DerivedData build-for-testing
-      
-      - name: Upload products
-        uses: actions/upload-artifact@v1
+            
+      - name: Create Simulator App
+        run: xcrun simctl create FLEKSY com.fleksy.FleksyCoreSample iPhone-14-Pro
+
+      - name: Upload Simulator App
+        uses: actions/upload-artifact@v2
         with:
-          name: Products
-          path: DerivedData/Build/Products
+          name: FleksyCoreSample.app
+          path: coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj/build/FleksyCoreSample-iphonesimulator/FleksyCoreSample.app
