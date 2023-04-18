@@ -25,12 +25,11 @@ jobs:
           xcodebuild build clean \
             -resolvePackageDependencies \
             -workspace project.xcworkspace \
-            -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
-            -exportArchive
-            -archivePath $PWD/build/Release/Release/Release.xcarchive
-            -exportPath $PWD/build/Release
-            -exportOptionsPlist $PWD/build/Release/exportOptionsRelease.plist
+            -exportArchive \
+            -archivePath $PWD/build/Release/Release/Release.xcarchive \
+            -exportPath $PWD/build/Release \
+            -exportOptionsPlist $PWD/build/Release/exportOptionsRelease.plist \
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
             -derivedDataPath DerivedData build-for-testing \
         
