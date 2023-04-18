@@ -16,6 +16,11 @@ jobs:
         xcodebuild-scheme: ['FleksyCoreSample']
         
     steps:
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.7"
+          
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -30,12 +35,23 @@ jobs:
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
             -derivedDataPath DerivedData build-for-testing
-            
-      - name: Create Simulator App
-        run: xcrun simctl create FLEKSY com.fleksy.FleksyCoreSample iPhone-14-Pro
 
-      - name: Upload Simulator App
-        uses: actions/upload-artifact@v2
+      - name: Fetch action
+        id: pl
+        uses: Rishabh510/Path-lister-action@master
         with:
-          name: FleksyCoreSample.app
-          path: coresdk-integrations/coresdk-ios/FleksyCoreSample.xcodeproj/build/FleksyCoreSample-iphonesimulator/FleksyCoreSample.app
+          path: "./${{ matrix.xcodebuild-workspace }}"
+          type: ".app"
+
+      - name: Output results
+        run: |
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
+          for i in ${{ steps.pl.outputs.paths }}; do
+          echo $i
+          done
+          
+      - name: Upload .app file
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.xcodebuild-scheme }}
+          path: ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.app
