@@ -16,11 +16,6 @@ jobs:
         xcodebuild-scheme: ['FleksyCoreSample']
         
     steps:
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
-        with:
-          python-version: "3.7"
-          
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -37,14 +32,10 @@ jobs:
             -derivedDataPath DerivedData build-for-testing
 
       - name: List files
-        working-directory: ./${{ matrix.xcodebuild-workspace }}
-        run: ls -R
+        run: ls -R "./${{ matrix.xcodebuild-workspace }}" | grep '\.jpg$'   
       - name: List files2
-        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: ls
-          find . -name \*.app -print
-      - name: List files3
-        run: ls -R ~/${{ matrix.xcodebuild-workspace }}
+          find ./${{ matrix.xcodebuild-workspace }} -type f -name "*.app" -print
       - name: Upload .app file
         uses: actions/upload-artifact@v3
         with:
