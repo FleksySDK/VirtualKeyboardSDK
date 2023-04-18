@@ -25,6 +25,7 @@ jobs:
           xcodebuild build clean \
             -resolvePackageDependencies \
             -workspace project.xcworkspace \
+            -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
             -exportArchive \
             -archivePath $PWD/build/Release/Release/Release.xcarchive \
