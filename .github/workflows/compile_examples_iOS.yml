@@ -31,18 +31,11 @@ jobs:
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
             -derivedDataPath DerivedData build-for-testing
         
-      - name: Print current dir
-        run: echo $PWD
-        
-      - name: List files
-        run: ls -R | grep '.plist$'
-
       - name: Create simulator app
-        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $PWD/build
+        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive/info.plist -exportPath $PWD/build
       
       - name: List files
-        working-directory: $PWD/build
-        run: ls -R
+        run: ls -R | grep '.app$'
         
       - name: Upload .app file
         uses: actions/upload-artifact@v3
