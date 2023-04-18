@@ -30,10 +30,14 @@ jobs:
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
             -derivedDataPath DerivedData build-for-testing
+            
+      - name: List files
+        working-directory: $PWD
+        run: ls -R | grep '.plist$'
 
       - name: Create simulator app
-        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportPath $PWD/build
-        
+        run: xcodebuild -exportArchive -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $PWD/build
+      
       - name: List files
         working-directory: $PWD/build
         run: ls -R
