@@ -30,11 +30,8 @@ jobs:
             -destination 'platform=iOS Simulator,name=iPhone 14 Pro'
             
       - name: Generate ${{ matrix.xcodebuild-scheme }} app
-        working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: |
-          xcodebuild build clean \
-            -resolvePackageDependencies \
-            -workspace project.xcworkspace \
+          xcodebuild \
             -exportArchive \
             -archivePath $PWD/build/Release/Release/Release.xcarchive \
             -exportPath $PWD/build/Release \
