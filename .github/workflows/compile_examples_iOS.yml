@@ -19,38 +19,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Build ${{ matrix.xcodebuild-scheme }} app
+      - name: Archive ${{ matrix.xcodebuild-scheme }} app
         working-directory: ./${{ matrix.xcodebuild-workspace }}
         run: |
-          xcodebuild build clean \
-            -resolvePackageDependencies \
-            -workspace project.xcworkspace \
+          xcodebuild archive \
+            -resolvePackageDependencies
             -scheme ${{ matrix.xcodebuild-scheme }} \
-            -configuration Release archive \
             -sdk iphonesimulator \
-            -SYMROOT=./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products \
-            -derivedDataPath DerivedData
-          
-          
-      - name: Create ${{ matrix.xcodebuild-scheme }} app
+            -archivePath ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive
+            
+      - name: ExportArchive ${{ matrix.xcodebuild-scheme }} app
         working-directory: ./${{ matrix.xcodebuild-workspace }}
-        run: set -o pipefail && xcodebuild "-workspace" "project.xcworkspace" "-scheme" "${{ matrix.xcodebuild-scheme }}" "-configuration" "Release" "clean" "build"          
-      
-      - name: List DerivedData  files
-        run: ls -R "./DerivedData"
-        
-      - name: List files
-        run: ls -R "./${{ matrix.xcodebuild-workspace }}"
-        
-      - name: Generate ${{ matrix.xcodebuild-scheme }} app
         run: |
           xcodebuild \
             -exportArchive \
-            -archivePath $PWD/build/Release/Release/Release.xcarchive \
-            -exportPath $PWD/build/Release \
-            -exportOptionsPlist $PWD/build/Release/exportOptionsRelease.plist
+            -archivePath ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive \
+            -exportOptionsPlist exportOptions.plist \
+            -exportPath artifacts \
 
-        
+      - name: List files
+        run: ls -R "./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive"
+
       - name: Upload .app file
         uses: actions/upload-artifact@v3
         with:
