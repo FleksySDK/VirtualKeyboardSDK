@@ -32,7 +32,7 @@ jobs:
             -derivedDataPath DerivedData build-for-testing
 
       - name: List files
-        run: ls -R "./${{ matrix.xcodebuild-workspace }}" | grep '\.app$'   
+        run: ls -R | grep '\.app$'   
         
       - name: Upload .app file
         uses: actions/upload-artifact@v3
