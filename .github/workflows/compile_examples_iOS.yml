@@ -27,13 +27,19 @@ jobs:
             -workspace project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -configuration Release archive \
+            -destination 'platform=iOS Simulator,name=iPhone 14 Pro'
+            
+      - name: Generate ${{ matrix.xcodebuild-scheme }} app
+        working-directory: ./${{ matrix.xcodebuild-workspace }}
+        run: |
+          xcodebuild build clean \
+            -resolvePackageDependencies \
+            -workspace project.xcworkspace \
             -exportArchive \
             -archivePath $PWD/build/Release/Release/Release.xcarchive \
             -exportPath $PWD/build/Release \
-            -exportOptionsPlist $PWD/build/Release/exportOptionsRelease.plist \
-            -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
-            -derivedDataPath DerivedData build-for-testing \
-        
+            -exportOptionsPlist $PWD/build/Release/exportOptionsRelease.plist
+
       - name: List files
         run: ls -R | grep '.app$'
         
