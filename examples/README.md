@@ -21,7 +21,7 @@ When a trigger action occurs, a view will appear over the virtual keyboard.
 
 [**Open View Example**](open-view/ios/KeyboardOpenView)
 
-The example that we have created triggers when the user presses a button and shows a full view over the keyboard. 
+The example we created triggers when the user presses a button and shows a full view over the keyboard. 
 What you will achieve:
 
 <p align="center">
@@ -31,8 +31,8 @@ What you will achieve:
 
 [**Frame View With TextField Example**](open-view/ios/KeyboardFrameWithTextField)
 
-In this case we are showcasing how we can show a view on top of the keyboard with a textfield. When the frame view appears on top of the keyboard we automatically switch the context to the internal textfield. When we close the frame view we automatically switch back the cursor to the textfield of the app.
-Note: By tapping the textfield, the user can manually switch between app textfield and keyboard's textfield.
+In the following example, we demonstrate a way to display a view on top of the keyboard with a textfield. When the frame view appears on top of the keyboard, the context is automatically switched to the internal textfield. When the frame view is closed, the cursor is automatically switched back to the textfield of the app.
+Note: the user can manually switch between the app textfield and the keyboard's textfield by tapping on the textfield.
 
 What you will achieve:
 
