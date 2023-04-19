@@ -20,8 +20,8 @@ jobs:
         uses: actions/checkout@v3
             
       - name: Build ${{ matrix.xcodebuild-scheme }} app
-        run: |
-          cd ios && xcodebuild archive \
+        run: | 
+          xcodebuild archive \
             -resolvePackageDependencies \
             -workspace ./${{ matrix.xcodebuild-workspace }}/project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
@@ -32,7 +32,7 @@ jobs:
             
       - name: Export ${{ matrix.xcodebuild-scheme }} app
         run: |
-          cd ios && xcodebuild \
+          xcodebuild \
             -exportArchive \
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             -exportOptionsPlist $PWD/ci.plist \
