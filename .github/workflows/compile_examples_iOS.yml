@@ -18,31 +18,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Archive ${{ matrix.xcodebuild-scheme }} app
-        working-directory: ./${{ matrix.xcodebuild-workspace }}
+            
+      - name: Build ${{ matrix.xcodebuild-scheme }} app
         run: |
-          xcodebuild archive \
+          cd ios && xcodebuild archive \
             -resolvePackageDependencies \
-            -workspace project.xcworkspace \
+            -workspace ./${{ matrix.xcodebuild-workspace }}/project.xcworkspace \
             -scheme ${{ matrix.xcodebuild-scheme }} \
             -sdk iphonesimulator \
-            -archivePath ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive
+            -configuration Release \
+            -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
+            IPHONEOS_DEPLOYMENT_TARGET=16.4 \
             
-      - name: ExportArchive ${{ matrix.xcodebuild-scheme }} app
-        working-directory: ./${{ matrix.xcodebuild-workspace }}
+      - name: Export ${{ matrix.xcodebuild-scheme }} app
         run: |
-          xcodebuild \
+          cd ios && xcodebuild \
             -exportArchive \
-            -archivePath ./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive \
-            -exportOptionsPlist exportOptions.plist \
-            -exportPath artifacts \
-
-      - name: List files
-        run: ls -R "./${{ matrix.xcodebuild-workspace }}/${{ matrix.xcodebuild-scheme }}.xcarchive"
-
-      - name: Upload .app file
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ matrix.xcodebuild-scheme }}
-          path: ./${{ matrix.xcodebuild-workspace }}/build/${{ matrix.xcodebuild-scheme }}/Build/Products/${{ matrix.xcodebuild-scheme }}.app
+            -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
+            -exportOptionsPlist $PWD/ci.plist \
+            -exportPath $PWD/build
+      
