@@ -29,12 +29,15 @@ jobs:
             -configuration Release \
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
             IPHONEOS_DEPLOYMENT_TARGET=16.4 \
-            
+       
+      - name: List files
+        run: ls -R
+        
       - name: Export ${{ matrix.xcodebuild-scheme }} app
         run: |
           xcodebuild \
             -exportArchive \
             -archivePath $PWD/build/${{ matrix.xcodebuild-scheme }}.xcarchive \
-            -exportOptionsPlist $PWD/ci.plist \
+            -exportOptionsPlist $PWD/ExportOptions.plist \
             -exportPath $PWD/build
       
