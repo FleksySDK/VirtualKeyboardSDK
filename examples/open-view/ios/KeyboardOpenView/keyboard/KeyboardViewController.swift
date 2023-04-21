@@ -13,10 +13,10 @@ class KeyboardViewController: FKKeyboardViewController {
     
     override func createConfiguration() -> KeyboardConfiguration {
         // License Configuration
-        let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
+        let licenseConfig = LicenseConfiguration(licenseKey: "<your-license-key>", licenseSecret: "<your-license-secret>")
         
         // KEYBOARD CONFIGURATION --
-        let config = KeyboardConfiguration(apps: AppsConfiguration(keyboardApps: [KeyboardOpenViewCustom.init()], showAppsInCarousel: false), /// This is a new parameter. We share the View that might be invoked.
+        let config = KeyboardConfiguration(apps: AppsConfiguration(keyboardApps: [KeyboardOpenViewCustom()], showAppsInCarousel: false), /// This is a new parameter. We share the View that might be invoked.
                                            license: licenseConfig)
         return config
     }

@@ -57,6 +57,7 @@
 		7540092A29530F800022B197 /* keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = keyboard.entitlements; sourceTree = "<group>"; };
 		75400957295313DE0022B197 /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
 		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
+		75808F5E29F269C600A3257F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
 		C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardOpenViewCustom.swift; sourceTree = "<group>"; };
 		C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KeyboardOpenView.entitlements; sourceTree = "<group>"; };
 		C7C709F529DB2F61003FBD14 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		754008F629530F120022B197 = {
 			isa = PBXGroup;
 			children = (
+				75808F5D29F269BA00A3257F /* Configuration */,
 				C7C709F429DB2F61003FBD14 /* KeyboardOpenView */,
 				7540091B29530F3E0022B197 /* keyboard */,
 				7540090029530F120022B197 /* Products */,
@@ -111,11 +113,9 @@
 		7540091B29530F3E0022B197 /* keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				7540092A29530F800022B197 /* keyboard.entitlements */,
-				C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
-				75400956295313DE0022B197 /* fonts */,
-				7540091E29530F3E0022B197 /* Info.plist */,
+				C758D73029D5872E00532289 /* KeyboardOpenViewCustom.swift */,
+				75808F6029F269E500A3257F /* SupportingFiles */,
 			);
 			path = keyboard;
 			sourceTree = "<group>";
@@ -136,18 +136,44 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		C7C709F429DB2F61003FBD14 /* KeyboardOpenView */ = {
+		75808F5D29F269BA00A3257F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				75808F5E29F269C600A3257F /* SampleCode.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		75808F5F29F269E000A3257F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				C77F2CDB29DB336E00B777BA /* KeyboardOpenView.entitlements */,
 				C7C70A0B29DB2F61003FBD14 /* AppDelegate.swift */,
 				C7C70A0D29DB2F61003FBD14 /* SceneDelegate.swift */,
-				C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */,
-				C7C709F529DB2F61003FBD14 /* Constants.swift */,
 				C7C70A0529DB2F61003FBD14 /* LaunchScreen.storyboard */,
-				C7C70A0A29DB2F61003FBD14 /* Main.storyboard */,
 				C7C70A0729DB2F61003FBD14 /* Assets.xcassets */,
 				C7C70A0C29DB2F61003FBD14 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		75808F6029F269E500A3257F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7540092A29530F800022B197 /* keyboard.entitlements */,
+				75400956295313DE0022B197 /* fonts */,
+				7540091E29530F3E0022B197 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C7C709F429DB2F61003FBD14 /* KeyboardOpenView */ = {
+			isa = PBXGroup;
+			children = (
+				C7C70A0929DB2F61003FBD14 /* WelcomeViewController.swift */,
+				C7C709F529DB2F61003FBD14 /* Constants.swift */,
+				C7C70A0A29DB2F61003FBD14 /* Main.storyboard */,
+				75808F5F29F269E000A3257F /* SupportingFiles */,
 			);
 			path = KeyboardOpenView;
 			sourceTree = "<group>";
@@ -295,6 +321,7 @@
 /* Begin XCBuildConfiguration section */
 		7540091129530F120022B197 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75808F5E29F269C600A3257F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -359,6 +386,7 @@
 		};
 		7540091229530F120022B197 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75808F5E29F269C600A3257F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -421,12 +449,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/KeyboardOpenView.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/SupportingFiles/KeyboardOpenView.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardOpenView/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
+				INFOPLIST_FILE = KeyboardOpenView/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KeyboardOpenView;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -438,8 +468,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksySDK;
+				PRODUCT_BUNDLE_IDENTIFIER = "thingthing.FleksySDK.samplecode.KeyboardOpenView${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,12 +483,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/KeyboardOpenView.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = KeyboardOpenView/SupportingFiles/KeyboardOpenView.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KeyboardOpenView/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
+				INFOPLIST_FILE = KeyboardOpenView/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KeyboardOpenView;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,8 +502,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksySDK;
+				PRODUCT_BUNDLE_IDENTIFIER = "thingthing.FleksySDK.samplecode.KeyboardOpenView${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,11 +514,13 @@
 		7540092329530F3E0022B197 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = keyboard/SupportingFiles/keyboard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keyboard/Info.plist;
+				INFOPLIST_FILE = keyboard/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -494,8 +530,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksySDK.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = "thingthing.FleksySDK.samplecode.KeyboardOpenView${SAMPLE_CODE_DISAMBIGUATOR}.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -506,11 +543,13 @@
 		7540092429530F3E0022B197 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = keyboard/keyboard.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = keyboard/SupportingFiles/keyboard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keyboard/Info.plist;
+				INFOPLIST_FILE = keyboard/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -520,8 +559,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksySDK.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = "thingthing.FleksySDK.samplecode.KeyboardOpenView${SAMPLE_CODE_DISAMBIGUATOR}.keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -4,6 +4,11 @@
 <dict>
 	<key>AppGroupName</key>
 	<string>group.thingthing.fleksysdk</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gilroy-Medium.otf</string>
+		<string>Gilroy-Regular.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -23,10 +28,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gilroy-Medium.otf</string>
-		<string>Gilroy-Regular.otf</string>
-	</array>
 </dict>
 </plist>

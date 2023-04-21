@@ -10,7 +10,7 @@ import UIKit
 import FleksyAppsCore
 
 ///
-/// Example on how to add a View on top of the keyboard
+/// Example on how to add a View over (i.e. covering) the keyboard
 /// This can be cusomized to your own needs
 ///
 class KeyboardOpenViewCustom : KeyboardApp{
@@ -23,11 +23,15 @@ class KeyboardOpenViewCustom : KeyboardApp{
     func initialize(listener: AppListener, configuration: AppConfiguration) {
         self.listener = listener
         self.configuration = configuration
-        self.exampleView = UIView()
     }
     
     func dispose() {
-        self.exampleView = nil
+        listener = nil
+        configuration = nil
+    }
+    
+    var defaultViewMode: KeyboardAppViewMode {
+        .fullCover // Shows the view over the keyboard, i.e. covering it.
     }
     
     ///
@@ -35,19 +39,16 @@ class KeyboardOpenViewCustom : KeyboardApp{
     /// which will show the view that you send here.
     ///
     func open(viewMode: KeyboardAppViewMode, theme: AppTheme) -> UIView? {
-        return createYourOwnView()
-    }
-    
-    // Handle the button
-    // In this case we consider interesting to hide the current view.
-    @MainActor @objc func handleClose(){
-        self.exampleView?.removeFromSuperview()
-        hideMyself()
+        if exampleView == nil {
+            createYourOwnView()
+        }
+        return exampleView
     }
     
     /// This is gonna be called automatically by the system when you close the View.
     func close() {
         // Free all references created from the open()
+        exampleView = nil
     }
     
     func onThemeChanged(_ theme: AppTheme) {
@@ -64,17 +65,19 @@ class KeyboardOpenViewCustom : KeyboardApp{
     /// Configure this to hide itself.
     /// Normally, you might add a button in the view to trigger this hide() action. After this action, the system itself will call close() method.
     ///
-    @MainActor func hideMyself(){
-        self.listener?.hide()
+    @MainActor @objc func hideMyself() {
+        listener?.hide()
     }
     
     //
     // Create your own view to add on top of the keyboard
     //
-    func createYourOwnView() -> UIView?{
+    func createYourOwnView() {
+        
+        let exampleView = UIView()
         
         // Configure the example View
-        self.exampleView?.backgroundColor = UIColor.init(red: 37.0/255.0, green: 150.0/255.0, blue: 190.0/255.0, alpha: 1.0)//theme.background
+        exampleView.backgroundColor = UIColor.init(red: 37.0/255.0, green: 150.0/255.0, blue: 190.0/255.0, alpha: 1.0)//theme.background
         
         // Add a simple close button
         let btnClose = UIButton()
@@ -86,28 +89,33 @@ class KeyboardOpenViewCustom : KeyboardApp{
         btnClose.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         btnClose.translatesAutoresizingMaskIntoConstraints = false
         
-        self.exampleView?.addSubview(btnClose)
+        exampleView.addSubview(btnClose)
         
         // Add constraints for cosmetics
-        let horizontalConstraint = NSLayoutConstraint(item: btnClose, attribute: NSLayoutConstraint.Attribute.trailingMargin, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.exampleView, attribute: NSLayoutConstraint.Attribute.trailingMargin, multiplier: 1, constant: -5)
-        let verticalConstraint = NSLayoutConstraint(item: btnClose, attribute: NSLayoutConstraint.Attribute.topMargin, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.exampleView, attribute: NSLayoutConstraint.Attribute.topMargin, multiplier: 1, constant: 5)
-         let widthConstraint = NSLayoutConstraint(item: btnClose, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 85)
-         let heightConstraint = NSLayoutConstraint(item: btnClose, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 25)
-        self.exampleView?.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+        NSLayoutConstraint.activate([
+            btnClose.trailingAnchor.constraint(equalTo: exampleView.leadingAnchor, constant: -5),
+            btnClose.topAnchor.constraint(equalTo: exampleView.topAnchor, constant: 5),
+            btnClose.widthAnchor.constraint(equalToConstant: 85),
+            btnClose.heightAnchor.constraint(equalToConstant: 25)
+        ])
 
-        btnClose.addTarget(self, action: #selector(handleClose), for: .touchUpInside)
+        btnClose.addTarget(self, action: #selector(hideMyself), for: .touchUpInside)
         
-        let text = UILabel()
-        text.textAlignment = .center
-        text.textColor = UIColor.white
-        text.text = "Customisable View 👀"
-        text.translatesAutoresizingMaskIntoConstraints = false
-        self.exampleView?.addSubview(text)
-        self.exampleView?.addConstraints([NSLayoutConstraint(item: text, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.exampleView, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0),NSLayoutConstraint(item: text, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.exampleView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0),NSLayoutConstraint(item: text, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 240),NSLayoutConstraint(item: text, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 40)])
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = "Customisable View 👀"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        exampleView.addSubview(label)
         
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: exampleView.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: exampleView.centerYAnchor),
+            label.widthAnchor.constraint(equalToConstant: 240),
+            label.heightAnchor.constraint(equalToConstant: 40)
+        ])
         
         // Add anything else here.
-        
-        return exampleView
+        self.exampleView = exampleView
     }
 }

@@ -27,5 +27,7 @@
 		<string>Gilroy-Medium.otf</string>
 		<string>Gilroy-Regular.otf</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>keyboard</string>
 </dict>
 </plist>

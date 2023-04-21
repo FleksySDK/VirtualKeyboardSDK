@@ -95,25 +95,6 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
-        <!--Selection Table View Controller-->
-        <scene sceneID="AXg-2G-zCQ">
-            <objects>
-                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="KeyboardFrameWithTextField" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OOI-Ww-cqP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="u7L-Ct-OJ2" id="Rc8-do-UEA"/>
-                            <outlet property="delegate" destination="u7L-Ct-OJ2" id="zhp-Rz-Ggt"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="22T-Ib-zth"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gRo-1Y-uLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2772" y="139"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

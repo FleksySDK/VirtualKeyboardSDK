@@ -30,7 +30,6 @@ class WelcomeViewController: UITableViewController {
     }
     
     enum ItemAction {
-        case segue(identifier: String)
         case openURL(url: URL)
     }
     
@@ -81,6 +80,9 @@ class WelcomeViewController: UITableViewController {
                 Item(titleKey: "FleksyKeyboardSDK version",
                      subtitleKey: Constants.App.keyboardSDKVersionAndBuild,
                      type: .info),
+                Item(titleKey: "Keyboard status",
+                     subtitleKey: fleksyKeyboardAdded ? "Installed" : "Not installed",
+                     type: fleksyKeyboardAdded ? .info : .link(path: UIApplication.openSettingsURLString))
             ])
         ]
     }
@@ -144,8 +146,6 @@ class WelcomeViewController: UITableViewController {
         switch item.type.action {
         case .none:
             return
-        case .segue(identifier: let identifier):
-            performSegue(withIdentifier: identifier, sender: item)
         case .openURL(url: let url):
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
