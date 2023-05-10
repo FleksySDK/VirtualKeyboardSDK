@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+        maven {
+            url = uri("https://maven.fleksy.com/maven")
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url = uri("https://maven.fleksy.com/maven")
+        }
+    }
+}
+rootProject.name = "InAppKeyboard"
+include ':app'
