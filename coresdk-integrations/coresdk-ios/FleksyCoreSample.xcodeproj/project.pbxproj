@@ -40,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		751AE52E2A0E44E9006C6DB1 /* FleksyCoreSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FleksyCoreSample.entitlements; sourceTree = "<group>"; };
 		753F5F38289D13380011B20D /* FleksyCoreSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleksyCoreSample.swift; sourceTree = "<group>"; };
 		758CB7BB28A3C8F5007AA892 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D10AE57A28927109002C325F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		D163FF3B287D555D00743F7C /* FleksyCoreSample */ = {
 			isa = PBXGroup;
 			children = (
+				751AE52E2A0E44E9006C6DB1 /* FleksyCoreSample.entitlements */,
 				D163FF76287D59CE00743F7C /* App */,
 				D163FF73287D596E00743F7C /* Configuration */,
 				D164D02A288031430005F32A /* Views */,
@@ -461,6 +463,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FleksyCoreSample/FleksyCoreSample.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -479,6 +483,9 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksyCoreSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,6 +497,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FleksyCoreSample/FleksyCoreSample.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -508,6 +517,9 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = thingthing.FleksyCoreSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,7 +555,7 @@
 			repositoryURL = "https://github.com/FleksySDK/FleksyCoreSDK-iOS.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
+				minimumVersion = 1.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
