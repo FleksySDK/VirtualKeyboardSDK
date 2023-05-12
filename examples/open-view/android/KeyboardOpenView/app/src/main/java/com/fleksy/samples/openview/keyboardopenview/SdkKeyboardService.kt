@@ -5,6 +5,7 @@ import co.thingthing.fleksy.core.keyboard.KeyboardService
 import co.thingthing.fleksy.core.keyboard.PanelHelper
 import co.thingthing.fleksy.core.languages.KeyboardLanguage
 import co.thingthing.fleksy.core.languages.LanguageRepository
+import co.thingthing.fleksy.core.themes.SystemThemes
 import com.fleksy.samples.openview.keyboardopenview.databinding.ViewCustomBinding
 
 class SdkKeyboardService: KeyboardService() {
@@ -20,7 +21,9 @@ class SdkKeyboardService: KeyboardService() {
     override fun createConfiguration() =
         KeyboardConfiguration(
             style = KeyboardConfiguration.StyleConfiguration(
-                swipeDuration = 300
+                swipeDuration = 300,
+                forceTheme = SystemThemes.lightTheme,
+                forceDarkTheme = SystemThemes.darkTheme
             ),
             language = KeyboardConfiguration.LanguageConfiguration(
                 current = currentLanguage,

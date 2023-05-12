@@ -1,10 +1,11 @@
 package com.fleksy.samples.inappkeyboard
 
 import android.content.Context
-import co.thingthing.fleksy.core.keyboard.*
+import co.thingthing.fleksy.core.keyboard.KeyboardConfiguration
 import co.thingthing.fleksy.core.keyboard.inapp.InAppKeyboardIntegration
 import co.thingthing.fleksy.core.languages.KeyboardLanguage
 import co.thingthing.fleksy.core.languages.LanguageRepository
+import co.thingthing.fleksy.core.themes.SystemThemes
 
 class Integration(context: Context) : InAppKeyboardIntegration(context) {
 
@@ -13,7 +14,9 @@ class Integration(context: Context) : InAppKeyboardIntegration(context) {
 
     override fun createConfiguration() = KeyboardConfiguration(
         style = KeyboardConfiguration.StyleConfiguration(
-            swipeDuration = 300
+            swipeDuration = 300,
+            forceTheme = SystemThemes.lightTheme,
+            forceDarkTheme = SystemThemes.darkTheme
         ),
         language = KeyboardConfiguration.LanguageConfiguration(
             current = currentLanguage,
