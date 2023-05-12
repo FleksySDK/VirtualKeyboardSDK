@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KeyboardOpenView</string>
+    <string name="custom_layout_text">Customisable View 👀</string>
+    <string name="hide">Hide</string>
+    <string name="ime_enabled">IME Enabled=</string>
+    <string name="ime_current">IME Current=</string>
+</resources>

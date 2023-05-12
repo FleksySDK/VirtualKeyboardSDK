@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KeyboardFrameWithTextField</string>
+    <string name="frame_view_text">Frame View 👀 - Type your text</string>
+    <string name="hide">Hide</string>
+    <string name="full_cover">Full Cover</string>
+    <string name="search">Search</string>
+    <string name="ime_enabled">IME Enabled=</string>
+    <string name="ime_current">IME Current=</string>
+    <string name="try_it">Try it</string>
+</resources>
