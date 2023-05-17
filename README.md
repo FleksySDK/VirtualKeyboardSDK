@@ -5,7 +5,7 @@ Fleksy is in a mission to build the technological foundation for outstanding Lan
 
 In this repository, FleksySDK repository, Fleksy showcases the different sdk's for iOS, watchOS, Android and Flutter that might power your Keyboard or Input Technology.
 
-## Keyboard SDK 📱
+## Virtual Keyboard SDK 📱
 
 Keyboard SDK is a keyboard for iOS and Android.
 
@@ -35,9 +35,9 @@ Join our community to test how FleksySDK performs.
 | [Android Firebase](https://appdistribution.firebase.dev/i/f9ae23f7f30c9045) | Android sample App for testing right away our last development on the FleksySDK.|
 
 
-## Core SDK ⚙️
+## Predictive Keyboard SDK ⚙️
 
-Core SDK is the backbone of our keyboard SDK.
+Predictive Keyboard SDK is the backbone of our keyboard SDK.
 
 This is a specific SDK for people looking for increasing the reach of it's typing capabilities.
 
