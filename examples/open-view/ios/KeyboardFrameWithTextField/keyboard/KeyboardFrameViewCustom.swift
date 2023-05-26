@@ -56,7 +56,7 @@ class KeyboardFrameViewCustom : KeyboardApp, AppTextFieldDelegate {
     
     @MainActor @objc func handleFullCover() {
         label?.text = nil
-        listener?.show(mode: .fullCover)
+        listener?.show(mode: .fullCover())
     }
     
     /// This is gonna be called automatically by the system when you close the View.

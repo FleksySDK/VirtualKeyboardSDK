@@ -31,7 +31,7 @@ class KeyboardOpenViewCustom : KeyboardApp{
     }
     
     var defaultViewMode: KeyboardAppViewMode {
-        .fullCover // Shows the view over the keyboard, i.e. covering it.
+        .fullCover() // Shows the view over the keyboard, i.e. covering it.
     }
     
     ///

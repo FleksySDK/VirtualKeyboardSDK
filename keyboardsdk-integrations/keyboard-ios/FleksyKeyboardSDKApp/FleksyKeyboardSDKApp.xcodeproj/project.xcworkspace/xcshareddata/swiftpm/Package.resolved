@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FleksySDK/fleksyapps-iOS",
       "state" : {
-        "revision" : "a2f0b54ca330ae548dce85770b316e523ba8bc1f",
-        "version" : "1.0.0"
+        "revision" : "354757052687cdb170c6c62715b818f455038827",
+        "version" : "1.0.1"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FleksySDK/FleksyEngine-iOS",
       "state" : {
-        "revision" : "7963be3c7589f31b2793e217d994b51a9da8d8f4",
-        "version" : "3.10.3"
+        "revision" : "a57304e98c959ca68238acf202e93085b7be3ca5",
+        "version" : "3.12.4"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FleksySDK/FleksySDK-iOS",
       "state" : {
-        "revision" : "463d401e3017238cee8b5e099e2447e8354cba48",
-        "version" : "4.7.1"
+        "revision" : "3a9fe1844e7071e665e48e57d845d0753a6e62bf",
+        "version" : "4.9.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FleksySDK/iOS-FleksyAppsCore",
       "state" : {
-        "revision" : "5c25b4eaceebe3e326d1576c3fda14ad77708b75",
-        "version" : "0.9.1"
+        "revision" : "fef4136a5dcfd8260e0f35f5bb65888db3965ddd",
+        "version" : "1.0.0"
       }
     }
   ],
