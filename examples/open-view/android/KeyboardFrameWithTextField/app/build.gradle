@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation "co.thingthing.fleksycore:fleksycore-release:4.3.2"
+    implementation "co.thingthing.fleksycore:fleksycore-release:4.3.8"
     implementation 'androidx.core:core-ktx:1.10.0'
 
 
