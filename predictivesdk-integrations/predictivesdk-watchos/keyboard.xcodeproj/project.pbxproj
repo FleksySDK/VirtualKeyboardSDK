@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7542E517299671030033CFC5 /* KeyboardSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542E516299671030033CFC5 /* KeyboardSwipe.swift */; };
+		7542E51A299672AB0033CFC5 /* KeyboardSwipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542E519299672AB0033CFC5 /* KeyboardSwipeViewModel.swift */; };
+		7542E51C299683890033CFC5 /* SwipePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542E51B299683890033CFC5 /* SwipePoint.swift */; };
+		757DD04429926E1900138FB2 /* KeyboardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DD04329926E1900138FB2 /* KeyboardLayout.swift */; };
+		758E94132A3A0AFE00014D03 /* PredictiveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 758E94122A3A0AFE00014D03 /* PredictiveSDK */; };
+		759516E6299A2B300013E7B9 /* TextReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759516E5299A2B300013E7B9 /* TextReplacement.swift */; };
+		759516E9299A4ADA0013E7B9 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759516E8299A4ADA0013E7B9 /* String+Util.swift */; };
+		759516EB299A57CF0013E7B9 /* TextWithHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759516EA299A57CF0013E7B9 /* TextWithHighlight.swift */; };
+		759914B12993871000DBF673 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759914B02993871000DBF673 /* KeyboardViewModel.swift */; };
+		75A10EF52993DAAD005DB8FF /* SwiftUI+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A10EF42993DAAD005DB8FF /* SwiftUI+Util.swift */; };
+		75ABA2E62992378700D941D4 /* keyboard Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 75ABA2E52992378700D941D4 /* keyboard Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		75ABA2EB2992378700D941D4 /* keyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ABA2EA2992378700D941D4 /* keyboardApp.swift */; };
+		75ABA2ED2992378700D941D4 /* TypingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ABA2EC2992378700D941D4 /* TypingView.swift */; };
+		75ABA2EF2992378700D941D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ABA2EE2992378700D941D4 /* Assets.xcassets */; };
+		75ABA2F22992378700D941D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75ABA2F12992378700D941D4 /* Preview Assets.xcassets */; };
+		75ABA300299238C100D941D4 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ABA2FF299238C100D941D4 /* Keyboard.swift */; };
+		75ABA302299238DF00D941D4 /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ABA301299238DE00D941D4 /* KeyboardKey.swift */; };
+		75D07EB329965DD700E543E9 /* SwipeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D07EB229965DD700E543E9 /* SwipeShape.swift */; };
+		75D6BC9A2994DA1300B65C9C /* PredictiveSDKInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6BC992994DA1300B65C9C /* PredictiveSDKInteractor.swift */; };
+		75D6BCA22994DAB000B65C9C /* resourceArchive-en-US.jet in Resources */ = {isa = PBXBuildFile; fileRef = 75D6BCA12994DAB000B65C9C /* resourceArchive-en-US.jet */; };
+		75D6BCA92994E4C600B65C9C /* KeyboardSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6BCA82994E4C600B65C9C /* KeyboardSuggestions.swift */; };
+		75D6BCAB2995151A00B65C9C /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6BCAA2995151A00B65C9C /* Candidate.swift */; };
+		75D6BCAD29951F9A00B65C9C /* TypedTextProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6BCAC29951F9A00B65C9C /* TypedTextProxy.swift */; };
+		75E0908C299B8C15002E5D8B /* KeyboardMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0908B299B8C15002E5D8B /* KeyboardMode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75ABA2E72992378700D941D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75ABA2D92992378600D941D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75ABA2E42992378700D941D4;
+			remoteInfo = "keyboard Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75ABA2F82992378700D941D4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				75ABA2E62992378700D941D4 /* keyboard Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75D6BC9F2994DA3000B65C9C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7542E516299671030033CFC5 /* KeyboardSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSwipe.swift; sourceTree = "<group>"; };
+		7542E519299672AB0033CFC5 /* KeyboardSwipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSwipeViewModel.swift; sourceTree = "<group>"; };
+		7542E51B299683890033CFC5 /* SwipePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePoint.swift; sourceTree = "<group>"; };
+		757DD04329926E1900138FB2 /* KeyboardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayout.swift; sourceTree = "<group>"; };
+		759516E5299A2B300013E7B9 /* TextReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReplacement.swift; sourceTree = "<group>"; };
+		759516E8299A4ADA0013E7B9 /* String+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
+		759516EA299A57CF0013E7B9 /* TextWithHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithHighlight.swift; sourceTree = "<group>"; };
+		759914B02993871000DBF673 /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		75A10EF42993DAAD005DB8FF /* SwiftUI+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Util.swift"; sourceTree = "<group>"; };
+		75A4D69E2A38654B00967935 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
+		75ABA2DF2992378700D941D4 /* keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75ABA2E52992378700D941D4 /* keyboard Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "keyboard Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75ABA2EA2992378700D941D4 /* keyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardApp.swift; sourceTree = "<group>"; };
+		75ABA2EC2992378700D941D4 /* TypingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingView.swift; sourceTree = "<group>"; };
+		75ABA2EE2992378700D941D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75ABA2F12992378700D941D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75ABA2FF299238C100D941D4 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		75ABA301299238DE00D941D4 /* KeyboardKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
+		75D07EB229965DD700E543E9 /* SwipeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeShape.swift; sourceTree = "<group>"; };
+		75D6BC992994DA1300B65C9C /* PredictiveSDKInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictiveSDKInteractor.swift; sourceTree = "<group>"; };
+		75D6BCA12994DAB000B65C9C /* resourceArchive-en-US.jet */ = {isa = PBXFileReference; lastKnownFileType = file; path = "resourceArchive-en-US.jet"; sourceTree = "<group>"; };
+		75D6BCA82994E4C600B65C9C /* KeyboardSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSuggestions.swift; sourceTree = "<group>"; };
+		75D6BCAA2995151A00B65C9C /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		75D6BCAC29951F9A00B65C9C /* TypedTextProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedTextProxy.swift; sourceTree = "<group>"; };
+		75E0908B299B8C15002E5D8B /* KeyboardMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardMode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75ABA2E22992378700D941D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758E94132A3A0AFE00014D03 /* PredictiveSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7542E518299672630033CFC5 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				7542E516299671030033CFC5 /* KeyboardSwipe.swift */,
+				7542E519299672AB0033CFC5 /* KeyboardSwipeViewModel.swift */,
+				75D07EB229965DD700E543E9 /* SwipeShape.swift */,
+				7542E51B299683890033CFC5 /* SwipePoint.swift */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		755C7D41299BB97700E85534 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				75D6BCA82994E4C600B65C9C /* KeyboardSuggestions.swift */,
+				759516EA299A57CF0013E7B9 /* TextWithHighlight.swift */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		755C7D42299BB9C200E85534 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				757DD04329926E1900138FB2 /* KeyboardLayout.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		759516E7299A4AD20013E7B9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				75A10EF42993DAAD005DB8FF /* SwiftUI+Util.swift */,
+				759516E8299A4ADA0013E7B9 /* String+Util.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		759914AF299386FE00DBF673 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7542E518299672630033CFC5 /* Swipe */,
+				759914B02993871000DBF673 /* KeyboardViewModel.swift */,
+				75ABA2FF299238C100D941D4 /* Keyboard.swift */,
+				75ABA301299238DE00D941D4 /* KeyboardKey.swift */,
+				75E0908B299B8C15002E5D8B /* KeyboardMode.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		75A4D69D2A38653500967935 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				75A4D69E2A38654B00967935 /* SampleCode.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		75ABA2D82992378600D941D4 = {
+			isa = PBXGroup;
+			children = (
+				75ABA2E92992378700D941D4 /* keyboardWatchApp */,
+				75ABA2E02992378700D941D4 /* Products */,
+				75D6BC9B2994DA2F00B65C9C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		75ABA2E02992378700D941D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75ABA2DF2992378700D941D4 /* keyboard.app */,
+				75ABA2E52992378700D941D4 /* keyboard Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75ABA2E92992378700D941D4 /* keyboardWatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				75A4D69D2A38653500967935 /* Configuration */,
+				75ABA2EA2992378700D941D4 /* keyboardApp.swift */,
+				75ABA2EC2992378700D941D4 /* TypingView.swift */,
+				75D6BCAC29951F9A00B65C9C /* TypedTextProxy.swift */,
+				755C7D42299BB9C200E85534 /* Model */,
+				755C7D41299BB97700E85534 /* Suggestions */,
+				759914AF299386FE00DBF673 /* Keyboard */,
+				75D6BC982994DA0C00B65C9C /* PredictiveSDK */,
+				759516E7299A4AD20013E7B9 /* Util */,
+				75D6BCA02994DA8C00B65C9C /* Resources */,
+				75ABA2F02992378700D941D4 /* Preview Content */,
+			);
+			path = keyboardWatchApp;
+			sourceTree = "<group>";
+		};
+		75ABA2F02992378700D941D4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				75ABA2F12992378700D941D4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75D6BC982994DA0C00B65C9C /* PredictiveSDK */ = {
+			isa = PBXGroup;
+			children = (
+				75D6BC992994DA1300B65C9C /* PredictiveSDKInteractor.swift */,
+				75D6BCAA2995151A00B65C9C /* Candidate.swift */,
+				759516E5299A2B300013E7B9 /* TextReplacement.swift */,
+			);
+			path = PredictiveSDK;
+			sourceTree = "<group>";
+		};
+		75D6BC9B2994DA2F00B65C9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75D6BCA02994DA8C00B65C9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75D6BCA12994DAB000B65C9C /* resourceArchive-en-US.jet */,
+				75ABA2EE2992378700D941D4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75ABA2DE2992378700D941D4 /* keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75ABA2F92992378700D941D4 /* Build configuration list for PBXNativeTarget "keyboard" */;
+			buildPhases = (
+				75ABA2DD2992378700D941D4 /* Resources */,
+				75ABA2F82992378700D941D4 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75ABA2E82992378700D941D4 /* PBXTargetDependency */,
+			);
+			name = keyboard;
+			productName = keyboard;
+			productReference = 75ABA2DF2992378700D941D4 /* keyboard.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		75ABA2E42992378700D941D4 /* keyboard Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75ABA2F52992378700D941D4 /* Build configuration list for PBXNativeTarget "keyboard Watch App" */;
+			buildPhases = (
+				75ABA2E12992378700D941D4 /* Sources */,
+				75ABA2E22992378700D941D4 /* Frameworks */,
+				75ABA2E32992378700D941D4 /* Resources */,
+				75D6BC9F2994DA3000B65C9C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "keyboard Watch App";
+			packageProductDependencies = (
+				758E94122A3A0AFE00014D03 /* PredictiveSDK */,
+			);
+			productName = "keyboard Watch App";
+			productReference = 75ABA2E52992378700D941D4 /* keyboard Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75ABA2D92992378600D941D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					75ABA2DE2992378700D941D4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					75ABA2E42992378700D941D4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 75ABA2DC2992378600D941D4 /* Build configuration list for PBXProject "keyboard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75ABA2D82992378600D941D4;
+			packageReferences = (
+				758E94112A3A0AFE00014D03 /* XCRemoteSwiftPackageReference "PredictiveSDK-iOS" */,
+			);
+			productRefGroup = 75ABA2E02992378700D941D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75ABA2DE2992378700D941D4 /* keyboard */,
+				75ABA2E42992378700D941D4 /* keyboard Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75ABA2DD2992378700D941D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75ABA2E32992378700D941D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75ABA2F22992378700D941D4 /* Preview Assets.xcassets in Resources */,
+				75D6BCA22994DAB000B65C9C /* resourceArchive-en-US.jet in Resources */,
+				75ABA2EF2992378700D941D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75ABA2E12992378700D941D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7542E51A299672AB0033CFC5 /* KeyboardSwipeViewModel.swift in Sources */,
+				75E0908C299B8C15002E5D8B /* KeyboardMode.swift in Sources */,
+				75D07EB329965DD700E543E9 /* SwipeShape.swift in Sources */,
+				75D6BC9A2994DA1300B65C9C /* PredictiveSDKInteractor.swift in Sources */,
+				75ABA2ED2992378700D941D4 /* TypingView.swift in Sources */,
+				759516E9299A4ADA0013E7B9 /* String+Util.swift in Sources */,
+				75D6BCA92994E4C600B65C9C /* KeyboardSuggestions.swift in Sources */,
+				759516E6299A2B300013E7B9 /* TextReplacement.swift in Sources */,
+				75D6BCAB2995151A00B65C9C /* Candidate.swift in Sources */,
+				75ABA300299238C100D941D4 /* Keyboard.swift in Sources */,
+				757DD04429926E1900138FB2 /* KeyboardLayout.swift in Sources */,
+				75D6BCAD29951F9A00B65C9C /* TypedTextProxy.swift in Sources */,
+				759516EB299A57CF0013E7B9 /* TextWithHighlight.swift in Sources */,
+				75ABA302299238DF00D941D4 /* KeyboardKey.swift in Sources */,
+				75A10EF52993DAAD005DB8FF /* SwiftUI+Util.swift in Sources */,
+				7542E517299671030033CFC5 /* KeyboardSwipe.swift in Sources */,
+				7542E51C299683890033CFC5 /* SwipePoint.swift in Sources */,
+				75ABA2EB2992378700D941D4 /* keyboardApp.swift in Sources */,
+				759914B12993871000DBF673 /* KeyboardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75ABA2E82992378700D941D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75ABA2E42992378700D941D4 /* keyboard Watch App */;
+			targetProxy = 75ABA2E72992378700D941D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		75ABA2F32992378700D941D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A4D69E2A38654B00967935 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75ABA2F42992378700D941D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A4D69E2A38654B00967935 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		75ABA2F62992378700D941D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"keyboardWatchApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.thingthing.keyboard${SAMPLE_CODE_DISAMBIGUATOR}.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		75ABA2F72992378700D941D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"keyboardWatchApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.thingthing.keyboard${SAMPLE_CODE_DISAMBIGUATOR}.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		75ABA2FA2992378700D941D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.thingthing.keyboard${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		75ABA2FB2992378700D941D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.thingthing.keyboard${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75ABA2DC2992378600D941D4 /* Build configuration list for PBXProject "keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75ABA2F32992378700D941D4 /* Debug */,
+				75ABA2F42992378700D941D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75ABA2F52992378700D941D4 /* Build configuration list for PBXNativeTarget "keyboard Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75ABA2F62992378700D941D4 /* Debug */,
+				75ABA2F72992378700D941D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75ABA2F92992378700D941D4 /* Build configuration list for PBXNativeTarget "keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75ABA2FA2992378700D941D4 /* Debug */,
+				75ABA2FB2992378700D941D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		758E94112A3A0AFE00014D03 /* XCRemoteSwiftPackageReference "PredictiveSDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FleksySDK/PredictiveSDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		758E94122A3A0AFE00014D03 /* PredictiveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 758E94112A3A0AFE00014D03 /* XCRemoteSwiftPackageReference "PredictiveSDK-iOS" */;
+			productName = PredictiveSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 75ABA2D92992378600D941D4 /* Project object */;
+}

@@ -45,13 +45,13 @@ Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 la
 
 ###  Integration
 
-Using the Fleksy Core SDK you can add Autocorrection, Next word prediction and Swipe typing to your apps and custom keyboards.
+Using the Predictive SDK you can add Autocorrection, Next word prediction and Swipe typing to your apps and custom keyboards.
 
 | Folder | Description |
 | --- | --- |
-| [/coresdk-integrations/coresdk-ios](/coresdk-integrations/coresdk-ios) | iOS project for an App which uses the Fleksy Core SDK for Autocorrection and Next word prediction. |
-| [/coresdk-integrations/coresdk-watchos](/coresdk-integrations/coresdk-watchos) | watchOS project for an App which uses the Fleksy Core SDK for implementing a keyboard. |
-| [/coresdk-integrations/coresdk-android](/coresdk-integrations/coresdk-android) | Android project for an App which uses the Fleksy Core SDK for Autocorrection and Next word prediction. |
+| [/predictivesdk-integrations/predictivesdk-ios](/predictivesdk-integrations/predictivesdk-ios) | iOS project for an App which uses the Predictive SDK for Autocorrection and Next word prediction. |
+| [/predictivesdk-integrations/predictivesdk-watchos](/predictivesdk-integrations/predictivesdk-watchos) | watchOS project for an App which uses the Predictive SDK for implementing a keyboard. |
+| [/predictivesdk-integrations/predictivesdk-android](/predictivesdk-integrations/predictivesdk-android) | Android project for an App which uses the Predictive SDK for Autocorrection and Next word prediction. |
 
 ## Documentation 📗
 
