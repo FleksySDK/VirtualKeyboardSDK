@@ -35,24 +35,6 @@ Join our community to test how FleksySDK performs.
 | [Android Firebase](https://appdistribution.firebase.dev/i/f9ae23f7f30c9045) | Android sample App for testing right away our last development on the FleksySDK.|
 
 
-## Predictive Keyboard SDK ⚙️
-
-Predictive Keyboard SDK is the backbone of our keyboard SDK.
-
-This is a specific SDK for people looking for increasing the reach of it's typing capabilities.
-
-Autocorrection, Autocompletition, Next Word Prediction and Swipe typing in 82 languages are the core features that enables the expansion of any Input Technologies to other geographies. 
-
-###  Integration
-
-Using the Predictive SDK you can add Autocorrection, Next word prediction and Swipe typing to your apps and custom keyboards.
-
-| Folder | Description |
-| --- | --- |
-| [/predictivesdk-integrations/predictivesdk-ios](/predictivesdk-integrations/predictivesdk-ios) | iOS project for an App which uses the Predictive SDK for Autocorrection and Next word prediction. |
-| [/predictivesdk-integrations/predictivesdk-watchos](/predictivesdk-integrations/predictivesdk-watchos) | watchOS project for an App which uses the Predictive SDK for implementing a keyboard. |
-| [/predictivesdk-integrations/predictivesdk-android](/predictivesdk-integrations/predictivesdk-android) | Android project for an App which uses the Predictive SDK for Autocorrection and Next word prediction. |
-
 ## Documentation 📗
 
 - [Quick Start](https://docs.fleksy.com/quick-start/) - Get started on developing your keyboard using the FleksySDK.
