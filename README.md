@@ -7,7 +7,6 @@ This keyboard has outstanding features included such as: being able to type or s
 
 Once integrated you would be able to see an actual virtual keyboard in your device.
 
-
 ## Installation
 
 **iOS, iPadOS**
@@ -85,7 +84,7 @@ Join our community to test how FleksySDK performs.
 
 Any question that you might have, please post it directly into the [Github Discussion Forum](https://github.com/FleksySDK/fleksysdk/discussions).
 
-Business related questions, please, go to our [developer portal](https://developers.fleksy.com/), we will assist you as soon as possible.
+Business related questions, please, go to our <a href="https://developers.fleksy.com/" target="_blank">developer portal</a>, we will assist you as soon as possible.
 
 
 ## Licensing 📄
