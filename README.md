@@ -50,6 +50,7 @@ It also supports `kotlin` and `java`
 * 📱 **In-App Keyboard**: The Virtual Keyboard SDK allows you to integrate the virtual keyboard as an in-app keyboard without needing a system-wide keyboard. This is specific for App developers in the cybersecurity space. Further details: [In-App Keyboard iOS](https://docs.fleksy.com/sdk-ios/features/in-app-keyboard/) and [In-App Keyboard Android](https://docs.fleksy.com/sdk-android/features/in-app-keyboard/).
 * 🌍 **Languages**: The Virtual Keyboard SDK supports up to 82 different languages. 
 * 🎨 **Theming**: The Virtual Keyboard SDK allows you to configure the appearance of the keyboard by changing colors, font, background and more for a different parts of the keyboard. For further details and comprehensive documentation: [Theming iOS](https://docs.fleksy.com/sdk-ios/features/theming/) and [Theming Android](https://docs.fleksy.com/sdk-android/features/theming/).
+* 💅 **Topbar Icon**: The Virtual keyboard SDK empowers you to customize icons within the top bar, ranging from a basic image to a view positioned on either the right or left side of the topbar. Further details:  [Topbar iOS](https://docs.fleksy.com/sdk-ios/features/topbar-icon/) and [Topbar Android](https://docs.fleksy.com/sdk-android/features/topbar-icon/).
 
 
 ## Integration 🔌
