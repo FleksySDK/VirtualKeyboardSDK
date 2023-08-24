@@ -11,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="fU9-5j-c5R">
             <objects>
-                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="78S-vq-gAP" customClass="WelcomeViewController" customModule="KeyboardStyleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8fM-9j-Jv6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,35 +72,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="yJ8-nE-C5h"/>
-                    <connections>
-                        <segue destination="ZVl-z9-W5q" kind="show" identifier="SettingsSegue" id="AFa-Tl-r48"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yL-ob-uHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017" y="139"/>
-        </scene>
-        <!--Settings Table View Controller-->
-        <scene sceneID="kzK-rk-kOp">
-            <objects>
-                <tableViewController id="ZVl-z9-W5q" customClass="SettingsTableViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QuB-Wz-fvx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ZVl-z9-W5q" id="u5g-7R-a2c"/>
-                            <outlet property="delegate" destination="ZVl-z9-W5q" id="wfC-zW-tE8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="tNu-D3-AOs"/>
-                    <connections>
-                        <segue destination="u7L-Ct-OJ2" kind="show" identifier="SelectionSettingSegue" id="Ytg-7e-j4e"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dp5-5O-PXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1887" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o1B-rR-b49">
@@ -119,25 +94,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sew-Uu-44N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
-        </scene>
-        <!--Selection Table View Controller-->
-        <scene sceneID="AXg-2G-zCQ">
-            <objects>
-                <tableViewController id="u7L-Ct-OJ2" customClass="SelectionTableViewController" customModule="FleksyKeyboardSDKApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OOI-Ww-cqP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="u7L-Ct-OJ2" id="Rc8-do-UEA"/>
-                            <outlet property="delegate" destination="u7L-Ct-OJ2" id="zhp-Rz-Ggt"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="22T-Ib-zth"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gRo-1Y-uLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2772" y="139"/>
         </scene>
     </scenes>
     <resources>

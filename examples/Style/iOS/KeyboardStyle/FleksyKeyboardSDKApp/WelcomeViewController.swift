@@ -36,20 +36,11 @@ class WelcomeViewController: UITableViewController {
     }
     
     private enum ItemType {
-        case languages
-        case settings([SettingModel])
-        case inAppKeyboardTest
         case link(path: String)
         case info
         
         var action: ItemAction? {
             switch self {
-            case .languages:
-                return .segue(identifier: "LanguageSelectionSegue")
-            case .settings:
-                return .segue(identifier: "SettingsSegue")
-            case .inAppKeyboardTest:
-                return .segue(identifier: "InAppKeyboardTestSegue")
             case .link(let path):
                 guard let url = URL(string: path) else {
                     return nil
@@ -84,14 +75,6 @@ class WelcomeViewController: UITableViewController {
     
     private static func getSections() -> [Section] {
         return [
-            Section(titleKey: "Settings", items: [
-                Item(titleKey: "Look",
-                     type: .settings(SettingsSDK.lookSettings)),
-                Item(titleKey: "Sound",
-                     type: .settings(SettingsSDK.soundSettings)),
-                Item(titleKey: "Typing",
-                     type: .settings(SettingsSDK.typingSettings)),
-            ]),
             Section(titleKey: "Information", items: [
                 Item(titleKey: "App version",
                      subtitleKey: Constants.App.versionAndBuild,
@@ -99,13 +82,16 @@ class WelcomeViewController: UITableViewController {
                 Item(titleKey: "FleksyKeyboardSDK version",
                      subtitleKey: Constants.App.keyboardSDKVersionAndBuild,
                      type: .info),
+                Item(titleKey: "Keyboard status",
+                     subtitleKey: fleksyKeyboardAdded ? "Installed" : "Not installed",
+                     type: fleksyKeyboardAdded ? .info : .link(path: UIApplication.openSettingsURLString))
             ])
         ]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("Welcome to FleksySDK!", comment: "")
+        title = NSLocalizedString("Develop with Fleksy!", comment: "")
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
@@ -119,10 +105,6 @@ class WelcomeViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let item = sender as? Item {
             segue.destination.title = NSLocalizedString(item.titleKey, comment: "")
-            if case .settings(let settings) = item.type,
-               let settingsVC = segue.destination as? SettingsTableViewController {
-                settingsVC.settings = settings
-            }
         }
     }
     
