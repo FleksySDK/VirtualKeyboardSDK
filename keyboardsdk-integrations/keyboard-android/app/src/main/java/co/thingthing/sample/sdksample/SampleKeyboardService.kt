@@ -98,8 +98,8 @@ class SampleKeyboardService : KeyboardService() {
                 showEmojiSuggestions = true
             ),
             license = LicenseConfiguration(
-                licenseKey = "16622cae-b40e-4820-9483-fbda5145ed96",
-                licenseSecret = "be64731a1d6b446eb991e9ac50f6045b"
+		licenseKey = BuildConfig.FLEKSY_LICENSE_KEY,
+                licenseSecret = BuildConfig.FLEKSY_SECRET_KEY
             ),
 			apps = KeyboardConfiguration.AppsConfiguration(
                 keyboardApps = apps,
@@ -111,7 +111,7 @@ class SampleKeyboardService : KeyboardService() {
             )
 		)
 
-	override val appIcon get() = null // R.drawable.fleksy_logo
+	override val appIcon get() = R.drawable.fleksy_logo
 
     companion object {
 
