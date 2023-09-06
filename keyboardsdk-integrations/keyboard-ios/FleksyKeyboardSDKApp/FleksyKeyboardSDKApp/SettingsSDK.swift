@@ -23,8 +23,6 @@ struct SettingsSDK {
                                         allItemsGetter: {
                                             return FontSelectionItem.getAllFontSelectionItems()
                                         })),
-            .bool(BoolSetting(titleKey: "Show language on spacebar",
-                              key: FLEKSY_SETTINGS_DISPLAY_LANGUAGE)),
             .selection(SelectionSetting(titleKey: "Special key",
                                         subtitleKey: "Change the function of the button to the left of the spacebar",
                                         orderingKey: FLEKSY_SETTINGS_MAGIC_BUTTON_ORDER,
