@@ -46,6 +46,7 @@ It also supports `kotlin` and `java`
 
 ## Features 💅
 
+* ⚡ **Custom Action**: The Virtual Keyboard SDK enables you to add custom actions directly to the keyboard layout. This might be custom buttons next to the space bar, specific images and associated actions. Check all the different options: [Custom Action iOS](https://docs.fleksy.com/sdk-ios/features/custom-action/). (Working on the Android version).
 * 🙋‍♀️ **Emojis**: Emojis are already configured by categories, and they are automatically updated to the latest supported version. Configure and check all the different options: [Emojis iOS](https://docs.fleksy.com/sdk-ios/features/emojis/) and [Emojis Android](https://docs.fleksy.com/sdk-android/features/emojis/).
 * 📱 **In-App Keyboard**: The Virtual Keyboard SDK allows you to integrate the virtual keyboard as an in-app keyboard without needing a system-wide keyboard. This is specific for App developers in the cybersecurity space. Further details: [In-App Keyboard iOS](https://docs.fleksy.com/sdk-ios/features/in-app-keyboard/) and [In-App Keyboard Android](https://docs.fleksy.com/sdk-android/features/in-app-keyboard/).
 * 🌍 **Languages**: The Virtual Keyboard SDK supports up to 82 different languages. 
