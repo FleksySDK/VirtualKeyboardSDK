@@ -9,7 +9,7 @@ import UIKit
 
 class InAppKeyboardTextField: UITextField {
 
-    private let keyboardViewController = KeyboardViewController()
+    private lazy var keyboardViewController = KeyboardViewController()
     
     override var inputViewController: UIInputViewController? {
         return keyboardViewController
