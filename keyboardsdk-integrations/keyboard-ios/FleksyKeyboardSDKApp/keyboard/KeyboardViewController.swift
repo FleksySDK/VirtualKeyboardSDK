@@ -32,9 +32,6 @@ class KeyboardViewController: FKKeyboardViewController {
         // TypingConfiguration which includes punctuationSymbols
         let typing = TypingConfiguration()
         
-        // EmojiConfiguration at trigger point
-        let emojiConfig = EmojiConfiguration(skinTone: enumEmojiSkinTone.emojiSkinTone_Neutral)
-        
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
         let appsConfig = AppsConfiguration(keyboardApps: [GiphyApp(apiKey: "your-Giphy-api-key")],
@@ -45,11 +42,8 @@ class KeyboardViewController: FKKeyboardViewController {
         //
         let config = KeyboardConfiguration( style: style,
                                            typing: typing,
-                                           specialKeys: nil,
                                            apps: appsConfig,
                                            license: licenseConfig)
-        
-        config.emojiConfig = emojiConfig
         
         return config
     }
