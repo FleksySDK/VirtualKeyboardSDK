@@ -22,10 +22,5 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).KeyboardViewController</string>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gilroy-Medium.otf</string>
-		<string>Gilroy-Regular.otf</string>
-	</array>
 </dict>
 </plist>

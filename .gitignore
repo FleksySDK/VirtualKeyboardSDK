@@ -39,6 +39,7 @@ xcuserdata
 DerivedData
 *.xcuserstate
 Package.resolved
+package.resolve
 
 # Intellij
 

@@ -11,8 +11,6 @@
 		7534057E29C4817C00273484 /* FleksyApps in Frameworks */ = {isa = PBXBuildFile; productRef = 7534057D29C4817C00273484 /* FleksyApps */; };
 		753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */; };
 		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
-		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
-		753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540090329530F120022B197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090229530F120022B197 /* AppDelegate.swift */; };
 		7540090529530F120022B197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090429530F120022B197 /* SceneDelegate.swift */; };
 		7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
@@ -31,8 +29,6 @@
 		75400952295311B30022B197 /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400943295311B30022B197 /* SettingModels.swift */; };
 		75400953295311B30022B197 /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400944295311B30022B197 /* SettingsSDK.swift */; };
 		75400955295311D30022B197 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400954295311D30022B197 /* Constants.swift */; };
-		75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
-		7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
 		75ECE35729C854110010601C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75ECE35A29C854110010601C /* Localizable.strings */; };
@@ -90,8 +86,6 @@
 		75400943295311B30022B197 /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
 		75400944295311B30022B197 /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
 		75400954295311D30022B197 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		75400957295313DE0022B197 /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
-		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		75ECE35C29C8542B0010601C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -172,7 +166,6 @@
 			children = (
 				7540092A29530F800022B197 /* keyboard.entitlements */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
-				75400956295313DE0022B197 /* fonts */,
 				7540091E29530F3E0022B197 /* Info.plist */,
 			);
 			path = keyboard;
@@ -231,15 +224,6 @@
 				7540093B295311B30022B197 /* LanguageCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		75400956295313DE0022B197 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				75400957295313DE0022B197 /* Gilroy-Regular.otf */,
-				75400958295313DE0022B197 /* Gilroy-Medium.otf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		75ECE35329C853FD0010601C /* Localization */ = {
@@ -344,14 +328,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */,
 				75400945295311B30022B197 /* Assets.xcassets in Resources */,
 				7540095E2953185A0022B197 /* Main.storyboard in Resources */,
 				7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */,
 				7540094C295311B30022B197 /* LanguageCell.xib in Resources */,
 				75ECE35729C854110010601C /* Localizable.strings in Resources */,
 				75400947295311B30022B197 /* BoolSettingCell.xib in Resources */,
-				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */,
 				75ECE35829C854110010601C /* Localizable.strings in Resources */,
-				75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +672,7 @@
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.14.0;
+				minimumVersion = 4.16.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
