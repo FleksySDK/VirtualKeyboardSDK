@@ -30,6 +30,7 @@ class KeyboardViewController: FKKeyboardViewController {
         
         // TypingConfiguration which includes punctuationSymbols
         let typing = TypingConfiguration()
+
         
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
