@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
-		753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
-		753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540090329530F120022B197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090229530F120022B197 /* AppDelegate.swift */; };
 		7540090529530F120022B197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090429530F120022B197 /* SceneDelegate.swift */; };
 		7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
@@ -17,8 +15,6 @@
 		75400945295311B30022B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7540092E295311B30022B197 /* Assets.xcassets */; };
 		7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540093D295311B30022B197 /* WelcomeViewController.swift */; };
 		75400955295311D30022B197 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400954295311D30022B197 /* Constants.swift */; };
-		75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400957295313DE0022B197 /* Gilroy-Regular.otf */; };
-		7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75400958295313DE0022B197 /* Gilroy-Medium.otf */; };
 		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
@@ -63,8 +59,6 @@
 		7540092E295311B30022B197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7540093D295311B30022B197 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		75400954295311D30022B197 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		75400957295313DE0022B197 /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
-		75400958295313DE0022B197 /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C76C5B982A701F7400EB1C15 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -128,7 +122,6 @@
 		7540091B29530F3E0022B197 /* keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				75400956295313DE0022B197 /* fonts */,
 				7540092A29530F800022B197 /* keyboard.entitlements */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
 				7540091E29530F3E0022B197 /* Info.plist */,
@@ -142,15 +135,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		75400956295313DE0022B197 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				75400957295313DE0022B197 /* Gilroy-Regular.otf */,
-				75400958295313DE0022B197 /* Gilroy-Medium.otf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,11 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753CA892296D755A00E05B42 /* Gilroy-Regular.otf in Resources */,
 				75400945295311B30022B197 /* Assets.xcassets in Resources */,
 				7540095E2953185A0022B197 /* Main.storyboard in Resources */,
 				7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */,
-				753CA893296D755D00E05B42 /* Gilroy-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76C5B992A701F7500EB1C15 /* Media.xcassets in Resources */,
-				7540095A295313DE0022B197 /* Gilroy-Medium.otf in Resources */,
-				75400959295313DE0022B197 /* Gilroy-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
