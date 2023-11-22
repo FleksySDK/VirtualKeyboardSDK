@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Fleksy Health Keyboard</string>
+    <string name="header_text">Fleksy Health Keyboard</string>
+
+    <!-- Preferences -->
+    <string name="preferences_header">Settings</string>
+    <string name="autocorrection_title">Autocorrection</string>
+    <string name="swipe_title">Swipe Typing</string>
+    <string name="predictions_title">Predictions</string>
+    <string name="pref_key_autocorrection">autocorrection</string>
+    <string name="pref_key_swipe">swipe</string>
+    <string name="pref_key_predictions">predictions</string>
+
+    <string name="enable_fleksy_sdk">Enable Fleksy Health Keyboard ⚠️</string>
+    <string name="fleksy_sdk_enabled">Fleksy Health Keyboard is enabled! ✅</string>
+
+    <string name="select_fleksy_sdk">Select Fleksy Health Keyboard ⚠️</string>
+    <string name="fleksy_sdk_selected">Fleksy Health keyboard is selected! ✅</string>
+</resources>

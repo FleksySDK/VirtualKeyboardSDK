@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="def_value_autocorrection">false</bool>
+    <bool name="def_value_swipe">true</bool>
+    <bool name="def_value_predictions">true</bool>
+</resources>
