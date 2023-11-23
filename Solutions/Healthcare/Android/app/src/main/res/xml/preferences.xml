@@ -1,0 +1,26 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:title="@string/preferences_header"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:defaultValue="@bool/def_value_autocorrection"
+            app:key="@string/pref_key_autocorrection"
+            app:title="@string/autocorrection_title" />
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:defaultValue="@bool/def_value_swipe"
+            app:key="@string/pref_key_swipe"
+            app:title="@string/swipe_title" />
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:defaultValue="@bool/def_value_predictions"
+            app:key="@string/pref_key_predictions"
+            app:title="@string/predictions_title" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
