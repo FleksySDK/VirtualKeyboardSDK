@@ -82,31 +82,5 @@ class KeyboardSDKService : KeyboardService() {
 
     override fun onCreate() {
         super.onCreate()
-        updateFlaggedWordsFromAssets("en-US", true)
     }
-
-    private fun updateFlaggedWordsFromAssets(locale: String, restartEngine: Boolean) {
-        val sharedPreferenceKey = "asset_flagged"
-
-        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-
-        if (!sharedPreferences.getBoolean(sharedPreferenceKey, false)) {
-            val sourceAsset = "encrypted/bad_words.txt"
-            val destination = File(filesDir, "flagged_words_en-US.txt")
-
-            try {
-                resources.assets.open(sourceAsset).apply {
-                    copyTo(FileOutputStream(destination))
-                    close()
-                }
-
-                updateFlaggedWords(locale, destination, restartEngine)
-            } catch (exception: IOException) {
-                Log.e("HealthKeyboard", "Error copying asset file: ${exception.message}")
-            }
-
-            sharedPreferences.edit().putBoolean(sharedPreferenceKey, true).apply()
-        }
-    }
-
 }
