@@ -9,6 +9,7 @@
 import UIKit
 import FleksyKeyboardSDK
 import GiphyApp
+import Combine
 
 // MARK: - KeyboardViewController
 
