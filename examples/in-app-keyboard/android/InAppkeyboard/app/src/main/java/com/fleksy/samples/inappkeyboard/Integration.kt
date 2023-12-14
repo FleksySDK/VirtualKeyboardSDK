@@ -21,7 +21,6 @@ class Integration(context: Context) : InAppKeyboardIntegration(context) {
         language = KeyboardConfiguration.LanguageConfiguration(
             current = currentLanguage,
             automaticDownload = true,
-            repository = LanguageRepository.PREVIEW,
             orderMode = KeyboardConfiguration.LanguageOrderMode.STATIC
 
         ),
@@ -29,9 +28,6 @@ class Integration(context: Context) : InAppKeyboardIntegration(context) {
             recent = DEFAULT_RECENT_EMOJI,
             defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
             defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-        ),
-        monitor = KeyboardConfiguration.MonitorConfiguration(
-            extractionMode = KeyboardConfiguration.ExtractionMode.EXTRACTED
         )
     )
 

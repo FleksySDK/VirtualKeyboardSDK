@@ -12,8 +12,8 @@ import com.fleksy.samples.openview.framewithtextfield.databinding.ViewCustomFull
 
 class SdkKeyboardService : KeyboardService() {
 
-    lateinit var customViewFrame: ViewCustomFrameBinding
-    lateinit var customViewFull: ViewCustomFullBinding
+    private lateinit var customViewFrame: ViewCustomFrameBinding
+    private lateinit var customViewFull: ViewCustomFullBinding
 
     private val currentLanguage
         get() = KeyboardLanguage("en-US")
@@ -45,7 +45,7 @@ class SdkKeyboardService : KeyboardService() {
             false
         }
 
-        PanelHelper.showFrameView(customViewFrame.root)
+        PanelHelper.showFrameView(customViewFrame.root, topBarVisible = true)
     }
 
     private fun openFullView() {
@@ -73,7 +73,6 @@ class SdkKeyboardService : KeyboardService() {
             language = KeyboardConfiguration.LanguageConfiguration(
                 current = currentLanguage,
                 automaticDownload = true,
-                repository = LanguageRepository.PREVIEW,
                 orderMode = KeyboardConfiguration.LanguageOrderMode.STATIC
 
             ),
@@ -81,9 +80,6 @@ class SdkKeyboardService : KeyboardService() {
                 recent = DEFAULT_RECENT_EMOJI,
                 defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
                 defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-            ),
-            monitor = KeyboardConfiguration.MonitorConfiguration(
-                extractionMode = KeyboardConfiguration.ExtractionMode.EXTRACTED
             )
         )
 

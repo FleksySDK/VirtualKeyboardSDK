@@ -10,7 +10,7 @@ import com.fleksy.samples.openview.keyboardopenview.databinding.ViewCustomBindin
 
 class SdkKeyboardService: KeyboardService() {
 
-    lateinit var customView: ViewCustomBinding
+    private lateinit var customView: ViewCustomBinding
 
     private val currentLanguage
         get() = KeyboardLanguage("en-US")
@@ -28,7 +28,6 @@ class SdkKeyboardService: KeyboardService() {
             language = KeyboardConfiguration.LanguageConfiguration(
                 current = currentLanguage,
                 automaticDownload = true,
-                repository = LanguageRepository.PREVIEW,
                 orderMode = KeyboardConfiguration.LanguageOrderMode.STATIC
 
             ),
@@ -36,9 +35,6 @@ class SdkKeyboardService: KeyboardService() {
                 recent = DEFAULT_RECENT_EMOJI,
                 defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
                 defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-            ),
-            monitor = KeyboardConfiguration.MonitorConfiguration(
-                extractionMode = KeyboardConfiguration.ExtractionMode.EXTRACTED
             )
         )
 

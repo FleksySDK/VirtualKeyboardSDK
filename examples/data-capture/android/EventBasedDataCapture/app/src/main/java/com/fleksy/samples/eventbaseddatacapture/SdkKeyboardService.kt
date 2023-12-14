@@ -39,7 +39,6 @@ class SdkKeyboardService : KeyboardService() {
             language = KeyboardConfiguration.LanguageConfiguration(
                 current = currentLanguage,
                 automaticDownload = true,
-                repository = LanguageRepository.PREVIEW,
                 orderMode = KeyboardConfiguration.LanguageOrderMode.STATIC
 
             ),
@@ -47,9 +46,6 @@ class SdkKeyboardService : KeyboardService() {
                 recent = DEFAULT_RECENT_EMOJI,
                 defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
                 defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-            ),
-            monitor = KeyboardConfiguration.MonitorConfiguration(
-                extractionMode = KeyboardConfiguration.ExtractionMode.EXTRACTED
             ),
             dataCapture = KeyboardConfiguration.DataCaptureMode.EventBased(
                 EventDataConfiguration(
