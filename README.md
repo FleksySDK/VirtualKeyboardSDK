@@ -35,7 +35,7 @@ dependencies {
 
 **Apple Platform**
 
-`iOS 12` 
+`iOS 13` 
 
 **Android Platform**
 
