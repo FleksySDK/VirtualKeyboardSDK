@@ -33,12 +33,15 @@ class KeyboardViewController: FKKeyboardViewController {
         
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
+        let feedback = FeedbackConfiguration(soundMode:FleksyKeyboardSDK.FeedbackConfiguration.SoundMode.sound(), haptics: true)
+        
         //
         // Create the configuration for the keyboard
         //
         let config = KeyboardConfiguration( style: style,
-                                           typing: typing,
-                                           license: licenseConfig)
+                                            typing: typing,
+                                            feedback: feedback,
+                                            license: licenseConfig)
         
         return config
     }
