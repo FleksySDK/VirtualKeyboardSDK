@@ -60,9 +60,9 @@ Using the Fleksy Keyboard SDK you are able to create an App for iOS or Android w
 
 | Folder | Description |
 | --- | --- |
-| [/keyboardsdk-integrations/keyboard-ios](/keyboardsdk-integrations/keyboard-ios) | iOS project for an App which holds a keyboard built using the FleksySDK. |
-| [/keyboardsdk-integrations/keyboard-android](/keyboardsdk-integrations/keyboard-android) | Android project for an App which has a keyboard built using the FleksySDK. |
-| [/keyboardsdk-integrations/keyboard-flutter](/keyboardsdk-integrations/keyboard-flutter) | Flutter project for an App which holds a keyboard built using the FleksySDK. |
+| [/Integration/Keyboard-iOS](/Integration/Keyboard-iOS) | iOS project for an App which holds a keyboard built using the FleksySDK. |
+| [/Integration/Keyboard-Android](/Integration/Keyboard-Android) | Android project for an App which has a keyboard built using the FleksySDK. |
+| [/Integration/Keyboard-Flutter](/Integration/Keyboard-Flutter) | Flutter project for an App which holds a keyboard built using the FleksySDK. |
 
 ## Benchmark 🚀
 
