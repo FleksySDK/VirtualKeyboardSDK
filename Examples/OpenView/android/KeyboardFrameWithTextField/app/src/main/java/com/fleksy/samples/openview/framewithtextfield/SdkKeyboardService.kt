@@ -1,11 +1,11 @@
 package com.fleksy.samples.openview.framewithtextfield
 
-import android.view.inputmethod.EditorInfo
+import android.view.View
+import android.view.accessibility.AccessibilityEvent
 import co.thingthing.fleksy.core.keyboard.KeyboardConfiguration
 import co.thingthing.fleksy.core.keyboard.KeyboardService
 import co.thingthing.fleksy.core.keyboard.PanelHelper
 import co.thingthing.fleksy.core.languages.KeyboardLanguage
-import co.thingthing.fleksy.core.languages.LanguageRepository
 import co.thingthing.fleksy.core.themes.SystemThemes
 import com.fleksy.samples.openview.framewithtextfield.databinding.ViewCustomFrameBinding
 import com.fleksy.samples.openview.framewithtextfield.databinding.ViewCustomFullBinding
@@ -23,29 +23,60 @@ class SdkKeyboardService : KeyboardService() {
 
     override fun onAppsButtonClicked() {
         customViewFrame = ViewCustomFrameBinding.inflate(this.layoutInflater)
-        customViewFrame.btClose.setOnClickListener {
-            PanelHelper.hideFullView()
-            clearTemporaryInputConnection()
-        }
-        customViewFrame.btFullCover.setOnClickListener { openFullView() }
-        customViewFrame.btClose.setOnClickListener { PanelHelper.hideFrameView() }
-
-        customViewFrame.etSearch.setOnFocusChangeListener { _, hasFocus ->
-            temporaryInputConnection = if (hasFocus) {
-                val inputConnection = customViewFrame.etSearch.onCreateInputConnection(EditorInfo())
-                inputConnection
-            } else {
+        with(customViewFrame) {
+            btClose.setOnClickListener {
+                PanelHelper.hideFullView()
                 clearTemporaryInputConnection()
-                null
             }
-        }
-        customViewFrame.etSearch.setOnEditorActionListener { textView, i, keyEvent ->
-            customViewFrame.textView.text = textView.text
-            clearTemporaryInputConnection()
-            false
-        }
+            btFullCover.setOnClickListener { openFullView() }
+            btClose.setOnClickListener { PanelHelper.hideFrameView() }
 
-        PanelHelper.showFrameView(customViewFrame.root, topBarVisible = true)
+            etSearch.apply {
+
+                setOnClickListener {
+                    requestFocus()
+                }
+
+                setOnFocusChangeListener { _, hasFocus ->
+                    if (hasFocus) {
+
+                        val editorInfo = createEditorInfo(this)
+
+                        val inputConnection =
+                            onCreateInputConnection(editorInfo)
+
+                        attachTemporaryInputConnection(
+                            inputConnection,
+                            editorInfo
+                        )
+                    } else {
+                        clearTemporaryInputConnection()
+                    }
+                }
+
+                setOnEditorActionListener { textView, i, keyEvent ->
+                    customViewFrame.textView.text = textView.text
+                    clearTemporaryInputConnection()
+                    false
+                }
+
+                accessibilityDelegate = object : View.AccessibilityDelegate() {
+                    override fun sendAccessibilityEvent(host: View, eventType: Int) {
+                        when (eventType) {
+                            AccessibilityEvent.TYPE_VIEW_TEXT_SELECTION_CHANGED -> {
+                                forceCursorSelectionChange(
+                                    selectionStart,
+                                    selectionEnd
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            root.setOnClickListener { etSearch.requestFocus() }
+            PanelHelper.showFrameView(root, topBarVisible = true)
+        }
     }
 
     private fun openFullView() {

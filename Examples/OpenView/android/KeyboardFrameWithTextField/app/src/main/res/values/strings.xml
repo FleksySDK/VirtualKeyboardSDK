@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KeyboardFrameWithTextField</string>
     <string name="frame_view_text">Frame View 👀 - Type your text</string>
+    <string name="full_view_text">Full View 👀</string>
     <string name="hide">Hide</string>
     <string name="full_cover">Full Cover</string>
     <string name="search">Search</string>
