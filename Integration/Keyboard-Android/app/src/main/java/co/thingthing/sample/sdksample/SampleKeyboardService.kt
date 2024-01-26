@@ -28,11 +28,11 @@ import java.util.concurrent.TimeUnit
 
 class SampleKeyboardService : KeyboardService() {
 
-	private val apps by lazy {
-		listOf(
-			GiphyApp(GIPHY_API_KEY)
-		)
-	}
+    private val apps by lazy {
+        listOf(
+            GiphyApp(GIPHY_API_KEY)
+        )
+    }
 
     private val currentLanguage
         get() = KeyboardLanguage(currentLocale, currentLayout)
@@ -98,10 +98,10 @@ class SampleKeyboardService : KeyboardService() {
                 showEmojiSuggestions = true
             ),
             license = LicenseConfiguration(
-		licenseKey = BuildConfig.FLEKSY_LICENSE_KEY,
+                licenseKey = BuildConfig.FLEKSY_LICENSE_KEY,
                 licenseSecret = BuildConfig.FLEKSY_SECRET_KEY
             ),
-			apps = KeyboardConfiguration.AppsConfiguration(
+            apps = KeyboardConfiguration.AppsConfiguration(
                 keyboardApps = apps,
                 shareAuthority = "$packageName.fileprovider",
                 shareDirectory = "SharedContent",
@@ -109,13 +109,13 @@ class SampleKeyboardService : KeyboardService() {
                 showAppsInCarousel = true,
                 showAppsOnStart = true
             )
-		)
+        )
 
-	override val appIcon get() = R.drawable.fleksy_logo
+    override val appIcon get() = R.drawable.fleksy_logo
 
     companion object {
 
-		const val GIPHY_API_KEY = "ADD_YOUR_GIPHY_KEY_HERE"
+        const val GIPHY_API_KEY = "ADD_YOUR_GIPHY_KEY_HERE"
 
         private val DEFAULT_RECENT_EMOJI = setOf(
             "😂", "😍", "😭", "☺️", "😘", "👏", "🙏", "👌", "👍",
