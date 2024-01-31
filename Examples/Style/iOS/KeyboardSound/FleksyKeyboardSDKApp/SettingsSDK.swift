@@ -12,16 +12,19 @@ import UIKit
 
 struct SettingsSDK {
     static var soundSettings: [SettingModel] {
-        let accessibilityPrefix = Constants.Accessibility.SectionPrefix.sound
         return [
-            .bool(BoolSetting(titleKey: "Keyboard clicks",
-                              subtitleKey: "The keyboard emits a click sound whenever you tap it. Requires Full Access",
-                              key: FLEKSY_SETTINGS_KEYBOARD_CLICKS,
-                              accessibilityPrefix: accessibilityPrefix + "KeyboardClicks.")),
-            .bool(BoolSetting(titleKey: "Swipe Sounds",
-                              subtitleKey: "A swoosh sound whenever you swipe. Requires Full Access",
-                              key: FLEKSY_SETTINGS_TYPING_SOUNDS,
-                              accessibilityPrefix: accessibilityPrefix + "SwipeSounds."))
+            .selection(SelectionSetting(titleKey: "Keyboard sounds",
+                                        getter: { .keyboardSounds(.init(sdkSoundMode: FleksyManagedSettings.soundMode)) },
+                                        setter: {
+                                            guard case .keyboardSounds(let keyboardSounds) = $0 else { fatalError() }
+                                            FleksyManagedSettings.soundMode = keyboardSounds.sdkSoundMode
+                                        },
+                                        allItemsGetter: { KeyboardSoundSelectionItem.getAllKeyboardSoundsSelectionItems()
+                                        })),
+            .bool(BoolSetting(titleKey: "Keyboard haptics",
+                              subtitleKey: "The keyboard produce haptic feedback whenever you tap it. Requires Full Access",
+                              getter: { FleksyManagedSettings.haptics },
+                              setter: { FleksyManagedSettings.haptics = $0 })),
         ]
     }
 }
