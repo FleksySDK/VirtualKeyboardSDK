@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol BoolSettingCellDelegate: SettingsTableViewController {
-    func updateRelatedCells(for parentKey: String)
-}
-
 class BoolSettingCell: UITableViewCell {
     
     static var identifier: String {
@@ -25,34 +21,18 @@ class BoolSettingCell: UITableViewCell {
     @IBOutlet private weak var lbTitle: UILabel!
     @IBOutlet private weak var lbSubtitle: UILabel!
     @IBOutlet private weak var switchSetting: UISwitch!
+        
+    private var setting: BoolSetting?
     
-    weak var delegate: (BoolSettingCellDelegate)?
-    
-    private var setting: BoolSetting? {
-        didSet {
-            self.reloadContent()
-        }
-    }
-
     func loadSetting(_ setting: BoolSetting) {
         self.setting = setting
+        reloadContent()
     }
-    
-    func refreshIfNeeded(for parentKey: String) -> Bool {
-        guard let setting = self.setting else { return false }
-        let isRelated = setting.relations
-            .filter({ $0.isDependant })
-            .compactMap({ $0.key })
-            .contains(parentKey)
-        return isRelated
-    }
-    
+        
     @IBAction func toggleSwitch(_ sender: UISwitch) {
         setting?.set(value: sender.isOn)
         guard let setting = self.setting else { return }
         sender.isOn = setting.get()
-        guard let delegate = self.delegate else { return }
-        delegate.updateRelatedCells(for: setting.settingKey)
     }
     
     private func reloadContent() {
@@ -64,9 +44,6 @@ class BoolSettingCell: UITableViewCell {
         }
         lbSubtitle.isHidden = lbSubtitle.text?.isEmpty ?? true
         switchSetting.isOn = setting.get()
-        
-        accessibilityIdentifier = setting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.view
-        switchSetting.accessibilityIdentifier = setting.accessibilityPrefix + Constants.Accessibility.ComponentSuffix.switchControl
     }
     
 }

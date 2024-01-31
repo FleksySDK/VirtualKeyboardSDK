@@ -91,7 +91,7 @@ class WelcomeViewController: UITableViewController {
                      type: fleksyKeyboardAdded ? .info : .link(path: UIApplication.openSettingsURLString))
             ]),
             Section(titleKey: "Settings", items: [
-                Item(titleKey: "Sounds",
+                Item(titleKey: "Sounds & Haptics",
                      type: .settings(SettingsSDK.soundSettings))
             ])
         ]
@@ -120,11 +120,11 @@ class WelcomeViewController: UITableViewController {
         }
     }
     
+    // MARK: - Private functions
+    
     @objc func appDidBecomeActive(_ notification: Notification) {
         reloadData()
     }
-    
-    // MARK: - Private functions
     
     private func reloadData() {
         sections = Self.getSections()

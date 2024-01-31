@@ -17,6 +17,9 @@
 		75400955295311D30022B197 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75400954295311D30022B197 /* Constants.swift */; };
 		7540095D2953185A0022B197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095B2953185A0022B197 /* LaunchScreen.storyboard */; };
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
+		75BCEE662B6A5B5000406E25 /* CustomButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75BCEE632B6A5B5000406E25 /* CustomButton.wav */; };
+		75BCEE672B6A5B5000406E25 /* CustomBackspace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75BCEE642B6A5B5000406E25 /* CustomBackspace.wav */; };
+		75BCEE682B6A5B5000406E25 /* CustomTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75BCEE652B6A5B5000406E25 /* CustomTap.wav */; };
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 		C77DA22E2AB311C20087BB6F /* SettingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77DA2272AB311C20087BB6F /* SettingModels.swift */; };
@@ -25,7 +28,6 @@
 		C77DA2312AB311C20087BB6F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77DA22B2AB311C20087BB6F /* SettingsTableViewController.swift */; };
 		C77DA2322AB311C20087BB6F /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77DA22C2AB311C20087BB6F /* SelectionTableViewController.swift */; };
 		C77DA2332AB311C20087BB6F /* SettingsSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77DA22D2AB311C20087BB6F /* SettingsSDK.swift */; };
-		C77DA2352AB313AB0087BB6F /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77DA2342AB313AB0087BB6F /* CommonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +69,15 @@
 		75400954295311D30022B197 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		75BCEE632B6A5B5000406E25 /* CustomButton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CustomButton.wav; sourceTree = "<group>"; };
+		75BCEE642B6A5B5000406E25 /* CustomBackspace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CustomBackspace.wav; sourceTree = "<group>"; };
+		75BCEE652B6A5B5000406E25 /* CustomTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CustomTap.wav; sourceTree = "<group>"; };
 		C77DA2272AB311C20087BB6F /* SettingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModels.swift; sourceTree = "<group>"; };
 		C77DA2292AB311C20087BB6F /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
 		C77DA22A2AB311C20087BB6F /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
 		C77DA22B2AB311C20087BB6F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C77DA22C2AB311C20087BB6F /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
 		C77DA22D2AB311C20087BB6F /* SettingsSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSDK.swift; sourceTree = "<group>"; };
-		C77DA2342AB313AB0087BB6F /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,6 @@
 				7540090229530F120022B197 /* AppDelegate.swift */,
 				7540092E295311B30022B197 /* Assets.xcassets */,
 				75400954295311D30022B197 /* Constants.swift */,
-				C77DA2342AB313AB0087BB6F /* CommonUtils.swift */,
 				7540093D295311B30022B197 /* WelcomeViewController.swift */,
 				7540090429530F120022B197 /* SceneDelegate.swift */,
 				7540095B2953185A0022B197 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 		7540091B29530F3E0022B197 /* keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				75BCEE622B6A5B4400406E25 /* Resources */,
 				7540092A29530F800022B197 /* keyboard.entitlements */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
 				7540091E29530F3E0022B197 /* Info.plist */,
@@ -149,6 +153,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75BCEE622B6A5B4400406E25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75BCEE642B6A5B5000406E25 /* CustomBackspace.wav */,
+				75BCEE632B6A5B5000406E25 /* CustomButton.wav */,
+				75BCEE652B6A5B5000406E25 /* CustomTap.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C77DA2262AB311C20087BB6F /* Settings */ = {
@@ -273,6 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BCEE662B6A5B5000406E25 /* CustomButton.wav in Resources */,
+				75BCEE672B6A5B5000406E25 /* CustomBackspace.wav in Resources */,
+				75BCEE682B6A5B5000406E25 /* CustomTap.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +303,6 @@
 				753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */,
 				7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */,
 				C77DA2322AB311C20087BB6F /* SelectionTableViewController.swift in Sources */,
-				C77DA2352AB313AB0087BB6F /* CommonUtils.swift in Sources */,
 				C77DA22E2AB311C20087BB6F /* SettingModels.swift in Sources */,
 				C77DA22F2AB311C20087BB6F /* BoolSettingCell.swift in Sources */,
 				C77DA2312AB311C20087BB6F /* SettingsTableViewController.swift in Sources */,
@@ -594,7 +610,7 @@
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.18.2;
+				minimumVersion = 4.20.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

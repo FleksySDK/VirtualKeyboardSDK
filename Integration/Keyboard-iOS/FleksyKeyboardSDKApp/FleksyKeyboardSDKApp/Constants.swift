@@ -14,13 +14,7 @@ enum Constants {
     enum App {
         static let keyboardExtensionBundleId = Bundle.main.bundleIdentifier! + ".keyboard"
         static var versionAndBuild: String {
-            let buildConfigStr: String
-            #if DEBUG
-            buildConfigStr = "Dev "
-            #else
-            buildConfigStr = "Prod "
-            #endif
-            return buildConfigStr + versionAndBuild(forBundle: Bundle.main)
+            versionAndBuild(forBundle: Bundle.main)
         }
         
         static var keyboardSDKVersionAndBuild: String {
