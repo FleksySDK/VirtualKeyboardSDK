@@ -19,24 +19,22 @@ enum SettingModel {
 struct BoolSetting {
     let titleKey: String
     let subtitleKey: String?
-    private let isInverted: Bool
-    fileprivate let key: String
-    
-    init(titleKey: String, subtitleKey: String? = nil, isInverted: Bool = false, key: String) {
+    private let getter: () -> Bool
+    private let setter: (Bool) -> Void
+            
+    init(titleKey: String, subtitleKey: String? = nil, getter: @escaping () -> Bool, setter: @escaping (Bool) -> Void, isInverted: Bool = false) {
         self.titleKey = titleKey
         self.subtitleKey = subtitleKey
-        self.isInverted = isInverted
-        self.key = key
+        self.getter = getter
+        self.setter = setter
     }
     
     func get() -> Bool {
-        let value = SettingsSDK.userDefaults.bool(forKey: key)
-        return isInverted ? !value : value
+        getter()
     }
     
     func set(value: Bool) {
-        let finalValue = isInverted ? !value : value
-        SettingsSDK.userDefaults.set(finalValue, forKey: key)
+        setter(value)
     }
 }
 
@@ -51,30 +49,74 @@ protocol SelectionItem {
 
 /// Type used to apply an extra (visual) modificator to the selection items.
 enum ItemModificator {
-    case font(name: String)
+    case font(UIFont?)
 }
 
 /// Type that contains the object that is set into the `UserDefaults`.
 enum SelectionItemValue: Equatable {
     
-    enum ValueError: Error {
-        /// Sent when trying to operate on an array of `SelectionItemValue` items that are not of the same case.
-        case heterogeneousArray
+    enum KeyboardFontValue: Equatable {
+        case system(weight: UIFont.Weight)
+        case custom(name: String)
+        
+        var sdkKeyboardFont: StyleConfiguration.KeyboardFont {
+            switch self {
+            case .system(let weight):
+                return .system(weight: weight)
+            case .custom(let name):
+                return .custom(fontName: name)
+            }
+        }
+        
+        init(sdkKeyboardFont: StyleConfiguration.KeyboardFont) {
+            switch sdkKeyboardFont {
+            case .system(let weight):
+                self = .system(weight: weight)
+            case .custom(let fontName):
+                self = .custom(name: fontName)
+            @unknown default:
+                fatalError()
+            }
+        }
+    }
+    
+    enum AppMagicButtonAction: String, Codable, CaseIterable {
+        case globe
+        case emoji
+        case hideKeyboard = "hide keyboard"
+        case comma
+        case autoCorrectToggle = "auto correct toggle"
+        
+        var sdkMagicButtonAction: MagicButtonAction {
+            switch self {
+            case .globe: return .globe
+            case .emoji: return .emoji
+            case .hideKeyboard: return .hideKeyboard
+            case .comma: return .comma
+            case .autoCorrectToggle: return .autoCorrectToggle
+            }
+        }
+        
+        init(sdkMagicButtonAction: MagicButtonAction) {
+            switch sdkMagicButtonAction {
+            case .globe:
+                self = .globe
+            case .emoji:
+                self = .emoji
+            case .hideKeyboard:
+                self = .hideKeyboard
+            case .comma:
+                self = .comma
+            case .autoCorrectToggle:
+                self = .autoCorrectToggle
+            }
+        }
     }
     
     case string(String)
     case integer(Int)
-    
-    init?(from value: Any?) {
-        switch value {
-        case let str as String:
-            self = .string(str)
-        case let integer as Int:
-            self = .integer(integer)
-        default:
-            return nil
-        }
-    }
+    case fontValue(KeyboardFontValue)
+    case mainMagicButton(AppMagicButtonAction)
 }
 
 struct SelectionSetting: Selectable {
@@ -84,136 +126,136 @@ struct SelectionSetting: Selectable {
         return itemsGetter()
     }
     var allowsSorting: Bool {
-        return !(orderingKey?.isEmpty ?? true)
+        return orderingClosure != nil
     }
-    fileprivate let key: String
     
-    fileprivate let orderingKey: String?
+    private let getter: () -> SelectionItemValue
+    private let setter: (SelectionItemValue) -> Void
+    private let orderingClosure: (([SelectionItemValue]) -> Void)?
+    
     private let itemsGetter: () -> [SelectionItem]
     
-    init(titleKey: String, subtitleKey: String? = nil, orderingKey: String? = nil, key: String, allItemsGetter: @escaping () -> [SelectionItem]) {
+    init(titleKey: String, subtitleKey: String? = nil, getter: @escaping () -> SelectionItemValue, setter: @escaping (SelectionItemValue) -> Void, ordering: (([SelectionItemValue]) -> Void)? = nil, allItemsGetter: @escaping () -> [SelectionItem]) {
         self.titleKey = titleKey
         self.subtitleKey = subtitleKey
-        self.orderingKey = orderingKey
-        self.key = key
+        self.getter = getter
+        self.setter = setter
+        self.orderingClosure = ordering
         self.itemsGetter = allItemsGetter
     }
     
     func getSelected() -> SelectionItem? {
-        guard let valueInDefaults = SettingsSDK.userDefaults.value(forKey: key),
-              let value = SelectionItemValue(from: valueInDefaults) else {
-            return nil
-        }
+        let value = getter()
         return items.first {
             $0.value == value
         }
     }
 
     func setSelected(_ item: SelectionItem) {
-        switch item.value {
-        case .string(let str):
-            SettingsSDK.userDefaults.set(str, forKey: key)
-        case .integer(let integer):
-            SettingsSDK.userDefaults.set(integer, forKey: key)
-        }
-    }
-    
-    func itemsOrderUpdated(_ sortedItems: [SelectionItem]) {
-        guard let orderingKey = orderingKey else {
-            return
-        }
-            
-        let sortedValues = sortedItems.map {
-            $0.value
-        }.map { (value) -> Any in
-            switch value {
-            case .string(let str):
-                return str
-            case .integer(let integer):
-                return NSNumber(value: integer)
-            }
-        }
-        
-        guard sortedValues is [String]
-                || sortedValues is [NSNumber]
-        else {
-            fatalError("Trying to save heterogeneous array into UserDefaults")
-        }
-        SettingsSDK.userDefaults.set(sortedValues, forKey: orderingKey)
+        setter(item.value)
     }
 }
 
 // MARK: Font
 
 struct FontSelectionItem: SelectionItem {
-    private let fontName: String
+    private let fontValue: SelectionItemValue.KeyboardFontValue
     var titleKey: String {
-        fontName
+        switch fontValue {
+        case .system(let weight):
+            return "System font \(weight.displayName)"
+        case .custom(let name):
+            return name
+        }
     }
     let subtitleKey: String? = nil
     var value: SelectionItemValue {
-        .string(fontName)
+        .fontValue(fontValue)
     }
     var modificator: ItemModificator? {
-        return .font(name: self.fontName)
+        switch fontValue {
+        case .system(let weight):
+            return .font(.systemFont(ofSize: 17, weight: weight))
+        case .custom(let name):
+            return .font(UIFont(name: name, size: 17))
+        }
     }
     
-    init(fontName: String) {
-        self.fontName = fontName
+    init(fontValue: SelectionItemValue.KeyboardFontValue) {
+        self.fontValue = fontValue
     }
     
     static func getAllFontSelectionItems() -> [FontSelectionItem] {
-        return [
-            "System Font",
-            "Gilroy-Medium",
-            "HelveticaNeue",
-            "HelveticaNeue-Bold",
-            "HelveticaNeue-Thin",
-            "Futura-MediumItalic",
-            "Menlo-Regular",
-            "Avenir-Light",
-            "System Font Bold"
-        ].map {
-            FontSelectionItem(fontName: $0)
+        let systemFonts = UIFont.Weight.allCases.map {
+            FontSelectionItem(fontValue: .system(weight: $0))
         }
+        
+        
+                
+        let otherFonts = UIFont.familyNames.sorted().flatMap {
+            UIFont.fontNames(forFamilyName: $0)
+        }.map {
+            FontSelectionItem(fontValue: .custom(name: $0))
+        }
+        return systemFonts + otherFonts
     }
 }
 
 // MARK: Magic key
 
-struct SpecialKeySelectionItem: SelectionItem {
-    let titleKey: String
+struct MagicButtonActionSelectionItem: SelectionItem {
+    var titleKey: String {
+        magicButtonAction.rawValue
+    }
     let subtitleKey: String? = nil
-    let integerValue: Int
+    let magicButtonAction: SelectionItemValue.AppMagicButtonAction
     var value: SelectionItemValue {
-        .integer(integerValue)
+        .mainMagicButton(magicButtonAction)
     }
     var modificator: ItemModificator? = nil
 
-    static func getAllSpecialKeySelectionItems() -> [SpecialKeySelectionItem] {
-        let magicButtonsSorted = SettingsSDK.userDefaults.object(forKey: FLEKSY_SETTINGS_MAGIC_BUTTON_ORDER) as? [NSNumber] ?? []
-        return magicButtonsSorted.compactMap { button in
-            let titleKey: String?
-            switch button.uint32Value {
-            case FleksyControlTypeEmojiKey.rawValue:
-                titleKey = NSLocalizedString("Emoji", comment: "")
-            case FleksyControlTypeCommaKey.rawValue:
-                titleKey = NSLocalizedString("Comma", comment: "")
-            case FleksyControlTypeHideKeyboardKey.rawValue:
-                titleKey = NSLocalizedString("Dismiss Keyboard", comment: "")
-            case FleksyControlTypeAutoCorrectOffKey.rawValue:
-                titleKey = NSLocalizedString("Autocorrect Toggle", comment: "")
-            case FleksyControlTypeGlobeKey.rawValue:
-                titleKey = NSLocalizedString("Globe (Switch Keyboard)", comment: "")
-            default:
-                titleKey = nil
-            }
-            if let titleKey = titleKey {
-                return SpecialKeySelectionItem(titleKey: titleKey, integerValue: button.intValue)
-            } else {
-                return nil
-            }
+    static func getAllSpecialKeySelectionItems() -> [MagicButtonActionSelectionItem] {
+        FleksyManagedSettings.magicButtonLongPressActions.map {
+            let magicButtonAction = SelectionItemValue.AppMagicButtonAction(sdkMagicButtonAction: $0)
+            return MagicButtonActionSelectionItem(magicButtonAction: magicButtonAction)
         }
     }
 }
 
+// MARK: - UIFont.Weight
+
+extension UIFont.Weight: CaseIterable {
+        
+    // CaseIterable
+    
+    public static var allCases: [UIFont.Weight] {
+        [
+            UIFont.Weight.ultraLight,
+            UIFont.Weight.thin,
+            UIFont.Weight.light,
+            UIFont.Weight.regular,
+            UIFont.Weight.medium,
+            UIFont.Weight.semibold,
+            UIFont.Weight.bold,
+            UIFont.Weight.heavy,
+            UIFont.Weight.black
+        ]
+    }
+    
+    // Other
+    
+    var displayName: String {
+        switch self {
+        case .ultraLight: return "ultraLight"
+        case .thin: return "thin"
+        case .light: return "light"
+        case .regular: return "regular"
+        case .medium: return "medium"
+        case .semibold: return "semibold"
+        case .bold: return "bold"
+        case .heavy: return "heavy"
+        case .black: return "black"
+        default: return "invalid UIFont.Weight"
+        }
+    }
+}

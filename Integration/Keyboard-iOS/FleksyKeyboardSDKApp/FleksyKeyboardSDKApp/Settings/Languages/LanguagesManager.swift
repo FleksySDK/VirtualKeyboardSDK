@@ -97,9 +97,13 @@ class LanguagesManager {
     /// Downloads and installs the language.
     func downloadLanguage(_ language: LanguageModel) {
         downloadLanguage(language) { [weak self] in
-            self?.delegate?.didFinishDownloadingLanguage(language)
+            DispatchQueue.main.async {
+                self?.delegate?.didFinishDownloadingLanguage(language)
+            }
         } onFailure: { [weak self] in
-            self?.delegate?.didFailDownloadingLanguage(language)
+            DispatchQueue.main.async {
+                self?.delegate?.didFailDownloadingLanguage(language)
+            }
         }
     }
     
@@ -215,24 +219,24 @@ class LanguagesManager {
                 language.downloadState = .downloading(progress: bytesCurrent / bytesTotal)
             }
         } onComplete: { [weak self] result in
-            DispatchQueue.main.async {
                 self?.reloadLanguageResources { [weak self] in
-                    switch result {
-                    case .failure:
-                        language.downloadState = .notDownloaded
-                        onFailure()
-                    case .success:
-                        self?.installLanguage(language)
-                        language.downloadState = .installed(currentLanguage: false, keyboardLayout: self?.getCurrentLayout(forLanguage: language.code))
-                        if let index = self?.nonInstalledLanguages.firstIndex(of: language) {
-                            self?.nonInstalledLanguages.remove(at: index)
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .failure:
+                            language.downloadState = .notDownloaded
+                            onFailure()
+                        case .success:
+                            self?.installLanguage(language)
+                            language.downloadState = .installed(currentLanguage: false, keyboardLayout: self?.getCurrentLayout(forLanguage: language.code))
+                            if let index = self?.nonInstalledLanguages.firstIndex(of: language) {
+                                self?.nonInstalledLanguages.remove(at: index)
+                            }
+                            self?.installedLanguages.append(language)
+                            onSuccess()
                         }
-                        self?.installedLanguages.append(language)
-                        onSuccess()
+                        self?.activeDownloads[language.code] = nil
                     }
-                    self?.activeDownloads[language.code] = nil
                 }
-            }
         }
     }
     

@@ -173,8 +173,10 @@ class LanguagesTableViewController: UITableViewController {
     private func loadInitialData() {
         spinner.startAnimating()
         languageManager.loadAvailableLanguages { [weak self] in
-            self?.spinner.stopAnimating()
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.spinner.stopAnimating()
+                self?.tableView.reloadData()
+            }
         }
     }
     

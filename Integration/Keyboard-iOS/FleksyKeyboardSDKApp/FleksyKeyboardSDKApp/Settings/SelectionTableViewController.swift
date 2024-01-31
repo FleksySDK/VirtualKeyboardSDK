@@ -78,14 +78,10 @@ class SelectionTableViewController: UITableViewController {
             }
             
             switch item.modificator {
-            case .font(name: let fontName):
-                let font = UIFont(name: fontName, size: 17) ?? UIFont.preferredFont(forTextStyle: .body)
-                if #available(iOS 11, *) {
-                    let fontMetrics = UIFontMetrics(forTextStyle: .body)
-                    cell.textLabel?.font = fontMetrics.scaledFont(for: font)
-                } else {
-                    cell.textLabel?.font = font
-                }
+            case .font(let optFont):
+                let font = optFont ?? UIFont.preferredFont(forTextStyle: .body)
+                let fontMetrics = UIFontMetrics(forTextStyle: .body)
+                cell.textLabel?.font = fontMetrics.scaledFont(for: font)
             default:
                 cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .body)
             }
