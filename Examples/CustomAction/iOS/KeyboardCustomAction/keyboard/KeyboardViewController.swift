@@ -24,10 +24,7 @@ class KeyboardViewController: FKKeyboardViewController {
     
     override func createConfiguration() -> KeyboardConfiguration {
         // Examples on configuration at startup
-        
-        // TypingConfiguration which includes punctuationSymbols
-        let typing = TypingConfiguration()
-        
+                
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
         
@@ -49,13 +46,9 @@ class KeyboardViewController: FKKeyboardViewController {
         //
         // Create the configuration for the keyboard
         //
-        let config = KeyboardConfiguration( typing: typing,
-                                     customLayout: customActionConfig,
-                                          license: licenseConfig)
-        
-        return config
+        return KeyboardConfiguration(customLayout: customActionConfig,
+                                           license: licenseConfig)
     }
-    
     
 
     override var appIcon: UIImage?{
