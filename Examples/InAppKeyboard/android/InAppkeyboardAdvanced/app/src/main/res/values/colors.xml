@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimaryLight">@color/radicalred_light</color>
+    <color name="colorPrimaryDark">@color/radicalred_dark</color>
+    <color name="colorPrimary">@color/radicalred</color>
+
+    <color name="radicalred">#F44966</color>
+    <color name="radicalred_light">#ff7e94</color>
+    <color name="radicalred_dark">#bb003c</color>
+</resources>
