@@ -20,5 +20,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "InAppKeyboard"
+rootProject.name = "InAppkeyboard"
 include ':app'

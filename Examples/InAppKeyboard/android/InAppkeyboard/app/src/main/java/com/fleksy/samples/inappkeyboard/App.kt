@@ -8,13 +8,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         val integration = Integration(applicationContext)
-
         InAppKeyboardSDK.initialise(integration)
-
-        val integration2 = InAppKeyboardSDK.integration
-
-        Log.e("OPI", "$integration2")
     }
 }
