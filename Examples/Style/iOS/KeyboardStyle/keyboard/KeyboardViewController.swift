@@ -24,10 +24,17 @@ class KeyboardViewController: FKKeyboardViewController {
     
     override func createConfiguration() -> KeyboardConfiguration {
         // Examples on configuration at startup
-        let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
-        return KeyboardConfiguration(license: licenseConfig)
+        //let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
+        let licenseConfig = LicenseConfiguration(licenseKey: "d6f458ba-e0b8-430e-986c-1e1ccc281cee", licenseSecret: "19f8042f4a93a0f7bddb605e0d6816ce")
+        let styleConfig = factoryStyle()
+        return KeyboardConfiguration(style:styleConfig, license: licenseConfig)
     }
     
+    // StyleConfiguration change
+    private var theme = 0
+    func factoryStyle() -> StyleConfiguration{
+        return KeyboardStyle().factoryStyle(styleSelection: theme)
+    }
     //
     // Topbar Icon Example on different types of topbar icons
     //
@@ -114,9 +121,17 @@ class KeyboardViewController: FKKeyboardViewController {
     }
     @objc func leadingButton(sender: UIButton!) {
         print("leadingButton")
+        
+        print("Change theme on the fly")
+        theme+=1
+        self.reloadConfiguration()
     }
     @objc func trailingButton(sender: UIButton!) {
         print("trailingButton")
+        
+        print("Change theme on the fly")
+        theme+=1
+        self.reloadConfiguration()
     }
     
 }
