@@ -13,6 +13,9 @@ import FleksyKeyboardSDK
 
 class KeyboardViewController: FKKeyboardViewController {
     
+    // StyleConfiguration change
+    private var keyboardStyle: KeyboardStyle = .light
+    
     // MARK: View Controller life cycle
     
     /// - Important: Every time the keyboard appears it calls in this order: ``viewDidLoad`` -> ``viewWillAppear`` -> ``viewDidAppear``.
@@ -24,14 +27,16 @@ class KeyboardViewController: FKKeyboardViewController {
     
     override func createConfiguration() -> KeyboardConfiguration {
         // Examples on configuration at startup
-        let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
-        return KeyboardConfiguration(license: licenseConfig)
+        //let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
+        let licenseConfig = LicenseConfiguration(licenseKey: "d6f458ba-e0b8-430e-986c-1e1ccc281cee", licenseSecret: "19f8042f4a93a0f7bddb605e0d6816ce")
+        let styleConfig = keyboardStyle.getStyleConfiguration()
+        return KeyboardConfiguration(style:styleConfig, license: licenseConfig)
     }
     
     //
     // Topbar Icon Example on different types of topbar icons
     //
-    enum IconTopBar{
+    enum IconTopBar {
         case appIcon
         case leadingView
         case trailingView
@@ -42,71 +47,64 @@ class KeyboardViewController: FKKeyboardViewController {
     // When the view is used, leading or trailing, you should implement the button and action if you want to receive
     // the action.
     //
-    // Note: override leadingTopBarView overrides the usage of appIcon, so, if you only want to use the appIcon, only override the appIcon and do not add the leadingTopBarView.
+    // Note: overriding leadingTopBarView overrides the usage of appIcon, so, if you only want to use the appIcon, only override the appIcon or return super.leadingTopBarView when overriding the leadingTopBarView.
     //
-    let iconPosition = IconTopBar.leadingView
+    let iconPosition = IconTopBar.trailingView
     
-    /*
-    override var appIcon: UIImage?{
-        if(iconPosition == .appIcon){
-            return UIImage(named: "IconOrange")
+    override var appIcon: UIImage? {
+        guard iconPosition == .appIcon else {
+            return super.appIcon
         }
-        else{
-            return nil
-        }
+        return UIImage(named: "IconOrange")
     }
-    */
     
-    override var leadingTopBarView: UIView?{
-        if(iconPosition == .leadingView){
-            let iconViewLeading = UIView()
-            iconViewLeading.translatesAutoresizingMaskIntoConstraints = false
-            let button = UIButton(type:UIButton.ButtonType.custom)
-            button.setImage(UIImage(named: "IconBlue"), for: UIControl.State.normal)
-            button.contentMode = .scaleAspectFit
-            button.imageView?.contentMode = .scaleAspectFit
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(leadingButton), for: .touchUpInside)
-
-            iconViewLeading.addSubview(button)
-            NSLayoutConstraint.activate([
-                iconViewLeading.widthAnchor.constraint(equalToConstant: 42),
-                button.widthAnchor.constraint(equalToConstant: 38),
-                button.centerYAnchor.constraint(equalTo: iconViewLeading.centerYAnchor),
-                button.centerXAnchor.constraint(equalTo: iconViewLeading.centerXAnchor),
-            ])
-            
-            return iconViewLeading
+    override var leadingTopBarView: UIView? {
+        guard iconPosition == .leadingView else {
+            return super.leadingTopBarView
         }
-        else{
-            return nil
-        }
+        let iconViewLeading = UIView()
+        iconViewLeading.translatesAutoresizingMaskIntoConstraints = false
+        let button = UIButton(type:UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "IconBlue"), for: UIControl.State.normal)
+        button.contentMode = .scaleAspectFit
+        button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(leadingButton), for: .touchUpInside)
+        
+        iconViewLeading.addSubview(button)
+        NSLayoutConstraint.activate([
+            iconViewLeading.widthAnchor.constraint(equalToConstant: 42),
+            button.widthAnchor.constraint(equalToConstant: 38),
+            button.centerYAnchor.constraint(equalTo: iconViewLeading.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: iconViewLeading.centerXAnchor),
+        ])
+        
+        return iconViewLeading
     }
     
     
-    override var trailingTopBarView: UIView?{
-        if(iconPosition == .trailingView){
-            let iconViewTrailing = UIView()
-            iconViewTrailing.translatesAutoresizingMaskIntoConstraints = false
-            let button = UIButton(type:UIButton.ButtonType.custom)
-            button.setImage(UIImage(named: "IconBlack"), for: UIControl.State.normal)
-            button.contentMode = .scaleAspectFit
-            button.imageView?.contentMode = .scaleAspectFit
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(trailingButton), for: .touchUpInside)
-
-            iconViewTrailing.addSubview(button)
-            NSLayoutConstraint.activate([
-                iconViewTrailing.widthAnchor.constraint(equalToConstant: 42),
-                button.widthAnchor.constraint(equalToConstant: 38),
-                button.centerYAnchor.constraint(equalTo: iconViewTrailing.centerYAnchor),
-                button.centerXAnchor.constraint(equalTo: iconViewTrailing.centerXAnchor),
-            ])
-            return iconViewTrailing
+    override var trailingTopBarView: UIView? {
+        guard iconPosition == .trailingView else {
+            return super.trailingTopBarView
         }
-        else{
-            return nil
-        }
+        let iconViewTrailing = UIView()
+        iconViewTrailing.translatesAutoresizingMaskIntoConstraints = false
+        let button = UIButton(type:UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "IconBlack"), for: UIControl.State.normal)
+        button.contentMode = .scaleAspectFit
+        button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(trailingButton), for: .touchUpInside)
+        
+        iconViewTrailing.addSubview(button)
+        NSLayoutConstraint.activate([
+            iconViewTrailing.widthAnchor.constraint(equalToConstant: 42),
+            button.widthAnchor.constraint(equalToConstant: 38),
+            button.centerYAnchor.constraint(equalTo: iconViewTrailing.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: iconViewTrailing.centerXAnchor),
+        ])
+        return iconViewTrailing
+        
     }
     
     override func triggerOpenApp() {
@@ -114,9 +112,16 @@ class KeyboardViewController: FKKeyboardViewController {
     }
     @objc func leadingButton(sender: UIButton!) {
         print("leadingButton")
+        
+        print("Change theme on the fly")
+        keyboardStyle = keyboardStyle.next()
+        reloadConfiguration()
     }
     @objc func trailingButton(sender: UIButton!) {
         print("trailingButton")
+        
+        print("Change theme on the fly")
+        keyboardStyle = keyboardStyle.next()
+        reloadConfiguration()
     }
-    
 }

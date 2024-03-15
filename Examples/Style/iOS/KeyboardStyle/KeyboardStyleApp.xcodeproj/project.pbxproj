@@ -20,6 +20,8 @@
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
 		C76C5B992A701F7500EB1C15 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76C5B982A701F7400EB1C15 /* Media.xcassets */; };
+		C7EF63BA2BA36E4300FCCEA9 /* KeyboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */; };
+		C7EF63BB2BA3713000FCCEA9 /* KeyboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C76C5B982A701F7400EB1C15 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 			children = (
 				7540092A29530F800022B197 /* keyboard.entitlements */,
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
+				C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */,
 				7540091E29530F3E0022B197 /* Info.plist */,
 				C76C5B982A701F7400EB1C15 /* Media.xcassets */,
 			);
@@ -253,6 +257,7 @@
 				7540094F295311B30022B197 /* WelcomeViewController.swift in Sources */,
 				7540090329530F120022B197 /* AppDelegate.swift in Sources */,
 				75400955295311D30022B197 /* Constants.swift in Sources */,
+				C7EF63BB2BA3713000FCCEA9 /* KeyboardStyle.swift in Sources */,
 				7540090529530F120022B197 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EF63BA2BA36E4300FCCEA9 /* KeyboardStyle.swift in Sources */,
 				7540091D29530F3E0022B197 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +560,7 @@
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.18.2;
+				minimumVersion = 4.21.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
