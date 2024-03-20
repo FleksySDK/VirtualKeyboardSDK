@@ -19,6 +19,7 @@
 		7540095E2953185A0022B197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7540095C2953185A0022B197 /* Main.storyboard */; };
 		75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5C299FB30C00D884AB /* FleksySDK */; };
 		75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 75F25B5E299FB33E00D884AB /* FleksySDK */; };
+		C73B01C42BAB025C002A336E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C73B01C32BAB025C002A336E /* background.png */; };
 		C76C5B992A701F7500EB1C15 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76C5B982A701F7400EB1C15 /* Media.xcassets */; };
 		C7EF63BA2BA36E4300FCCEA9 /* KeyboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */; };
 		C7EF63BB2BA3713000FCCEA9 /* KeyboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */; };
@@ -63,6 +64,7 @@
 		75400954295311D30022B197 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7540095B2953185A0022B197 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C73B01C32BAB025C002A336E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C76C5B982A701F7400EB1C15 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				7540091C29530F3E0022B197 /* KeyboardViewController.swift */,
 				C7EF63B92BA36E4300FCCEA9 /* KeyboardStyle.swift */,
 				7540091E29530F3E0022B197 /* Info.plist */,
+				C73B01C32BAB025C002A336E /* background.png */,
 				C76C5B982A701F7400EB1C15 /* Media.xcassets */,
 			);
 			path = keyboard;
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76C5B992A701F7500EB1C15 /* Media.xcassets in Resources */,
+				C73B01C42BAB025C002A336E /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
