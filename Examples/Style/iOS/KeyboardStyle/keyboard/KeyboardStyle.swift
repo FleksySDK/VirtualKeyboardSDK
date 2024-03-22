@@ -20,13 +20,16 @@ enum KeyboardStyle: Int {
         return KeyboardStyle(rawValue: rawValue + 1) ?? .light
     }
     
-    func simulateDownloadImageAndStoreItLocally(){
-        // This is useful to download an image from your server, 
+    func downloadImageAndStoreItLocallyIfNeeded() {
+        // This is useful to download an image from your server,
         // store it locally and load it as part of the theme
         //
         
+        // Replace with your app's shared app group identifier
+        let appGroupIdentifier = "group.thingthing.fleksysdk"
+        
         // Obtain app group container directory
-        guard let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.thingthing.fleksysdk") else {
+        guard let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier) else {
             return
         }
 
@@ -38,10 +41,20 @@ enum KeyboardStyle: Int {
 
         // This is the URL where to store the downloaded image
         // You can choose the name you want, but the file format must be lowercase .png
+        let localImageURL = imagesDirectory.appendingPathComponent("background-colors.png", isDirectory: false)
         
-        // TODO: Store the image file on the local directory.
-        let localImageURL = imagesDirectory.appendingPathComponent("backgrounds-colors.png", isDirectory: false)
+        guard !FileManager.default.fileExists(atPath: localImageURL.path) else {
+            // File already exists
+            return
+        }
         
+        // Download image and store it
+        Task {
+            let imageURL = URL(string: "https://tt-fk-themes-public.s3.eu-west-1.amazonaws.com/examples/background-colors.png")!
+            
+            let (imageData, _) = try await URLSession.shared.data(from: imageURL)
+            try imageData.write(to: localImageURL)
+        }
     }
     
     func getStyleConfiguration() -> StyleConfiguration {
