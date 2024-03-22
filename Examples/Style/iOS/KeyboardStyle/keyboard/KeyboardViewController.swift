@@ -24,7 +24,7 @@ class KeyboardViewController: FKKeyboardViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        keyboardStyle.simulateDownloadImageAndStoreItLocally()
+        keyboardStyle.downloadImageAndStoreItLocallyIfNeeded()
     }
     
     override func createConfiguration() -> KeyboardConfiguration {
