@@ -23,6 +23,8 @@ class KeyboardViewController: FKKeyboardViewController {
     /// This behaviour is different from the normal iOS ViewController.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboardStyle.downloadImageAndStoreItLocallyIfNeeded()
     }
     
     override func createConfiguration() -> KeyboardConfiguration {
