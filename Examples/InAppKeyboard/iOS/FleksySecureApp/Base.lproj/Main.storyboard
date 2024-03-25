@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,7 +74,7 @@
                                         <color key="tintColor" white="0.65032419217687076" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="filled"/>
                                         <connections>
-                                            <action selector="onBtnStandard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dki-pp-Qco"/>
+                                            <action selector="actionUseLightStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dki-pp-Qco"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4d-Mk-Pe7" userLabel="BtnBlue">
@@ -87,7 +87,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled"/>
                                         <connections>
-                                            <action selector="onBtnBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNA-Ak-Hy5"/>
+                                            <action selector="actionUseBlueStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNA-Ak-Hy5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -127,7 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="btnBlue" destination="o4d-Mk-Pe7" id="Ojh-t3-RXF"/>
-                        <outlet property="btnStandard" destination="gmW-eL-b5x" id="xOx-Z1-0WB"/>
+                        <outlet property="btnLight" destination="gmW-eL-b5x" id="xOx-Z1-0WB"/>
                         <outlet property="textfield" destination="5YM-DS-nhi" id="yTg-si-LBk"/>
                     </connections>
                 </viewController>

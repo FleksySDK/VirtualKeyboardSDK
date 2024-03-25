@@ -12,25 +12,30 @@ import FleksyKeyboardSDK
 // MARK: - KeyboardViewController
 
 class KeyboardViewController: FleksyKeyboardSDK.FKKeyboardViewController {
-        
-    private var theme = 0
+    
+    let style: KeyboardStyle
     
     //
     // External Configuration based on preferences
     //
-    func setConfiguration(themeSelection: Int){
-        theme = themeSelection
+    init(style: KeyboardStyle) {
+        self.style = style
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @MainActor required dynamic init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func createConfiguration() -> KeyboardConfiguration {
-      // Configuration of the keyboard
-
+        // Configuration of the keyboard
+        
         // KEYBOARD STYLE
-        let style = KeyboardStyle().factoryStyle(styleSelection: theme)
+        let style = style.getStyleConfiguration()
         
         // TypingConfiguration which includes punctuationSymbols
         let typing = TypingConfiguration()
-      
+        
         //
         // Please, INPUT your own License and Secret key here:
         //
@@ -39,9 +44,9 @@ class KeyboardViewController: FleksyKeyboardSDK.FKKeyboardViewController {
         
         // KEYBOARD CONFIGURATION --
         // it groups capture, style and takes as constructor if we want a custom view or not + specific height
-        let config = KeyboardConfiguration( style: style,
-                                         typing: typing,
-                                         license: license)
+        let config = KeyboardConfiguration(style: style,
+                                           typing: typing,
+                                           license: license)
         return config
     }
     

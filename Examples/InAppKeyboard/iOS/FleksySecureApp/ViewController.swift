@@ -9,86 +9,60 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var textfield: UITextField!
-    @IBOutlet weak var btnStandard: UIButton!
+    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var btnLight: UIButton!
     @IBOutlet weak var btnBlue: UIButton!
     
     private var customInputViewController: KeyboardViewController?
     
-    private let themeStandard = 0
-    private let themeColorBlue = 1
-    private var currentTheme = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
         textfield.text = nil
         textfield.placeholder = "Try the secure keyboard..."
-        
-        initKeyboard(selection: currentTheme)
-        
-        textfield.becomeFirstResponder()
-        
+        btnLight.setTitle("", for: UIControl.State.normal)
+        btnBlue.setTitle("", for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        resetSelection()
-        
-        btnStandard.layer.borderWidth = 2.0
-        btnStandard.layer.borderColor = UIColor(red: 179.0/255.0, green: 184.0/255.0, blue: 192.0/255.0, alpha: 1.0).cgColor 
-        btnStandard.layer.cornerRadius = 3.0
+        setKeyboardStyle(.light, button: btnLight)
+        textfield.becomeFirstResponder()
     }
     
-    func initKeyboard(selection: Int){
-        customInputViewController = nil
-        
-        customInputViewController = KeyboardViewController()
-        customInputViewController?.setConfiguration(themeSelection: selection)
+    func initKeyboard(style: KeyboardStyle) {
+        customInputViewController = KeyboardViewController(style: style)
         textfield.inputView = customInputViewController?.inputView
     }
     
     // Color Configuration
     //
-    @IBAction func onBtnStandard(_ sender: Any) {
-        
-        if(currentTheme == themeStandard){
+    @IBAction func actionUseLightStyle(_ sender: UIButton) {
+        setKeyboardStyle(.light, button: sender)
+    }
+    
+    @IBAction func actionUseBlueStyle(_ sender: UIButton) {
+        setKeyboardStyle(.blue, button: sender)
+    }
+    
+    private func setKeyboardStyle(_ style: KeyboardStyle, button: UIButton) {
+        guard customInputViewController?.style != style else {
             return
         }
-        resetSelection()
         
-        btnStandard.layer.borderWidth = 2.0
-        btnStandard.layer.borderColor = UIColor(red: 179.0/255.0, green: 184.0/255.0, blue: 192.0/255.0, alpha: 1.0).cgColor
-        btnStandard.layer.cornerRadius = 3.0
+        resetSelection()
+        button.layer.borderWidth = 2.0
+        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.cornerRadius = 3.0
         
         textfield.resignFirstResponder()
-        currentTheme = themeStandard
-        initKeyboard(selection: currentTheme)
+        initKeyboard(style: style)
         textfield.becomeFirstResponder()
     }
     
-    @IBAction func onBtnBlue(_ sender: Any) {
-        if(currentTheme == themeColorBlue){
-            return
-        }
-        resetSelection()
-
-        btnBlue.layer.borderWidth = 2.0
-        btnBlue.layer.borderColor = UIColor(red: 70.0/255.0, green: 182.0/255.0, blue: 254.0/255.0, alpha: 1.0).cgColor
-        btnBlue.layer.cornerRadius = 3.0
-        
-        textfield.resignFirstResponder()
-        currentTheme = themeColorBlue
-        initKeyboard(selection: currentTheme)
-        textfield.becomeFirstResponder()
-    }
-    
-    func resetSelection(){
-        btnStandard.layer.borderWidth = 0.0
-        btnStandard.setTitle("", for: UIControl.State.normal)
-        
-        btnBlue.setTitle("", for: UIControl.State.normal)
+    private func resetSelection() {
+        btnLight.layer.borderWidth = 0.0
         btnBlue.layer.borderWidth = 0.0
     }
 }
