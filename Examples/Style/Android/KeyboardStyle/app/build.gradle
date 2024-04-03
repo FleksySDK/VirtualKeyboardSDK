@@ -17,8 +17,8 @@ android {
         multiDexEnabled true
 
         // License and Secret key, read from environment
-        buildConfigField "String", "FLEKSY_LICENSE_KEY", "\"$sdk_license_key\""
-        buildConfigField "String", "FLEKSY_SECRET_KEY", "\"$sdk_license_secret\""
+        buildConfigField "String", "FLEKSY_LICENSE_KEY", "\"$System.env.FLEKSY_LICENSE_KEY\""
+        buildConfigField "String", "FLEKSY_SECRET_KEY", "\"$System.env.FLEKSY_SECRET_KEY\""
     }
 
     buildTypes {

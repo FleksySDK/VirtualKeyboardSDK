@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The attributes in this XML file provide configuration information --><!-- for the Search Manager. -->
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:icon="@mipmap/ic_launcher"
+    android:settingsActivity="co.thingthing.sdk.MainActivity"
+    android:isDefault="true">
+    <subtype
+        android:label="%s"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="EmojiCapable,AsciiCapable,TrySuppressingImeSwitcher"
+        android:overridesImplicitlyEnabledSubtype="true" />
+    android:imeSubtypeExtraValue="AsciiCapable"
+    <subtype
+        android:imeSubtypeLocale="en_US"
+        android:imeSubtypeMode="keyboard"
+        android:isAsciiCapable="true" />
+
+</input-method>
