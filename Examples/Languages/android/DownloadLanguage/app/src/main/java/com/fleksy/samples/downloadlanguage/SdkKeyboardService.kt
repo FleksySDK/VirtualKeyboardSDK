@@ -44,7 +44,6 @@ class SdkKeyboardService : KeyboardService() {
         }
     }
 
-
     override fun createConfiguration() =
         KeyboardConfiguration(
             license = KeyboardConfiguration.LicenseConfiguration(

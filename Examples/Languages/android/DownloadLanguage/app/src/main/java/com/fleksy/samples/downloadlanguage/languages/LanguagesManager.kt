@@ -115,6 +115,7 @@ object LanguagesManager {
      * this method will be unable to delete said language.
      */
     fun deleteLanguage(context: Context, locale: String) {
+        LanguagesHelper.deleteLanguage(locale)
         deleteLayoutForLanguage(context, locale)
     }
 
