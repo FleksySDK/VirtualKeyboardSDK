@@ -72,7 +72,7 @@ object LanguagesManager {
                         override fun onError(error: Throwable) {
                             Toast.makeText(
                                 context,
-                                "Error downloading language: $locale",
+                                "Error downloading language: $locale. Error: ${error.localizedMessage}",
                                 Toast.LENGTH_LONG
                             ).show()
                             Log.e(
@@ -81,6 +81,12 @@ object LanguagesManager {
                             )
                         }
                     })
+                } else {
+                    Toast.makeText(
+                        context,
+                        "Error downloading language: $locale is not available for download",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
         }
