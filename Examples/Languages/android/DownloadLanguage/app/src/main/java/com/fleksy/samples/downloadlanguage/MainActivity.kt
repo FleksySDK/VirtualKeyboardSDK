@@ -85,11 +85,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
-
-
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         updateStatus()
@@ -128,18 +123,6 @@ class MainActivity : AppCompatActivity() {
                         SAMPLE_LANGUAGE
                     )
                 ) View.VISIBLE else View.GONE
-
-//            if (!isImeCurrent) {
-//                btnRemoveLanguage.visibility = View.GONE
-//            } else {
-//                LanguagesManager.getCurrentLanguage(this@MainActivity).also { currentLanguage ->
-//                    if (currentLanguage == SAMPLE_LANGUAGE) {
-//                        btnRemoveLanguage.visibility = View.VISIBLE
-//                    } else {
-//                        btnRemoveLanguage.visibility = View.GONE
-//                    }
-//                }
-//            }
         }
     }
 

@@ -111,8 +111,8 @@ object LanguagesManager {
      * Removes the downloaded language from the LanguagesConfiguration.userLanguages and deletes
      * the local files.
      *
-     * Note: After downloading a language, if the SDK's configuration has not been updated,
-     * this method will be unable to delete said language.
+     * Note: After downloading a language, if the SDK's configuration has not been updated to
+     * include said language in the userLanguages, this method will be unable to delete it.
      */
     fun deleteLanguage(context: Context, locale: String) {
         LanguagesHelper.deleteLanguage(locale)
@@ -131,7 +131,6 @@ object LanguagesManager {
     /**
      * Changes the keyboard's current language and/or it's layout.
      */
-
     fun changeLanguage(locale: String, layout: String?) {
         LanguagesHelper.changeLanguage(KeyboardLanguage(locale, layout))
     }
@@ -140,8 +139,8 @@ object LanguagesManager {
      * Change the layout for any locally available language. When changing the layout for the
      * keyboard's current language, the keyboard's UI will be refreshed.
      *
-     * Note: After downloading a language, if the SDK's configuration has not been updated,
-     * this method will be unable to change the layout for said language.
+     * Note: After downloading a language, if the SDK's configuration has not been updated to
+     * include said language, this method will be unable to change the layout for it.
      */
     fun onUpdateLanguageLayout(context: Context, locale: String, layout: String) {
         LanguagesHelper.updateLanguageLayout(KeyboardLanguage(locale, layout))

@@ -1,10 +1,8 @@
 package com.fleksy.samples.downloadlanguage
 
 import co.thingthing.fleksy.core.bus.events.ActivityEvent
-import co.thingthing.fleksy.core.bus.events.EventBasedDataCaptureEvent
 import co.thingthing.fleksy.core.keyboard.KeyboardConfiguration
 import co.thingthing.fleksy.core.keyboard.KeyboardService
-import co.thingthing.fleksy.core.keyboard.models.EventDataConfiguration
 import co.thingthing.fleksy.core.languages.KeyboardLanguage
 import com.fleksy.samples.downloadlanguage.languages.LanguagesManager
 
@@ -50,38 +48,20 @@ class SdkKeyboardService : KeyboardService() {
                 licenseKey = "INSERT_LICENSE_KEY",
                 licenseSecret = "INSERT_LICENSE_SECRET"
             ),
-            style = KeyboardConfiguration.StyleConfiguration(
-                swipeDuration = 300
-            ),
+
+            /**
+             * automaticDownload is disabled in this sample to showcase how to manually handle
+             * language downloads.
+             *
+             * In most cases it is recommended to keep automaticDownload enabled
+             * to allow the SDK to download and update all the languages specified in 'current' and
+             * 'userLanguages'.
+             */
             language = KeyboardConfiguration.LanguageConfiguration(
                 current = currentLanguage,
                 userLanguages = userLanguages,
                 automaticDownload = false,
                 orderMode = KeyboardConfiguration.LanguageOrderMode.STATIC
-            ),
-            emoji = KeyboardConfiguration.EmojiConfiguration(
-                recent = DEFAULT_RECENT_EMOJI,
-                defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
-                defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-            ),
-            dataCapture = KeyboardConfiguration.DataCaptureMode.EventBased(
-                EventDataConfiguration(
-                    keyStroke = true,
-                    delete = true,
-                    keyPlane = true,
-                    word = true,
-                    swipe = true,
-                    sessionUpdate = true,
-                    stressUpdate = true
-                )
             )
         )
-
-    companion object {
-        val DEFAULT_RECENT_EMOJI = setOf(
-            "😂", "😍", "😭", "☺️", "😘", "👏", "🙏", "👌", "👍",
-            "🙌", "❤️", "💕", "💓", "💙", "💗", "✨", "🔥", "🎉",
-            "💯", "🙈", "🎂", "🍕", "🍓", "🍻", "☕"
-        )
-    }
 }
