@@ -15,21 +15,6 @@ class SdkKeyboardService : KeyboardService() {
 
     override fun onCreate() {
         super.onCreate()
-
-        eventBus.eventBasedDataCapture.subscribe {
-            /**
-             * Data Capture will be received here.
-             */
-            when (it) {
-                is EventBasedDataCaptureEvent.KeyStrokeCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.DeleteCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.KeyPlaneCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.WordCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.SwipeCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.SessionUpdateCaptureEvent -> {}
-                is EventBasedDataCaptureEvent.StressUpdateCaptureEvent -> {}
-            }
-        }
     }
 
     override fun createConfiguration() =
@@ -51,17 +36,6 @@ class SdkKeyboardService : KeyboardService() {
                 recent = DEFAULT_RECENT_EMOJI,
                 defaultSkinTone = KeyboardConfiguration.EmojiSkinTone.NEUTRAL,
                 defaultGender = KeyboardConfiguration.EmojiGender.NEUTRAL
-            ),
-            dataCapture = KeyboardConfiguration.DataCaptureMode.EventBased(
-                EventDataConfiguration(
-                    keyStroke = true,
-                    delete = true,
-                    keyPlane = true,
-                    word = true,
-                    swipe = true,
-                    sessionUpdate = true,
-                    stressUpdate = true
-                )
             ),
             customizationBundle = KeyboardConfiguration.CustomizationBundleConfiguration(
                 /**
