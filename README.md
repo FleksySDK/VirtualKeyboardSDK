@@ -1,5 +1,21 @@
+<h1 align="center">VirtualKeyboardSDK</h1>
+<p align="center">
+A SDK to create a Virtual Keyboard for iOS and Android 💁.
+</p>
 
-## About Keyboard SDK 📱
+<p align="center">
+  <a href="#aboutkeyboardsdk">About</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#supportedplatforms">Supported Platforms</a> •
+  <a href="#features">Features</a>
+  <a href="#integration">Integration</a>
+  <a href="#benchmark">Benchmark</a>
+  <br>
+  <a href="https://docs.fleksy.com/" target="_blank">Documentation</a>
+</p>
+
+
+## About Keyboard SDK
 
 The Virtual Keyboard SDK is a virtual keyboard for `iOS` and `Android`.
 
@@ -7,7 +23,7 @@ This keyboard has outstanding features included such as: being able to type or s
 
 Once integrated you would be able to see an actual virtual keyboard in your device.
 
-## Installation ▶️
+## Installation
 
 **iOS, iPadOS**
 
@@ -31,7 +47,7 @@ dependencies {
 }
 ```
 
-## Supported Platforms 📲
+## Supported Platforms
 
 **Apple Platform**
 
@@ -44,7 +60,7 @@ dependencies {
 It also supports `kotlin` and `java`
 
 
-## Features 💅
+## Features
 
 * ⚡ **Custom Action**: The Virtual Keyboard SDK enables you to add custom actions directly to the keyboard layout. This might be custom buttons next to the space bar, specific images and associated actions. Check all the different options: [Custom Action iOS](https://docs.fleksy.com/sdk-ios/features/custom-action/). (Working on the Android version).
 * 🙋‍♀️ **Emojis**: Emojis are already configured by categories, and they are automatically updated to the latest supported version. Configure and check all the different options: [Emojis iOS](https://docs.fleksy.com/sdk-ios/features/emojis/) and [Emojis Android](https://docs.fleksy.com/sdk-android/features/emojis/).
@@ -54,7 +70,7 @@ It also supports `kotlin` and `java`
 * 💅 **Topbar Icon**: The Virtual keyboard SDK empowers you to customize icons within the top bar, ranging from a basic image to a view positioned on either the right or left side of the topbar. Further details:  [Topbar iOS](https://docs.fleksy.com/sdk-ios/features/topbar-icon/) and [Topbar Android](https://docs.fleksy.com/sdk-android/features/topbar-icon/).
 
 
-## Integration 🔌
+## Integration
 
 Using the Fleksy Keyboard SDK you are able to create an App for iOS or Android which has a keyboard.
 
@@ -64,7 +80,7 @@ Using the Fleksy Keyboard SDK you are able to create an App for iOS or Android w
 | [/Integration/Keyboard-Android](/Integration/Keyboard-Android) | Android project for an App which has a keyboard built using the FleksySDK. |
 | [/Integration/Keyboard-Flutter](/Integration/Keyboard-Flutter) | Flutter project for an App which holds a keyboard built using the FleksySDK. |
 
-## Benchmark 🚀
+## Benchmark
 
 Want to test how KeyboardSDK works on your phone ?
 
