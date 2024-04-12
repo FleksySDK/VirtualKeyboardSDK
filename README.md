@@ -4,11 +4,11 @@ A SDK to create a Virtual Keyboard for iOS and Android 💁.
 </p>
 
 <p align="center">
-  <a href="#aboutkeyboardsdk">About</a> •
+  <a href="#about-keyboard-sdk">About</a> •
   <a href="#installation">Installation</a> •
-  <a href="#supportedplatforms">Supported Platforms</a> •
-  <a href="#features">Features</a>
-  <a href="#integration">Integration</a>
+  <a href="#supported-platforms">Supported Platforms</a> •
+  <a href="#features">Features</a> •
+  <a href="#integration">Integration</a> •
   <a href="#benchmark">Benchmark</a>
   <br>
   <a href="https://docs.fleksy.com/" target="_blank">Documentation</a>
