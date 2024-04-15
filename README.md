@@ -87,6 +87,8 @@ Using the Fleksy Keyboard SDK you are able to create an App for iOS or Android w
 ## Examples
 
 1. Customise look&feel of the keyboard 🎨 -> [Examples/Style](/Examples/Style)
+2. Download and Install Languages 🌍 -> [Examples/Languages](/Examples/Languages)
+3. Add your own custom buttons on the keyboard layout 🔡 -> [Examples/CustomAction](/Examples/CustomAction)
 
 
 
