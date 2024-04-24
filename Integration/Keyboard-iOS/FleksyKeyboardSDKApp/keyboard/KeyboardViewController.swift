@@ -8,8 +8,6 @@
 
 import UIKit
 import FleksyKeyboardSDK
-import GiphyApp
-import Combine
 
 // MARK: - KeyboardViewController
 
@@ -29,13 +27,9 @@ class KeyboardViewController: FKKeyboardViewController {
         
         let licenseConfig = LicenseConfiguration(licenseKey: "your-license-key", licenseSecret: "your-license-secret")
         
-        let appsConfig = AppsConfiguration(keyboardApps: [GiphyApp(apiKey: "your-Giphy-api-key")],
-                                           showAppsInCarousel: true)
-        
         //
         // Create the configuration for the keyboard
         //
-        return KeyboardConfiguration(apps: appsConfig,
-                                     license: licenseConfig)
+        return KeyboardConfiguration(license: licenseConfig)
     }
 }
