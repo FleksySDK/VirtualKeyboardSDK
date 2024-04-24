@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7534057C29C4817800273484 /* FleksyApps in Frameworks */ = {isa = PBXBuildFile; productRef = 7534057B29C4817800273484 /* FleksyApps */; };
-		7534057E29C4817C00273484 /* FleksyApps in Frameworks */ = {isa = PBXBuildFile; productRef = 7534057D29C4817C00273484 /* FleksyApps */; };
 		753CA890296D751C00E05B42 /* InAppKeyboardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CA88F296D751C00E05B42 /* InAppKeyboardTextField.swift */; };
 		753CA891296D755500E05B42 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540091C29530F3E0022B197 /* KeyboardViewController.swift */; };
 		7540090329530F120022B197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540090229530F120022B197 /* AppDelegate.swift */; };
@@ -96,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7534057C29C4817800273484 /* FleksyApps in Frameworks */,
 				75F25B5D299FB30C00D884AB /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7534057E29C4817C00273484 /* FleksyApps in Frameworks */,
 				75F25B5F299FB33E00D884AB /* FleksySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +250,6 @@
 			name = FleksyKeyboardSDKApp;
 			packageProductDependencies = (
 				75F25B5C299FB30C00D884AB /* FleksySDK */,
-				7534057B29C4817800273484 /* FleksyApps */,
 			);
 			productName = TestSDKIntegration;
 			productReference = 754008FF29530F120022B197 /* FleksyKeyboardSDKApp.app */;
@@ -275,7 +270,6 @@
 			name = keyboard;
 			packageProductDependencies = (
 				75F25B5E299FB33E00D884AB /* FleksySDK */,
-				7534057D29C4817C00273484 /* FleksyApps */,
 			);
 			productName = keyboard;
 			productReference = 7540091A29530F3E0022B197 /* keyboard.appex */;
@@ -311,7 +305,6 @@
 			mainGroup = 754008F629530F120022B197;
 			packageReferences = (
 				75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */,
-				7534057A29C45B5B00273484 /* XCRemoteSwiftPackageReference "fleksyapps-iOS" */,
 			);
 			productRefGroup = 7540090029530F120022B197 /* Products */;
 			projectDirPath = "";
@@ -659,14 +652,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7534057A29C45B5B00273484 /* XCRemoteSwiftPackageReference "fleksyapps-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FleksySDK/fleksyapps-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
 		75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FleksySDK/FleksySDK-iOS";
@@ -678,16 +663,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7534057B29C4817800273484 /* FleksyApps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7534057A29C45B5B00273484 /* XCRemoteSwiftPackageReference "fleksyapps-iOS" */;
-			productName = FleksyApps;
-		};
-		7534057D29C4817C00273484 /* FleksyApps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7534057A29C45B5B00273484 /* XCRemoteSwiftPackageReference "fleksyapps-iOS" */;
-			productName = FleksyApps;
-		};
 		75F25B5C299FB30C00D884AB /* FleksySDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75F25B5B299FB30C00D884AB /* XCRemoteSwiftPackageReference "FleksySDK-iOS" */;

@@ -33,20 +33,20 @@ class KeyboardViewController: FKKeyboardViewController {
         //
         // Add Custom Action button with an AspectFill example image and a simple print action
         //
-        let actionButton = CustomLayoutConfiguration.Button(label: "custom-action",
+        let actionButton = CustomizationBundleConfiguration.Button(label: "custom-action",
                                                             image: UIImage(named: "IconOrange"),
                                                             contentMode: .scaleAspectFill,
                                                             action: { _ in
             // Do something for "custom-action" pressed
             print("> Pressed custom-action")
         })
-        let customActionConfig = CustomLayoutConfiguration(bundleFileName: "custom-action", buttons: [actionButton])
+        let customActionConfig = CustomizationBundleConfiguration(bundleFileName: "custom-action", buttons: [actionButton])
         
         
         //
         // Create the configuration for the keyboard
         //
-        return KeyboardConfiguration(customLayout: customActionConfig,
+        return KeyboardConfiguration(customizationBundle: customActionConfig,
                                            license: licenseConfig)
     }
     
