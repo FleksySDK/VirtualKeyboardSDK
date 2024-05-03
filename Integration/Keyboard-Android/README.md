@@ -15,8 +15,8 @@ Once integrated, you can see an actual custom keyboard on your device.
 
 ## Development
 
-To build this project, please set both license and secret keys as `FLEKSY_LICENSE_KEY` and `FLEKSY_SECRET_KEY`
-in your respective build environment to populate the `BuildConfig` variables at build time.
+To build this project, please set both license and secret keys as `fleksy_license_key` and `fleksy_license_secret`
+in your respective project properties to populate the `BuildConfig` variables at build time.
 
 ## Fleksy Apps
 1. The included GIPHY app requires a GIPHY API key to run properly. You must provide your own. You may [request one here](https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key).
