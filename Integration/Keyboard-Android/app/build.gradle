@@ -12,7 +12,7 @@ android {
         applicationId "co.thingthing.sample.sdksample"
         minSdk rootProject.minSdk
         targetSdk rootProject.targetSdk
-        versionCode 1
+        versionCode 10000
         versionName "1.0.0"
         multiDexEnabled true
 
