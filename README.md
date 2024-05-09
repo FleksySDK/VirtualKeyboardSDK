@@ -106,7 +106,7 @@ Join our community to test how the VirtualKeyboardSDK performs.
 
 **Keyboard Performance Comparison**
 
-Compare the perfomance of any keyboard against that of any other keyboard: [Kebbie](https://github.com/FleksySDK/kebbie)
+Compare the perfomance of any keyboard against that of any other keyboard, use our open source tool: [Kebbie](https://github.com/FleksySDK/kebbie)
 
 ## Documentation
 
