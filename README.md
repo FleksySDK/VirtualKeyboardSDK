@@ -103,7 +103,9 @@ Join our community to test how the VirtualKeyboardSDK performs.
 | [iOS Testflight](https://testflight.apple.com/join/zOZEBpQ9) | iOS sample App for testing right away our last development on the KeyboardSDK.|
 | [Android Firebase](https://appdistribution.firebase.dev/i/f9ae23f7f30c9045) | Android sample App for testing right away our last development on the KeyboardSDK.|
 
+
 **Keyboard Performance Comparison**
+
 Compare the perfomance of any keyboard against that of any other keyboard: [Kebbie](https://github.com/FleksySDK/kebbie)
 
 ## Documentation
