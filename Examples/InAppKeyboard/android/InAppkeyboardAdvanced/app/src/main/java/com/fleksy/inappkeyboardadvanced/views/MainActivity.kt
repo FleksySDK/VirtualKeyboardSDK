@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), InAppFragmentListener,
     }
 
     /**
-     * Safe method to make sure the KeyboardProvider is alway started before use regardless of the
+     * Safe method to make sure the KeyboardProvider is always started before use regardless of the
      * view's lifecycle.
      */
     private fun getSafeKeyboardProvider(): FleksyKeyboardProvider {
