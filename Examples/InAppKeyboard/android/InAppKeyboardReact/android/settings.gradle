@@ -1,0 +1,14 @@
+dependencyResolutionManagement { 
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories { 
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://maven.fleksy.com/maven")
+        }
+    }
+}
+rootProject.name = 'InAppKeyboardReact'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
