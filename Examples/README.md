@@ -19,7 +19,7 @@ When a trigger action occurs, a view will appear over the virtual keyboard.
   1. Full View that covers all the keyboard. We call this fleksyapp, which is a complete view for creating anything. 
   2. Frame View which is shown on top of the virtual keyboard view.
 
-[**Open View Example**](open-view/ios/KeyboardOpenView)
+[**Open View Example**](OpenView/ios/KeyboardOpenView)
 
 The example we created triggers when the user presses a button and shows a full view over the keyboard. 
 What you will achieve:
@@ -29,7 +29,7 @@ What you will achieve:
 </p>
 
 
-[**Frame View With TextField Example**](open-view/ios/KeyboardFrameWithTextField)
+[**Frame View With TextField Example**](OpenView/ios/KeyboardFrameWithTextField)
 
 In the following example, we demonstrate a way to display a view on top of the keyboard with a textfield. When the frame view appears on top of the keyboard, the context is automatically switched to the internal textfield. When the frame view is closed, the cursor is automatically switched back to the textfield of the app.
 Note: the user can manually switch between the app textfield and the keyboard's textfield by tapping on the textfield.
