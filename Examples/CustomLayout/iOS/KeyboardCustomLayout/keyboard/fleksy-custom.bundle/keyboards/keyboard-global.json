@@ -433,13 +433,6 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
-               "isTransparent" : false,
                "name" : "magic",
                "type" : "action-button",
                "weight" : 0.11
@@ -448,20 +441,13 @@
                "isTransparent" : false,
                "name" : "spacebar",
                "type" : "action-button",
-               "weight" : 0.39
-            },
-            {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
-               "type" : "action-button",
-               "weight" : 0.11
+               "weight" : 0.5
             },
             {
                "isTransparent" : false,
                "name" : "enter",
                "type" : "action-button",
-               "weight" : 0.14
+               "weight" : 0.25
             }
          ],
          "type" : "horizontal-layout"
@@ -476,13 +462,6 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
-               "isTransparent" : false,
                "name" : "magic",
                "type" : "action-button",
                "weight" : 0.11
@@ -491,20 +470,13 @@
                "isTransparent" : false,
                "name" : "spacebar",
                "type" : "action-button",
-               "weight" : 0.39
-            },
-            {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
-               "type" : "action-button",
-               "weight" : 0.11
+               "weight" : 0.5
             },
             {
                "isTransparent" : false,
                "name" : "enter",
                "type" : "action-button",
-               "weight" : 0.14
+               "weight" : 0.25
             }
          ],
          "type" : "horizontal-layout"
@@ -519,23 +491,22 @@
             },
             {
                "isTransparent" : false,
-               "name" : "spacebar",
-               "type" : "action-button",
-               "weight" : 0.39
-            },
-            {
-               "isTransparent" : false,
                "label" : "@",
                "name" : "letter-button",
                "type" : "action-button",
                "weight" : 0.11
             },
             {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
+               "isTransparent" : false,
+               "name" : "magic",
                "type" : "action-button",
                "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.39
             },
             {
                "isTransparent" : false,
@@ -556,13 +527,6 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
-               "isTransparent" : false,
                "name" : "magic",
                "type" : "action-button",
                "weight" : 0.11
@@ -571,7 +535,7 @@
                "isTransparent" : false,
                "name" : "spacebar",
                "type" : "action-button",
-               "weight" : 0.39
+               "weight" : 0.5
             },
             {
                "isTransparent" : false,
@@ -593,8 +557,8 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
+               "label" : "/",
+               "name" : "letter-button",
                "type" : "action-button",
                "weight" : 0.11
             },
@@ -611,17 +575,10 @@
                "weight" : 0.39
             },
             {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
                "isTransparent" : false,
                "name" : "enter",
                "type" : "action-button",
-               "weight" : 0.14
+               "weight" : 0.25
             }
          ],
          "type" : "horizontal-layout"
@@ -636,14 +593,7 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
-               "isTransparent" : false,
-               "name" : "magic",
+               "name" : "mic",
                "type" : "action-button",
                "weight" : 0.11
             },
@@ -651,20 +601,13 @@
                "isTransparent" : false,
                "name" : "spacebar",
                "type" : "action-button",
-               "weight" : 0.39
-            },
-            {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
-               "type" : "action-button",
-               "weight" : 0.11
+               "weight" : 0.5
             },
             {
                "isTransparent" : false,
                "name" : "enter",
                "type" : "action-button",
-               "weight" : 0.14
+               "weight" : 0.25
             }
          ],
          "type" : "horizontal-layout"
@@ -679,14 +622,7 @@
             },
             {
                "isTransparent" : false,
-               "name" : "custom_label",
-               "label" : "custom-action",
-               "type" : "action-button",
-               "weight" : 0.11
-            },
-            {
-               "isTransparent" : false,
-               "name" : "magic",
+               "name" : "mic",
                "type" : "action-button",
                "weight" : 0.11
             },
@@ -694,20 +630,13 @@
                "isTransparent" : false,
                "name" : "spacebar",
                "type" : "action-button",
-               "weight" : 0.39
-            },
-            {
-               "isTransparent" : true,
-               "label" : ".",
-               "name" : "punctuation",
-               "type" : "action-button",
-               "weight" : 0.11
+               "weight" : 0.5
             },
             {
                "isTransparent" : false,
                "name" : "enter",
                "type" : "action-button",
-               "weight" : 0.14
+               "weight" : 0.25
             }
          ],
          "type" : "horizontal-layout"
