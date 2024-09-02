@@ -62,7 +62,6 @@
 		7540095C2953185A0022B197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C7CC2CD92C63D89A00512D32 /* fleksy-custom.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "fleksy-custom.bundle"; sourceTree = "<group>"; };
 		C7CC2CF12C63D9F700512D32 /* KeyboardCustomLayoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardCustomLayoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7CC2CF22C63D9F700512D32 /* KeyboardCustomActionApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KeyboardCustomActionApp copy-Info.plist"; path = "/Users/xevi/Projects/public/VirtualKeyboardSDK/Examples/CustomLayout/iOS/KeyboardCustomLayout/KeyboardCustomActionApp copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +91,6 @@
 				7540091B29530F3E0022B197 /* keyboard */,
 				7540090029530F120022B197 /* Products */,
 				7540092B29530FF10022B197 /* Frameworks */,
-				C7CC2CF22C63D9F700512D32 /* KeyboardCustomActionApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -459,7 +457,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "KeyboardCustomActionApp copy-Info.plist";
+				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -493,7 +491,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8556JTA4X4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "KeyboardCustomActionApp copy-Info.plist";
+				INFOPLIST_FILE = FleksyKeyboardSDKApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FleksySDK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
