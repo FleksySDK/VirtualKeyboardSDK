@@ -1,0 +1,621 @@
+{
+   "layouts" : [
+      {
+         "accents" : [
+            [ "1", "½", "⅓", "¼", "⅕", "⅙", "⅐", "⅛", "⅑", "⅒" ],
+            [ "2", "²", "⅔", "⅖" ],
+            [ "3", "³", "¾", "⅗", "⅜" ],
+            [ "4", "⁴", "⅘" ],
+            [ "5", "⁵", "⅚", "⅝" ],
+            [ "6", "⁶" ],
+            [ "7", "⁷", "⅞" ],
+            [ "8", "⁸" ],
+            [ "9", "⁹" ],
+            [ "!", "¡" ],
+            [ "?", "¿" ]
+         ],
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "type" : "button-row",
+                     "values" : "1234567890"
+                  },
+                  {
+                     "type" : "button-row",
+                     "values" : "@#€_&-+()/"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "name" : "symbols",
+                           "type" : "action-button"
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "*\"':;,.!?"
+                        },
+                        {
+                           "name" : "backspace",
+                           "type" : "action-button"
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "actions" : {
+                        "keep-in-temp-layout" : true,
+                        "mini-mode" : "remove"
+                     },
+                     "name" : "spacebar-row-numbers",
+                     "type" : "predef"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "NUMBERS",
+         "type" : "numbers"
+      },
+      {
+         "accents" : [
+            [ "1", "½", "⅓", "¼", "⅕", "⅙", "⅐", "⅛", "⅑", "⅒" ],
+            [ "2", "²", "⅔", "⅖" ],
+            [ "3", "³", "¾", "⅗", "⅜" ],
+            [ "4", "⁴", "⅘" ],
+            [ "5", "⁵", "⅚", "⅝" ],
+            [ "6", "⁶" ],
+            [ "7", "⁷", "⅞" ],
+            [ "8", "⁸" ],
+            [ "9", "⁹" ],
+            [ "!", "¡" ],
+            [ "?", "¿" ]
+         ],
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "type" : "button-row",
+                     "values" : "1234567890"
+                  },
+                  {
+                     "type" : "button-row",
+                     "values" : "@#€_&-+()/"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "name" : "language-left",
+                           "type" : "action-button"
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "*\"':;,.!?"
+                        },
+                        {
+                           "name" : "language-right",
+                           "type" : "action-button"
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "NUMBERS",
+         "type" : "numbers-mini"
+      },
+      {
+         "accents" : [
+            [ "1", "½", "⅓", "¼", "⅕", "⅙", "⅐", "⅛", "⅑", "⅒" ],
+            [ "2", "²", "⅔", "⅖" ],
+            [ "3", "³", "¾", "⅗", "⅜" ],
+            [ "4", "⁴", "⅘" ],
+            [ "5", "⁵", "⅚", "⅝" ],
+            [ "6", "⁶" ],
+            [ "7", "⁷", "⅞" ],
+            [ "8", "⁸" ],
+            [ "9", "⁹" ],
+            [ "!", "¡" ],
+            [ "?", "¿" ]
+         ],
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "type" : "button-row",
+                     "values" : "1234567890"
+                  },
+                  {
+                     "type" : "button-row",
+                     "values" : "-/:;()€&@\""
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "name" : "symbols",
+                           "type" : "action-button"
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : ".,?!'"
+                        },
+                        {
+                           "name" : "backspace",
+                           "type" : "action-button"
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "actions" : {
+                        "keep-in-temp-layout" : true,
+                        "mini-mode" : "remove"
+                     },
+                     "name" : "spacebar-row-numbers",
+                     "type" : "predef"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "NUMBERS",
+         "type" : "numbers-ios"
+      },
+      {
+         "accents" : [
+            [ "•", "♪" ],
+            [ "π", "Π", "Ω", "μ" ],
+            [ "¶", "§" ],
+            [ "^", "↑", "←", "↓", "→" ],
+            [ "°", "′", "″" ],
+            [ "=", "≠", "∞", "≈" ],
+            [ "%", "‰", "℅" ],
+            [ "<", "«" ],
+            [ ">", "»" ]
+         ],
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "type" : "button-row",
+                     "values" : "~`|•√π÷×¶∆"
+                  },
+                  {
+                     "type" : "button-row",
+                     "values" : "£¥$¢^°={}\\"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "name" : "numbers",
+                           "type" : "action-button"
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "%©®™✓[]<>"
+                        },
+                        {
+                           "name" : "backspace",
+                           "type" : "action-button"
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "actions" : {
+                        "keep-in-temp-layout" : true,
+                        "mini-mode" : "remove"
+                     },
+                     "name" : "spacebar-row-symbols",
+                     "type" : "predef"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "SYMBOLS",
+         "type" : "symbols"
+      },
+      {
+         "accents" : [
+            [ "•", "♪" ],
+            [ "π", "Π", "Ω", "μ" ],
+            [ "¶", "§" ],
+            [ "^", "↑", "←", "↓", "→" ],
+            [ "°", "′", "″" ],
+            [ "=", "≠", "∞", "≈" ],
+            [ "%", "‰", "℅" ]
+         ],
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "type" : "button-row",
+                     "values" : "[]{}#%^*+="
+                  },
+                  {
+                     "type" : "button-row",
+                     "values" : "_\\|~<>€£¥•"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "name" : "numbers",
+                           "type" : "action-button"
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : ".,?!'"
+                        },
+                        {
+                           "name" : "backspace",
+                           "type" : "action-button"
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "actions" : {
+                        "keep-in-temp-layout" : true,
+                        "mini-mode" : "remove"
+                     },
+                     "name" : "spacebar-row-symbols",
+                     "type" : "predef"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "SYMBOLS",
+         "type" : "symbols-ios"
+      },
+      {
+         "elements" : [
+            {
+               "elements" : [
+                  {
+                     "elements" : [
+                        {
+                        {
+                           "type" : "button-row",
+                           "values" : "1",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "2",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "3",
+                           "weight" : 0.33
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "elements" : [
+                        {
+                        {
+                           "type" : "button-row",
+                           "values" : "4",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "5",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "6",
+                           "weight" : 0.33
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "type" : "button-row",
+                           "values" : "7",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "8",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "9",
+                           "weight" : 0.33
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  },
+                  {
+                     "elements" : [
+                        {
+                           "isTransparent" : true,
+                           "label" : ".",
+                           "name" : "punctuation",
+                           "type" : "action-button",
+                           "weight" : 0.33
+                        },
+                        {
+                           "type" : "button-row",
+                           "values" : "0",
+                           "weight" : 0.33
+                        },
+                        {
+                           "isTransparent" : true,
+                           "name" : "backspace",
+                           "type" : "action-button",
+                           "weight" : 0.33
+                        }
+                     ],
+                     "type" : "horizontal-layout"
+                  }
+               ],
+               "type" : "vertical-layout"
+            }
+         ],
+         "name" : "NUMBER PAD",
+         "type" : "number-pad"
+      }
+   ],
+   "makesUpperFromLower" : true,
+   "predefs" : {
+      "spacebar-row-letters" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "numbers",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.14
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-letters-ac-off" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "numbers",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.14
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-letters-email" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "numbers",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.39
+            },
+            {
+               "isTransparent" : false,
+               "label" : "@",
+               "name" : "letter-button",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.25
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-letters-twitter" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "numbers",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : false,
+               "label" : "#",
+               "name" : "letter-button",
+               "type" : "action-button",
+               "weight" : 0.25
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-letters-url" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "numbers",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.14
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-numbers" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "letters",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.14
+            }
+         ],
+         "type" : "horizontal-layout"
+      },
+      "spacebar-row-symbols" : {
+         "elements" : [
+            {
+               "isTransparent" : false,
+               "name" : "letters",
+               "type" : "action-button",
+               "weight" : 0.14
+            },
+            {
+               "isTransparent" : false,
+               "name" : "magic",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "spacebar",
+               "type" : "action-button",
+               "weight" : 0.50
+            },
+            {
+               "isTransparent" : true,
+               "label" : ".",
+               "name" : "punctuation",
+               "type" : "action-button",
+               "weight" : 0.11
+            },
+            {
+               "isTransparent" : false,
+               "name" : "enter",
+               "type" : "action-button",
+               "weight" : 0.14
+            }
+         ],
+         "type" : "horizontal-layout"
+      }
+   }
+}
