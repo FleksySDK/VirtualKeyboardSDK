@@ -17,9 +17,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    aaptOptions {
-        noCompress '.json', '.wav'
-    }
 
     signingConfigs {
         release{
@@ -44,6 +41,9 @@ android {
     viewBinding {
         enabled = true
     }
+    androidResources {
+        noCompress '.json', '.wav'
+    }
 }
 
 dependencies {
@@ -58,7 +58,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //Fleksy
-    implementation 'co.thingthing.fleksycore:fleksycore-release:4.5.3'
+    implementation 'co.thingthing.fleksycore:fleksycore-release:4.15.2'
 
     //Navigation component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'

@@ -16,4 +16,5 @@
 
     <string name="select_fleksy_sdk">Select Fleksy Health Keyboard ⚠️</string>
     <string name="fleksy_sdk_selected">Fleksy Health keyboard is selected! ✅</string>
+    <string name="hint_start_typing">Start typing...</string>
 </resources>
