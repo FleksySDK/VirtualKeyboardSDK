@@ -12,6 +12,7 @@
         android:layout_height="0dp"
         android:layout_margin="16dp"
         android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
         android:src="@drawable/ic_launcher_fleksy"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,7 +38,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/debugContainer"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
         <TextView
             android:id="@+id/imeEnabled"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="75dp"
             android:background="?selectableItemBackground"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
@@ -62,7 +63,7 @@
         <TextView
             android:id="@+id/imeSelected"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="75dp"
             android:background="?selectableItemBackground"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
@@ -76,39 +77,40 @@
             app:layout_constraintTop_toBottomOf="@+id/imeEnabled" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/hint_start_typing"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugContainer" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/settings"
         android:name="com.fleksy.healthkeyboard.SettingsFragment"
-        android:layout_width="522dp"
-        android:layout_height="400dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintBottom_toTopOf="@id/version"/>
 
     <TextView
         android:id="@+id/version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginVertical="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="0dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/edittext_border"
-        android:ems="10"
-        android:hint="Start typing..."
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/debugContainer" />
+        app:layout_constraintTop_toBottomOf="@id/settings"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
