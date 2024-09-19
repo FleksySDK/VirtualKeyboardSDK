@@ -47,7 +47,7 @@ and adding the dependency:
 dependencies {
   ...       
   // Keyboard SDK dependency
-  implementation("co.thingthing.fleksycore:fleksycore-release:4.15.1")
+  implementation("co.thingthing.fleksycore:fleksycore-release:4.15.2")
 }
 ```
 

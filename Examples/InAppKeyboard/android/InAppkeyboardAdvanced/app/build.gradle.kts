@@ -53,7 +53,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
-    implementation("co.thingthing.fleksycore:fleksycore-release:4.9.0")
+    implementation("co.thingthing.fleksycore:fleksycore-release:4.15.2")
 
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     implementation(composeBom)
