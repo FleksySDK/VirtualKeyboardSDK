@@ -31,7 +31,7 @@ class KeyboardOpenViewCustom : KeyboardApp{
     }
     
     var defaultViewMode: KeyboardAppViewMode {
-        .fullCover() // Shows the view over the keyboard, i.e. covering it.
+        .fullCover(height: .automatic) // Shows the view over the keyboard, i.e. covering it.
     }
     
     ///
@@ -93,10 +93,12 @@ class KeyboardOpenViewCustom : KeyboardApp{
         
         // Add constraints for cosmetics
         NSLayoutConstraint.activate([
-            btnClose.trailingAnchor.constraint(equalTo: exampleView.leadingAnchor, constant: -5),
+            btnClose.trailingAnchor.constraint(equalTo: exampleView.trailingAnchor, constant: -5),
             btnClose.topAnchor.constraint(equalTo: exampleView.topAnchor, constant: 5),
             btnClose.widthAnchor.constraint(equalToConstant: 85),
-            btnClose.heightAnchor.constraint(equalToConstant: 25)
+            btnClose.heightAnchor.constraint(equalToConstant: 25),
+            
+            exampleView.heightAnchor.constraint(equalToConstant: 80),
         ])
 
         btnClose.addTarget(self, action: #selector(hideMyself), for: .touchUpInside)
