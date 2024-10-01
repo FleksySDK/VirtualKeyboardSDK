@@ -37,7 +37,7 @@ class KeyboardFrameViewCustom : KeyboardApp, AppTextFieldDelegate {
     ///
     /// Override this property if your FleksyApp needs a different initial view mode.
     open var defaultViewMode: KeyboardAppViewMode {
-        .frame(barMode: .default, height: .default)
+        .frame(barMode: .default, height: .automatic)
     }
     
     ///
@@ -94,6 +94,7 @@ class KeyboardFrameViewCustom : KeyboardApp, AppTextFieldDelegate {
             label.centerYAnchor.constraint(equalTo: exampleView.centerYAnchor),
             label.widthAnchor.constraint(equalToConstant: 300),
             label.heightAnchor.constraint(lessThanOrEqualTo: exampleView.heightAnchor),
+            exampleView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100)
         ])
         
         self.exampleView = exampleView
