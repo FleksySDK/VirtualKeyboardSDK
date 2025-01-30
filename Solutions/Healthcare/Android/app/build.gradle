@@ -58,7 +58,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //Fleksy
-    implementation 'co.thingthing.fleksycore:fleksycore-release:4.15.2'
+    implementation 'co.thingthing.fleksycore:fleksycore-release:4.15.4'
 
     //Navigation component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'

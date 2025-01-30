@@ -55,6 +55,6 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
 	// Keyboard Dependencies
-	implementation "co.thingthing.fleksycore:fleksycore-release:4.15.2"
+	implementation "co.thingthing.fleksycore:fleksycore-release:4.15.4"
 	implementation("co.thingthing.fleksyapps:giphy:2.1.0")
 }

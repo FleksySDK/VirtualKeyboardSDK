@@ -70,5 +70,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
-    implementation("co.thingthing.fleksycore:fleksycore-release:4.15.2")
+    implementation("co.thingthing.fleksycore:fleksycore-release:4.15.4")
 }
